@@ -32,10 +32,10 @@ namespace niushuai233Kit
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.other_tabPage = new System.Windows.Forms.TabPage();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.other_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.other_button_keycode = new System.Windows.Forms.Button();
             this.number_conversion_tabPage = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -92,7 +92,7 @@ namespace niushuai233Kit
             // 
             // other_tabPage
             // 
-            this.other_tabPage.Controls.Add(this.groupBox7);
+            this.other_tabPage.Controls.Add(this.other_groupBox_result);
             this.other_tabPage.Controls.Add(this.groupBox8);
             this.other_tabPage.Location = new System.Drawing.Point(4, 26);
             this.other_tabPage.Margin = new System.Windows.Forms.Padding(4);
@@ -103,22 +103,22 @@ namespace niushuai233Kit
             this.other_tabPage.Text = "其他";
             this.other_tabPage.UseVisualStyleBackColor = true;
             // 
-            // groupBox7
+            // other_groupBox_result
             // 
-            this.groupBox7.Location = new System.Drawing.Point(286, 8);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(700, 500);
-            this.groupBox7.TabIndex = 3;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "显示区";
+            this.other_groupBox_result.Location = new System.Drawing.Point(286, 8);
+            this.other_groupBox_result.Name = "other_groupBox_result";
+            this.other_groupBox_result.Size = new System.Drawing.Size(791, 565);
+            this.other_groupBox_result.TabIndex = 3;
+            this.other_groupBox_result.TabStop = false;
+            this.other_groupBox_result.Text = "显示区";
             // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.button8);
-            this.groupBox8.Controls.Add(this.button9);
+            this.groupBox8.Controls.Add(this.other_button_keycode);
             this.groupBox8.Location = new System.Drawing.Point(8, 8);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(270, 500);
+            this.groupBox8.Size = new System.Drawing.Size(270, 565);
             this.groupBox8.TabIndex = 2;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "功能区";
@@ -129,17 +129,18 @@ namespace niushuai233Kit
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(125, 30);
             this.button8.TabIndex = 1;
-            this.button8.Text = "button8";
+            this.button8.Text = "待续...";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // other_button_keycode
             // 
-            this.button9.Location = new System.Drawing.Point(6, 38);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(125, 30);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "字数统计";
-            this.button9.UseVisualStyleBackColor = true;
+            this.other_button_keycode.Location = new System.Drawing.Point(6, 38);
+            this.other_button_keycode.Name = "other_button_keycode";
+            this.other_button_keycode.Size = new System.Drawing.Size(125, 30);
+            this.other_button_keycode.TabIndex = 0;
+            this.other_button_keycode.Text = "键盘按键码";
+            this.other_button_keycode.UseVisualStyleBackColor = true;
+            this.other_button_keycode.Click += new System.EventHandler(this.other_button_keycode_Click);
             // 
             // number_conversion_tabPage
             // 
@@ -428,10 +429,10 @@ namespace niushuai233Kit
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox other_groupBox_result;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button other_button_keycode;
         private System.Windows.Forms.TabPage datetime_tabPage;
     }
 }

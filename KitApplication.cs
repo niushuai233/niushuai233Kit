@@ -1,4 +1,5 @@
 ﻿
+using niushuai233Kit.KitForm.Other;
 using niushuai233Kit.KitForm.Strings;
 using System;
 using System.Collections.Generic;
@@ -27,14 +28,29 @@ namespace niushuai233Kit
         private void string_button_wordCount_Click(object sender, EventArgs e)
         {
             WordCountForm form = new WordCountForm(this);
+            FormReset(this.string_groupBox_result, form);
+        }
 
+        private void other_button_keycode_Click(object sender, EventArgs e)
+        {
+            KeyCodeSearchForm form = new KeyCodeSearchForm(this);
+            FormReset(this.other_groupBox_result, form);
+        }
+
+        /// <summary>
+        /// 设置Form的显示内容
+        /// </summary>
+        /// <param name="groupBox"></param>
+        /// <param name="form"></param>
+        private void FormReset(GroupBox groupBox, Form form)
+        {
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             // 清空面板
-            this.string_groupBox_result.Controls.Clear();
+            groupBox.Controls.Clear();
             // 添加新的面板
-            this.string_groupBox_result.Controls.Add(form);
+            groupBox.Controls.Add(form);
 
             form.Show();
         }

@@ -53,6 +53,12 @@
     <Compile Include="KitApplication.Designer.cs">
       <DependentUpon>KitApplication.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitForm\Other\KeyCodeSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitForm\Other\KeyCodeSearchForm.Designer.cs">
+      <DependentUpon>KeyCodeSearchForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KitForm\Strings\WordCountForm.cs">
       <SubType>Form</SubType>
     </Compile>
