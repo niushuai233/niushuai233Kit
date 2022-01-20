@@ -16,5 +16,15 @@ namespace niushuai233Kit
         {
             InitializeComponent();
         }
+
+        private void string_groupBox_result_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void string_groupbox_function_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

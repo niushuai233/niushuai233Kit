@@ -31,14 +31,44 @@ namespace niushuai233Kit
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage_other = new System.Windows.Forms.TabPage();
-            this.tabPage_number_conversion = new System.Windows.Forms.TabPage();
-            this.tabPage_encrypt = new System.Windows.Forms.TabPage();
-            this.tabPage_code_trans = new System.Windows.Forms.TabPage();
-            this.tabPage_string = new System.Windows.Forms.TabPage();
+            this.other_tabPage = new System.Windows.Forms.TabPage();
+            this.number_conversion_tabPage = new System.Windows.Forms.TabPage();
+            this.encrypt_tabPage = new System.Windows.Forms.TabPage();
+            this.code_trans_tabPage = new System.Windows.Forms.TabPage();
+            this.string_tabPage = new System.Windows.Forms.TabPage();
             this.tabControl_main = new System.Windows.Forms.TabControl();
+            this.string_groupbox_function = new System.Windows.Forms.GroupBox();
+            this.string_groupBox_result = new System.Windows.Forms.GroupBox();
+            this.string_button_wordCount = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.other_tabPage.SuspendLayout();
+            this.number_conversion_tabPage.SuspendLayout();
+            this.encrypt_tabPage.SuspendLayout();
+            this.code_trans_tabPage.SuspendLayout();
+            this.string_tabPage.SuspendLayout();
             this.tabControl_main.SuspendLayout();
+            this.string_groupbox_function.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -59,74 +89,276 @@ namespace niushuai233Kit
             this.关于ToolStripMenuItem.Size = new System.Drawing.Size(54, 25);
             this.关于ToolStripMenuItem.Text = "关于";
             // 
-            // tabPage_other
+            // other_tabPage
             // 
-            this.tabPage_other.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_other.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_other.Name = "tabPage_other";
-            this.tabPage_other.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_other.Size = new System.Drawing.Size(1027, 517);
-            this.tabPage_other.TabIndex = 4;
-            this.tabPage_other.Text = "其他";
-            this.tabPage_other.UseVisualStyleBackColor = true;
+            this.other_tabPage.Controls.Add(this.groupBox7);
+            this.other_tabPage.Controls.Add(this.groupBox8);
+            this.other_tabPage.Location = new System.Drawing.Point(4, 26);
+            this.other_tabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.other_tabPage.Name = "other_tabPage";
+            this.other_tabPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.other_tabPage.Size = new System.Drawing.Size(999, 515);
+            this.other_tabPage.TabIndex = 4;
+            this.other_tabPage.Text = "其他";
+            this.other_tabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage_number_conversion
+            // number_conversion_tabPage
             // 
-            this.tabPage_number_conversion.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_number_conversion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_number_conversion.Name = "tabPage_number_conversion";
-            this.tabPage_number_conversion.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_number_conversion.Size = new System.Drawing.Size(1027, 517);
-            this.tabPage_number_conversion.TabIndex = 3;
-            this.tabPage_number_conversion.Text = "进制转换";
-            this.tabPage_number_conversion.UseVisualStyleBackColor = true;
+            this.number_conversion_tabPage.Controls.Add(this.groupBox5);
+            this.number_conversion_tabPage.Controls.Add(this.groupBox6);
+            this.number_conversion_tabPage.Location = new System.Drawing.Point(4, 26);
+            this.number_conversion_tabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.number_conversion_tabPage.Name = "number_conversion_tabPage";
+            this.number_conversion_tabPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.number_conversion_tabPage.Size = new System.Drawing.Size(999, 515);
+            this.number_conversion_tabPage.TabIndex = 3;
+            this.number_conversion_tabPage.Text = "进制转换";
+            this.number_conversion_tabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage_encrypt
+            // encrypt_tabPage
             // 
-            this.tabPage_encrypt.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_encrypt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_encrypt.Name = "tabPage_encrypt";
-            this.tabPage_encrypt.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_encrypt.Size = new System.Drawing.Size(1027, 517);
-            this.tabPage_encrypt.TabIndex = 2;
-            this.tabPage_encrypt.Text = "加密解密";
-            this.tabPage_encrypt.UseVisualStyleBackColor = true;
+            this.encrypt_tabPage.Controls.Add(this.groupBox3);
+            this.encrypt_tabPage.Controls.Add(this.groupBox4);
+            this.encrypt_tabPage.Location = new System.Drawing.Point(4, 26);
+            this.encrypt_tabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.encrypt_tabPage.Name = "encrypt_tabPage";
+            this.encrypt_tabPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.encrypt_tabPage.Size = new System.Drawing.Size(999, 515);
+            this.encrypt_tabPage.TabIndex = 2;
+            this.encrypt_tabPage.Text = "加密解密";
+            this.encrypt_tabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage_code_trans
+            // code_trans_tabPage
             // 
-            this.tabPage_code_trans.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_code_trans.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_code_trans.Name = "tabPage_code_trans";
-            this.tabPage_code_trans.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_code_trans.Size = new System.Drawing.Size(1027, 517);
-            this.tabPage_code_trans.TabIndex = 1;
-            this.tabPage_code_trans.Text = "编码转换";
-            this.tabPage_code_trans.UseVisualStyleBackColor = true;
+            this.code_trans_tabPage.Controls.Add(this.groupBox1);
+            this.code_trans_tabPage.Controls.Add(this.groupBox2);
+            this.code_trans_tabPage.Location = new System.Drawing.Point(4, 26);
+            this.code_trans_tabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.code_trans_tabPage.Name = "code_trans_tabPage";
+            this.code_trans_tabPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.code_trans_tabPage.Size = new System.Drawing.Size(999, 515);
+            this.code_trans_tabPage.TabIndex = 1;
+            this.code_trans_tabPage.Text = "编码转换";
+            this.code_trans_tabPage.UseVisualStyleBackColor = true;
             // 
-            // tabPage_string
+            // string_tabPage
             // 
-            this.tabPage_string.Location = new System.Drawing.Point(4, 26);
-            this.tabPage_string.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_string.Name = "tabPage_string";
-            this.tabPage_string.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_string.Size = new System.Drawing.Size(999, 515);
-            this.tabPage_string.TabIndex = 0;
-            this.tabPage_string.Text = "字符串";
-            this.tabPage_string.UseVisualStyleBackColor = true;
+            this.string_tabPage.Controls.Add(this.string_groupBox_result);
+            this.string_tabPage.Controls.Add(this.string_groupbox_function);
+            this.string_tabPage.Location = new System.Drawing.Point(4, 26);
+            this.string_tabPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.string_tabPage.Name = "string_tabPage";
+            this.string_tabPage.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.string_tabPage.Size = new System.Drawing.Size(999, 515);
+            this.string_tabPage.TabIndex = 0;
+            this.string_tabPage.Text = "字符串";
+            this.string_tabPage.UseVisualStyleBackColor = true;
             // 
             // tabControl_main
             // 
-            this.tabControl_main.Controls.Add(this.tabPage_string);
-            this.tabControl_main.Controls.Add(this.tabPage_code_trans);
-            this.tabControl_main.Controls.Add(this.tabPage_encrypt);
-            this.tabControl_main.Controls.Add(this.tabPage_number_conversion);
-            this.tabControl_main.Controls.Add(this.tabPage_other);
+            this.tabControl_main.Controls.Add(this.string_tabPage);
+            this.tabControl_main.Controls.Add(this.code_trans_tabPage);
+            this.tabControl_main.Controls.Add(this.encrypt_tabPage);
+            this.tabControl_main.Controls.Add(this.number_conversion_tabPage);
+            this.tabControl_main.Controls.Add(this.other_tabPage);
             this.tabControl_main.Location = new System.Drawing.Point(16, 37);
             this.tabControl_main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl_main.Name = "tabControl_main";
             this.tabControl_main.SelectedIndex = 0;
             this.tabControl_main.Size = new System.Drawing.Size(1007, 545);
             this.tabControl_main.TabIndex = 0;
+            // 
+            // string_groupbox_function
+            // 
+            this.string_groupbox_function.Controls.Add(this.button2);
+            this.string_groupbox_function.Controls.Add(this.string_button_wordCount);
+            this.string_groupbox_function.Location = new System.Drawing.Point(8, 8);
+            this.string_groupbox_function.Name = "string_groupbox_function";
+            this.string_groupbox_function.Size = new System.Drawing.Size(270, 500);
+            this.string_groupbox_function.TabIndex = 0;
+            this.string_groupbox_function.TabStop = false;
+            this.string_groupbox_function.Text = "功能区";
+            this.string_groupbox_function.Enter += new System.EventHandler(this.string_groupbox_function_Enter);
+            // 
+            // string_groupBox_result
+            // 
+            this.string_groupBox_result.Location = new System.Drawing.Point(286, 8);
+            this.string_groupBox_result.Name = "string_groupBox_result";
+            this.string_groupBox_result.Size = new System.Drawing.Size(700, 500);
+            this.string_groupBox_result.TabIndex = 1;
+            this.string_groupBox_result.TabStop = false;
+            this.string_groupBox_result.Text = "显示区";
+            this.string_groupBox_result.Enter += new System.EventHandler(this.string_groupBox_result_Enter);
+            // 
+            // string_button_wordCount
+            // 
+            this.string_button_wordCount.Location = new System.Drawing.Point(6, 38);
+            this.string_button_wordCount.Name = "string_button_wordCount";
+            this.string_button_wordCount.Size = new System.Drawing.Size(125, 30);
+            this.string_button_wordCount.TabIndex = 0;
+            this.string_button_wordCount.Text = "字数统计";
+            this.string_button_wordCount.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(137, 38);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 30);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(286, 8);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(700, 500);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "显示区";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Location = new System.Drawing.Point(8, 8);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(270, 500);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "功能区";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(137, 38);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(125, 30);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 38);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(125, 30);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "字数统计";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Location = new System.Drawing.Point(286, 8);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(700, 500);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "显示区";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button4);
+            this.groupBox4.Controls.Add(this.button5);
+            this.groupBox4.Location = new System.Drawing.Point(8, 8);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(270, 500);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "功能区";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(137, 38);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(125, 30);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(6, 38);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(125, 30);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "字数统计";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Location = new System.Drawing.Point(286, 8);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(700, 500);
+            this.groupBox5.TabIndex = 3;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "显示区";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.button6);
+            this.groupBox6.Controls.Add(this.button7);
+            this.groupBox6.Location = new System.Drawing.Point(8, 8);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(270, 500);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "功能区";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(137, 38);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(125, 30);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(6, 38);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(125, 30);
+            this.button7.TabIndex = 0;
+            this.button7.Text = "字数统计";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Location = new System.Drawing.Point(286, 8);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(700, 500);
+            this.groupBox7.TabIndex = 3;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "显示区";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.button8);
+            this.groupBox8.Controls.Add(this.button9);
+            this.groupBox8.Location = new System.Drawing.Point(8, 8);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(270, 500);
+            this.groupBox8.TabIndex = 2;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "功能区";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(137, 38);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(125, 30);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(6, 38);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(125, 30);
+            this.button9.TabIndex = 0;
+            this.button9.Text = "字数统计";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // KitApplication
             // 
@@ -144,7 +376,17 @@ namespace niushuai233Kit
             this.Text = "Kit@niushuai233";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.other_tabPage.ResumeLayout(false);
+            this.number_conversion_tabPage.ResumeLayout(false);
+            this.encrypt_tabPage.ResumeLayout(false);
+            this.code_trans_tabPage.ResumeLayout(false);
+            this.string_tabPage.ResumeLayout(false);
             this.tabControl_main.ResumeLayout(false);
+            this.string_groupbox_function.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,12 +395,32 @@ namespace niushuai233Kit
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
-        private System.Windows.Forms.TabPage tabPage_other;
-        private System.Windows.Forms.TabPage tabPage_number_conversion;
-        private System.Windows.Forms.TabPage tabPage_encrypt;
-        private System.Windows.Forms.TabPage tabPage_code_trans;
-        private System.Windows.Forms.TabPage tabPage_string;
+        private System.Windows.Forms.TabPage other_tabPage;
+        private System.Windows.Forms.TabPage number_conversion_tabPage;
+        private System.Windows.Forms.TabPage encrypt_tabPage;
+        private System.Windows.Forms.TabPage code_trans_tabPage;
+        private System.Windows.Forms.TabPage string_tabPage;
         private System.Windows.Forms.TabControl tabControl_main;
+        private System.Windows.Forms.GroupBox string_groupbox_function;
+        private System.Windows.Forms.GroupBox string_groupBox_result;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button string_button_wordCount;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
     }
 }
 
