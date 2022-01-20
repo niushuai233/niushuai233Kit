@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,12 +18,12 @@ namespace niushuai233Kit
             InitializeComponent();
         }
 
-        private void string_groupBox_result_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void string_groupbox_function_Enter(object sender, EventArgs e)
+        /// <summary>
+        /// 字数统计 form表单
+        /// </summary>
+        /// <param name="sender">触发</param>
+        /// <param name="e">参数</param>
+        private void string_button_wordCount_Click(object sender, EventArgs e)
         {
 
         }
