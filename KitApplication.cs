@@ -1,4 +1,5 @@
 ﻿
+using niushuai233Kit.KitForm.Strings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,17 @@ namespace niushuai233Kit
         /// <param name="e">参数</param>
         private void string_button_wordCount_Click(object sender, EventArgs e)
         {
+            WordCountForm form = new WordCountForm(this);
 
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            // 清空面板
+            this.string_groupBox_result.Controls.Clear();
+            // 添加新的面板
+            this.string_groupBox_result.Controls.Add(form);
+
+            form.Show();
         }
     }
 }

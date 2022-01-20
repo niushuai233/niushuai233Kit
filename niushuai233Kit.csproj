@@ -46,11 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\Enums\CharType.cs" />
     <Compile Include="KitApplication.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KitApplication.Designer.cs">
       <DependentUpon>KitApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitForm\Strings\WordCountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitForm\Strings\WordCountForm.Designer.cs">
+      <DependentUpon>WordCountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,6 +71,9 @@
     <Compile Include="Util\XmlUtil.cs" />
     <EmbeddedResource Include="KitApplication.resx">
       <DependentUpon>KitApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitForm\Strings\WordCountForm.resx">
+      <DependentUpon>WordCountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -87,8 +97,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="KitForm\Strings\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

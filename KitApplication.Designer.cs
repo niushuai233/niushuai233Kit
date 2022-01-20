@@ -78,7 +78,7 @@ namespace niushuai233Kit
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1036, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(1121, 31);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -301,7 +301,7 @@ namespace niushuai233Kit
             this.string_tabPage.Margin = new System.Windows.Forms.Padding(4);
             this.string_tabPage.Name = "string_tabPage";
             this.string_tabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.string_tabPage.Size = new System.Drawing.Size(999, 515);
+            this.string_tabPage.Size = new System.Drawing.Size(1084, 580);
             this.string_tabPage.TabIndex = 0;
             this.string_tabPage.Text = "字符串";
             this.string_tabPage.UseVisualStyleBackColor = true;
@@ -310,7 +310,7 @@ namespace niushuai233Kit
             // 
             this.string_groupBox_result.Location = new System.Drawing.Point(286, 8);
             this.string_groupBox_result.Name = "string_groupBox_result";
-            this.string_groupBox_result.Size = new System.Drawing.Size(700, 500);
+            this.string_groupBox_result.Size = new System.Drawing.Size(791, 565);
             this.string_groupBox_result.TabIndex = 1;
             this.string_groupBox_result.TabStop = false;
             this.string_groupBox_result.Text = "显示区";
@@ -321,7 +321,7 @@ namespace niushuai233Kit
             this.string_groupbox_function.Controls.Add(this.string_button_wordCount);
             this.string_groupbox_function.Location = new System.Drawing.Point(8, 8);
             this.string_groupbox_function.Name = "string_groupbox_function";
-            this.string_groupbox_function.Size = new System.Drawing.Size(270, 500);
+            this.string_groupbox_function.Size = new System.Drawing.Size(270, 565);
             this.string_groupbox_function.TabIndex = 0;
             this.string_groupbox_function.TabStop = false;
             this.string_groupbox_function.Text = "功能区";
@@ -356,14 +356,14 @@ namespace niushuai233Kit
             this.tabControl_main.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl_main.Name = "tabControl_main";
             this.tabControl_main.SelectedIndex = 0;
-            this.tabControl_main.Size = new System.Drawing.Size(1007, 545);
+            this.tabControl_main.Size = new System.Drawing.Size(1092, 610);
             this.tabControl_main.TabIndex = 0;
             // 
             // KitApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 595);
+            this.ClientSize = new System.Drawing.Size(1121, 660);
             this.Controls.Add(this.tabControl_main);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
