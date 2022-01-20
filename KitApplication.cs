@@ -33,7 +33,7 @@ namespace niushuai233Kit
 
         private void other_button_keycode_Click(object sender, EventArgs e)
         {
-            KeyCodeSearchForm form = new KeyCodeSearchForm(this);
+            AsciiForm form = new AsciiForm(this);
             FormReset(this.other_groupBox_result, form);
         }
 

@@ -138,7 +138,7 @@ namespace niushuai233Kit
             this.other_button_keycode.Name = "other_button_keycode";
             this.other_button_keycode.Size = new System.Drawing.Size(125, 30);
             this.other_button_keycode.TabIndex = 0;
-            this.other_button_keycode.Text = "键盘按键码";
+            this.other_button_keycode.Text = "Ascii码查询";
             this.other_button_keycode.UseVisualStyleBackColor = true;
             this.other_button_keycode.Click += new System.EventHandler(this.other_button_keycode_Click);
             // 
