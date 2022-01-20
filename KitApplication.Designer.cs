@@ -57,6 +57,7 @@ namespace niushuai233Kit
             this.button2 = new System.Windows.Forms.Button();
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
+            this.datetime_tabPage = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -97,7 +98,7 @@ namespace niushuai233Kit
             this.other_tabPage.Margin = new System.Windows.Forms.Padding(4);
             this.other_tabPage.Name = "other_tabPage";
             this.other_tabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.other_tabPage.Size = new System.Drawing.Size(999, 515);
+            this.other_tabPage.Size = new System.Drawing.Size(1084, 580);
             this.other_tabPage.TabIndex = 4;
             this.other_tabPage.Text = "其他";
             this.other_tabPage.UseVisualStyleBackColor = true;
@@ -148,7 +149,7 @@ namespace niushuai233Kit
             this.number_conversion_tabPage.Margin = new System.Windows.Forms.Padding(4);
             this.number_conversion_tabPage.Name = "number_conversion_tabPage";
             this.number_conversion_tabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.number_conversion_tabPage.Size = new System.Drawing.Size(999, 515);
+            this.number_conversion_tabPage.Size = new System.Drawing.Size(1084, 580);
             this.number_conversion_tabPage.TabIndex = 3;
             this.number_conversion_tabPage.Text = "进制转换";
             this.number_conversion_tabPage.UseVisualStyleBackColor = true;
@@ -199,7 +200,7 @@ namespace niushuai233Kit
             this.encrypt_tabPage.Margin = new System.Windows.Forms.Padding(4);
             this.encrypt_tabPage.Name = "encrypt_tabPage";
             this.encrypt_tabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.encrypt_tabPage.Size = new System.Drawing.Size(999, 515);
+            this.encrypt_tabPage.Size = new System.Drawing.Size(1084, 580);
             this.encrypt_tabPage.TabIndex = 2;
             this.encrypt_tabPage.Text = "加密解密";
             this.encrypt_tabPage.UseVisualStyleBackColor = true;
@@ -250,7 +251,7 @@ namespace niushuai233Kit
             this.code_trans_tabPage.Margin = new System.Windows.Forms.Padding(4);
             this.code_trans_tabPage.Name = "code_trans_tabPage";
             this.code_trans_tabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.code_trans_tabPage.Size = new System.Drawing.Size(999, 515);
+            this.code_trans_tabPage.Size = new System.Drawing.Size(1084, 580);
             this.code_trans_tabPage.TabIndex = 1;
             this.code_trans_tabPage.Text = "编码转换";
             this.code_trans_tabPage.UseVisualStyleBackColor = true;
@@ -303,7 +304,7 @@ namespace niushuai233Kit
             this.string_tabPage.Padding = new System.Windows.Forms.Padding(4);
             this.string_tabPage.Size = new System.Drawing.Size(1084, 580);
             this.string_tabPage.TabIndex = 0;
-            this.string_tabPage.Text = "字符串";
+            this.string_tabPage.Text = " 文本 ";
             this.string_tabPage.UseVisualStyleBackColor = true;
             // 
             // string_groupBox_result
@@ -332,7 +333,7 @@ namespace niushuai233Kit
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 30);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "待续...";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // string_button_wordCount
@@ -351,6 +352,7 @@ namespace niushuai233Kit
             this.tabControl_main.Controls.Add(this.code_trans_tabPage);
             this.tabControl_main.Controls.Add(this.encrypt_tabPage);
             this.tabControl_main.Controls.Add(this.number_conversion_tabPage);
+            this.tabControl_main.Controls.Add(this.datetime_tabPage);
             this.tabControl_main.Controls.Add(this.other_tabPage);
             this.tabControl_main.Location = new System.Drawing.Point(16, 37);
             this.tabControl_main.Margin = new System.Windows.Forms.Padding(4);
@@ -358,6 +360,16 @@ namespace niushuai233Kit
             this.tabControl_main.SelectedIndex = 0;
             this.tabControl_main.Size = new System.Drawing.Size(1092, 610);
             this.tabControl_main.TabIndex = 0;
+            // 
+            // datetime_tabPage
+            // 
+            this.datetime_tabPage.Location = new System.Drawing.Point(4, 26);
+            this.datetime_tabPage.Name = "datetime_tabPage";
+            this.datetime_tabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.datetime_tabPage.Size = new System.Drawing.Size(1084, 580);
+            this.datetime_tabPage.TabIndex = 5;
+            this.datetime_tabPage.Text = "时间转换";
+            this.datetime_tabPage.UseVisualStyleBackColor = true;
             // 
             // KitApplication
             // 
@@ -420,6 +432,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TabPage datetime_tabPage;
     }
 }
 
