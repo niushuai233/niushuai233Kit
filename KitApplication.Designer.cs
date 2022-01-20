@@ -48,7 +48,7 @@ namespace niushuai233Kit
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(968, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(1036, 31);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -109,7 +109,7 @@ namespace niushuai233Kit
             this.tabPage_string.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage_string.Name = "tabPage_string";
             this.tabPage_string.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage_string.Size = new System.Drawing.Size(925, 398);
+            this.tabPage_string.Size = new System.Drawing.Size(999, 515);
             this.tabPage_string.TabIndex = 0;
             this.tabPage_string.Text = "字符串";
             this.tabPage_string.UseVisualStyleBackColor = true;
@@ -125,14 +125,14 @@ namespace niushuai233Kit
             this.tabControl_main.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl_main.Name = "tabControl_main";
             this.tabControl_main.SelectedIndex = 0;
-            this.tabControl_main.Size = new System.Drawing.Size(933, 428);
+            this.tabControl_main.Size = new System.Drawing.Size(1007, 545);
             this.tabControl_main.TabIndex = 0;
             // 
             // KitApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 480);
+            this.ClientSize = new System.Drawing.Size(1036, 595);
             this.Controls.Add(this.tabControl_main);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -140,6 +140,7 @@ namespace niushuai233Kit
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "KitApplication";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kit@niushuai233";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
