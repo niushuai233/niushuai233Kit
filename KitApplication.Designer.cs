@@ -58,6 +58,7 @@ namespace niushuai233Kit
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
+            this.encrypt_button_base64 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -268,6 +269,7 @@ namespace niushuai233Kit
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.encrypt_button_base64);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.encrypt_button_urlCodec);
             this.groupBox2.Location = new System.Drawing.Point(8, 8);
@@ -279,7 +281,7 @@ namespace niushuai233Kit
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(137, 38);
+            this.button1.Location = new System.Drawing.Point(6, 65);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 30);
             this.button1.TabIndex = 1;
@@ -288,11 +290,11 @@ namespace niushuai233Kit
             // 
             // encrypt_button_urlCodec
             // 
-            this.encrypt_button_urlCodec.Location = new System.Drawing.Point(6, 38);
+            this.encrypt_button_urlCodec.Location = new System.Drawing.Point(6, 30);
             this.encrypt_button_urlCodec.Name = "encrypt_button_urlCodec";
             this.encrypt_button_urlCodec.Size = new System.Drawing.Size(125, 30);
             this.encrypt_button_urlCodec.TabIndex = 0;
-            this.encrypt_button_urlCodec.Text = "Url编解码";
+            this.encrypt_button_urlCodec.Text = "Url";
             this.encrypt_button_urlCodec.UseVisualStyleBackColor = true;
             this.encrypt_button_urlCodec.Click += new System.EventHandler(this.encrypt_button_urlCodec_Click);
             // 
@@ -373,6 +375,16 @@ namespace niushuai233Kit
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
             // 
+            // encrypt_button_base64
+            // 
+            this.encrypt_button_base64.Location = new System.Drawing.Point(138, 30);
+            this.encrypt_button_base64.Name = "encrypt_button_base64";
+            this.encrypt_button_base64.Size = new System.Drawing.Size(125, 30);
+            this.encrypt_button_base64.TabIndex = 2;
+            this.encrypt_button_base64.Text = "Base64";
+            this.encrypt_button_base64.UseVisualStyleBackColor = true;
+            this.encrypt_button_base64.Click += new System.EventHandler(this.encrypt_button_base64_Click);
+            // 
             // KitApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -435,6 +447,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button other_button_keycode;
         private System.Windows.Forms.TabPage datetime_tabPage;
+        private System.Windows.Forms.Button encrypt_button_base64;
     }
 }
 

@@ -61,5 +61,11 @@ namespace niushuai233Kit
             UrlCodecForm form = new UrlCodecForm(this);
             FormReset(this.encrypt_groupBox_result, form);
         }
+
+        private void encrypt_button_base64_Click(object sender, EventArgs e)
+        {
+            Base64Form form = new Base64Form(this);
+            FormReset(this.encrypt_groupBox_result, form);
+        }
     }
 }
