@@ -16,7 +16,7 @@ namespace niushuai233Kit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new KitApplication());
+            Application.Run(new KitApplication());
         }
     }
 }
