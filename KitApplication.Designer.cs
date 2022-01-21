@@ -49,6 +49,7 @@ namespace niushuai233Kit
             this.code_trans_tabPage = new System.Windows.Forms.TabPage();
             this.encrypt_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.encrypted_button_escape = new System.Windows.Forms.Button();
             this.encrypt_button_base64 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.encrypt_button_urlCodec = new System.Windows.Forms.Button();
@@ -59,7 +60,6 @@ namespace niushuai233Kit
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
-            this.encrypted_button_escape = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -281,6 +281,17 @@ namespace niushuai233Kit
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "功能区";
             // 
+            // encrypted_button_escape
+            // 
+            this.encrypted_button_escape.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.encrypted_button_escape.Location = new System.Drawing.Point(6, 66);
+            this.encrypted_button_escape.Name = "encrypted_button_escape";
+            this.encrypted_button_escape.Size = new System.Drawing.Size(125, 30);
+            this.encrypted_button_escape.TabIndex = 3;
+            this.encrypted_button_escape.Text = "Escape/Unicode";
+            this.encrypted_button_escape.UseVisualStyleBackColor = true;
+            this.encrypted_button_escape.Click += new System.EventHandler(this.encrypted_button_escape_Click);
+            // 
             // encrypt_button_base64
             // 
             this.encrypt_button_base64.Location = new System.Drawing.Point(138, 30);
@@ -386,16 +397,6 @@ namespace niushuai233Kit
             this.datetime_tabPage.TabIndex = 5;
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
-            // 
-            // encrypted_button_escape
-            // 
-            this.encrypted_button_escape.Location = new System.Drawing.Point(6, 66);
-            this.encrypted_button_escape.Name = "encrypted_button_escape";
-            this.encrypted_button_escape.Size = new System.Drawing.Size(125, 30);
-            this.encrypted_button_escape.TabIndex = 3;
-            this.encrypted_button_escape.Text = "Escape";
-            this.encrypted_button_escape.UseVisualStyleBackColor = true;
-            this.encrypted_button_escape.Click += new System.EventHandler(this.encrypted_button_escape_Click);
             // 
             // KitApplication
             // 
