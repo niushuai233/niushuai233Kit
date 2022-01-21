@@ -67,5 +67,11 @@ namespace niushuai233Kit
             Base64Form form = new Base64Form(this);
             FormReset(this.encrypt_groupBox_result, form);
         }
+
+        private void encrypted_button_escape_Click(object sender, EventArgs e)
+        {
+            EscapeForm form = new EscapeForm(this);
+            FormReset(this.encrypt_groupBox_result, form);
+        }
     }
 }

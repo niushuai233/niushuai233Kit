@@ -49,6 +49,7 @@ namespace niushuai233Kit
             this.code_trans_tabPage = new System.Windows.Forms.TabPage();
             this.encrypt_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.encrypt_button_base64 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.encrypt_button_urlCodec = new System.Windows.Forms.Button();
             this.string_tabPage = new System.Windows.Forms.TabPage();
@@ -58,7 +59,7 @@ namespace niushuai233Kit
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
-            this.encrypt_button_base64 = new System.Windows.Forms.Button();
+            this.encrypted_button_escape = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -269,6 +270,7 @@ namespace niushuai233Kit
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.encrypted_button_escape);
             this.groupBox2.Controls.Add(this.encrypt_button_base64);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.encrypt_button_urlCodec);
@@ -279,9 +281,19 @@ namespace niushuai233Kit
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "功能区";
             // 
+            // encrypt_button_base64
+            // 
+            this.encrypt_button_base64.Location = new System.Drawing.Point(138, 30);
+            this.encrypt_button_base64.Name = "encrypt_button_base64";
+            this.encrypt_button_base64.Size = new System.Drawing.Size(125, 30);
+            this.encrypt_button_base64.TabIndex = 2;
+            this.encrypt_button_base64.Text = "Base64";
+            this.encrypt_button_base64.UseVisualStyleBackColor = true;
+            this.encrypt_button_base64.Click += new System.EventHandler(this.encrypt_button_base64_Click);
+            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 65);
+            this.button1.Location = new System.Drawing.Point(138, 66);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 30);
             this.button1.TabIndex = 1;
@@ -375,15 +387,15 @@ namespace niushuai233Kit
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
             // 
-            // encrypt_button_base64
+            // encrypted_button_escape
             // 
-            this.encrypt_button_base64.Location = new System.Drawing.Point(138, 30);
-            this.encrypt_button_base64.Name = "encrypt_button_base64";
-            this.encrypt_button_base64.Size = new System.Drawing.Size(125, 30);
-            this.encrypt_button_base64.TabIndex = 2;
-            this.encrypt_button_base64.Text = "Base64";
-            this.encrypt_button_base64.UseVisualStyleBackColor = true;
-            this.encrypt_button_base64.Click += new System.EventHandler(this.encrypt_button_base64_Click);
+            this.encrypted_button_escape.Location = new System.Drawing.Point(6, 66);
+            this.encrypted_button_escape.Name = "encrypted_button_escape";
+            this.encrypted_button_escape.Size = new System.Drawing.Size(125, 30);
+            this.encrypted_button_escape.TabIndex = 3;
+            this.encrypted_button_escape.Text = "Escape";
+            this.encrypted_button_escape.UseVisualStyleBackColor = true;
+            this.encrypted_button_escape.Click += new System.EventHandler(this.encrypted_button_escape_Click);
             // 
             // KitApplication
             // 
@@ -448,6 +460,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button other_button_keycode;
         private System.Windows.Forms.TabPage datetime_tabPage;
         private System.Windows.Forms.Button encrypt_button_base64;
+        private System.Windows.Forms.Button encrypted_button_escape;
     }
 }
 

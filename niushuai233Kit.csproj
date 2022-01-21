@@ -62,6 +62,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.JScript" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -91,6 +92,12 @@
     </Compile>
     <Compile Include="KitForm\Encrypt\Base64Form.Designer.cs">
       <DependentUpon>Base64Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitForm\Encrypt\EscapeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitForm\Encrypt\EscapeForm.Designer.cs">
+      <DependentUpon>EscapeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="KitForm\Encrypt\UrlCodecForm.cs">
       <SubType>Form</SubType>
@@ -125,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Encrypt\Base64Form.resx">
       <DependentUpon>Base64Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitForm\Encrypt\EscapeForm.resx">
+      <DependentUpon>EscapeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Encrypt\UrlCodecForm.resx">
       <DependentUpon>UrlCodecForm.cs</DependentUpon>
