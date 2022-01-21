@@ -40,6 +40,7 @@ namespace niushuai233Kit.Util
             return IsEnglish(_char.ToString());
         }
 
+
         /// <summary>
         /// 字符串是否为英文
         /// </summary>
@@ -69,6 +70,26 @@ namespace niushuai233Kit.Util
         public static bool IsSymbolOfEnglish(char _char)
         {
             return _char.ToString().Length == Encoding.Default.GetByteCount(_char.ToString());
+        }
+
+
+        /// <summary>
+        /// 字符串是否为空
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static bool IsEmpty(string text)
+        {
+            return !IsNotEmpty(text);
+        }
+        /// <summary>
+        /// 字符串是否不为空
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static bool IsNotEmpty(string text)
+        {
+            return null != text && text.Length > 0;
         }
     }
 }

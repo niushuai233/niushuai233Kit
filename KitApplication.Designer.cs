@@ -47,10 +47,10 @@ namespace niushuai233Kit
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.code_trans_tabPage = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.encrypt_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.encrypt_button_urlCodec = new System.Windows.Forms.Button();
             this.string_tabPage = new System.Windows.Forms.TabPage();
             this.string_groupBox_result = new System.Windows.Forms.GroupBox();
             this.string_groupbox_function = new System.Windows.Forms.GroupBox();
@@ -246,7 +246,7 @@ namespace niushuai233Kit
             // 
             // code_trans_tabPage
             // 
-            this.code_trans_tabPage.Controls.Add(this.groupBox1);
+            this.code_trans_tabPage.Controls.Add(this.encrypt_groupBox_result);
             this.code_trans_tabPage.Controls.Add(this.groupBox2);
             this.code_trans_tabPage.Location = new System.Drawing.Point(4, 26);
             this.code_trans_tabPage.Margin = new System.Windows.Forms.Padding(4);
@@ -257,22 +257,22 @@ namespace niushuai233Kit
             this.code_trans_tabPage.Text = "编码转换";
             this.code_trans_tabPage.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // encrypt_groupBox_result
             // 
-            this.groupBox1.Location = new System.Drawing.Point(286, 8);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 500);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "显示区";
+            this.encrypt_groupBox_result.Location = new System.Drawing.Point(286, 8);
+            this.encrypt_groupBox_result.Name = "encrypt_groupBox_result";
+            this.encrypt_groupBox_result.Size = new System.Drawing.Size(791, 565);
+            this.encrypt_groupBox_result.TabIndex = 3;
+            this.encrypt_groupBox_result.TabStop = false;
+            this.encrypt_groupBox_result.Text = "显示区";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.encrypt_button_urlCodec);
             this.groupBox2.Location = new System.Drawing.Point(8, 8);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(270, 500);
+            this.groupBox2.Size = new System.Drawing.Size(270, 565);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "功能区";
@@ -283,17 +283,18 @@ namespace niushuai233Kit
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 30);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "待续...";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // encrypt_button_urlCodec
             // 
-            this.button3.Location = new System.Drawing.Point(6, 38);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 30);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "字数统计";
-            this.button3.UseVisualStyleBackColor = true;
+            this.encrypt_button_urlCodec.Location = new System.Drawing.Point(6, 38);
+            this.encrypt_button_urlCodec.Name = "encrypt_button_urlCodec";
+            this.encrypt_button_urlCodec.Size = new System.Drawing.Size(125, 30);
+            this.encrypt_button_urlCodec.TabIndex = 0;
+            this.encrypt_button_urlCodec.Text = "Url编解码";
+            this.encrypt_button_urlCodec.UseVisualStyleBackColor = true;
+            this.encrypt_button_urlCodec.Click += new System.EventHandler(this.encrypt_button_urlCodec_Click);
             // 
             // string_tabPage
             // 
@@ -417,10 +418,10 @@ namespace niushuai233Kit
         private System.Windows.Forms.GroupBox string_groupBox_result;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button string_button_wordCount;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox encrypt_groupBox_result;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button encrypt_button_urlCodec;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button4;

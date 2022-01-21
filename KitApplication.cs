@@ -1,4 +1,5 @@
 ﻿
+using niushuai233Kit.KitForm.Encrypt;
 using niushuai233Kit.KitForm.Other;
 using niushuai233Kit.KitForm.Strings;
 using System;
@@ -21,6 +22,24 @@ namespace niushuai233Kit
         }
 
         /// <summary>
+        /// 设置Form的显示内容
+        /// </summary>
+        /// <param name="groupBox"></param>
+        /// <param name="form"></param>
+        private void FormReset(GroupBox groupBox, Form form)
+        {
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            // 清空面板
+            groupBox.Controls.Clear();
+            // 添加新的面板
+            groupBox.Controls.Add(form);
+
+            form.Show();
+        }
+
+        /// <summary>
         /// 字数统计 form表单
         /// </summary>
         /// <param name="sender">触发</param>
@@ -37,22 +56,10 @@ namespace niushuai233Kit
             FormReset(this.other_groupBox_result, form);
         }
 
-        /// <summary>
-        /// 设置Form的显示内容
-        /// </summary>
-        /// <param name="groupBox"></param>
-        /// <param name="form"></param>
-        private void FormReset(GroupBox groupBox, Form form)
+        private void encrypt_button_urlCodec_Click(object sender, EventArgs e)
         {
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
-            // 清空面板
-            groupBox.Controls.Clear();
-            // 添加新的面板
-            groupBox.Controls.Add(form);
-
-            form.Show();
+            UrlCodecForm form = new UrlCodecForm(this);
+            FormReset(this.encrypt_groupBox_result, form);
         }
     }
 }
