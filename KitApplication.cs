@@ -73,5 +73,16 @@ namespace niushuai233Kit
             EscapeForm form = new EscapeForm(this);
             FormReset(this.encrypt_groupBox_result, form);
         }
+
+        /// <summary>
+        /// 大小写转换点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void string_button_wordConvert_Click(object sender, EventArgs e)
+        {
+            WordConvertForm form = new WordConvertForm(this);
+            FormReset(this.string_groupBox_result, form);
+        }
     }
 }

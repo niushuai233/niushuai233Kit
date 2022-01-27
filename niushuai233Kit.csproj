@@ -111,6 +111,12 @@
     <Compile Include="KitForm\Other\AsciiForm.Designer.cs">
       <DependentUpon>AsciiForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitForm\Strings\WordConvertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitForm\Strings\WordConvertForm.Designer.cs">
+      <DependentUpon>WordConvertForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KitForm\Strings\WordCountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Other\AsciiForm.resx">
       <DependentUpon>AsciiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitForm\Strings\WordConvertForm.resx">
+      <DependentUpon>WordConvertForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Strings\WordCountForm.resx">
       <DependentUpon>WordCountForm.cs</DependentUpon>

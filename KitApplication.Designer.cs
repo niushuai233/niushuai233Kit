@@ -60,6 +60,7 @@ namespace niushuai233Kit
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
+            this.string_button_wordConvert = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -345,6 +346,7 @@ namespace niushuai233Kit
             // 
             // string_groupbox_function
             // 
+            this.string_groupbox_function.Controls.Add(this.string_button_wordConvert);
             this.string_groupbox_function.Controls.Add(this.button2);
             this.string_groupbox_function.Controls.Add(this.string_button_wordCount);
             this.string_groupbox_function.Location = new System.Drawing.Point(8, 8);
@@ -356,7 +358,7 @@ namespace niushuai233Kit
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(137, 38);
+            this.button2.Location = new System.Drawing.Point(138, 66);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 30);
             this.button2.TabIndex = 1;
@@ -365,7 +367,7 @@ namespace niushuai233Kit
             // 
             // string_button_wordCount
             // 
-            this.string_button_wordCount.Location = new System.Drawing.Point(6, 38);
+            this.string_button_wordCount.Location = new System.Drawing.Point(6, 30);
             this.string_button_wordCount.Name = "string_button_wordCount";
             this.string_button_wordCount.Size = new System.Drawing.Size(125, 30);
             this.string_button_wordCount.TabIndex = 0;
@@ -397,6 +399,16 @@ namespace niushuai233Kit
             this.datetime_tabPage.TabIndex = 5;
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
+            // 
+            // string_button_wordConvert
+            // 
+            this.string_button_wordConvert.Location = new System.Drawing.Point(138, 30);
+            this.string_button_wordConvert.Name = "string_button_wordConvert";
+            this.string_button_wordConvert.Size = new System.Drawing.Size(125, 30);
+            this.string_button_wordConvert.TabIndex = 2;
+            this.string_button_wordConvert.Text = "大小写转换";
+            this.string_button_wordConvert.UseVisualStyleBackColor = true;
+            this.string_button_wordConvert.Click += new System.EventHandler(this.string_button_wordConvert_Click);
             // 
             // KitApplication
             // 
@@ -462,6 +474,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.TabPage datetime_tabPage;
         private System.Windows.Forms.Button encrypt_button_base64;
         private System.Windows.Forms.Button encrypted_button_escape;
+        private System.Windows.Forms.Button string_button_wordConvert;
     }
 }
 
