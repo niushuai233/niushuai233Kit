@@ -84,5 +84,11 @@ namespace niushuai233Kit
             WordConvertForm form = new WordConvertForm(this);
             FormReset(this.string_groupBox_result, form);
         }
+
+        private void string_button_textNumber_Click(object sender, EventArgs e)
+        {
+            TextNumberForm form = new TextNumberForm(this);
+            FormReset(this.string_groupBox_result, form);
+        }
     }
 }

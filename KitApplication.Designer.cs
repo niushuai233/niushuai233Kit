@@ -56,11 +56,12 @@ namespace niushuai233Kit
             this.string_tabPage = new System.Windows.Forms.TabPage();
             this.string_groupBox_result = new System.Windows.Forms.GroupBox();
             this.string_groupbox_function = new System.Windows.Forms.GroupBox();
+            this.string_button_textNumber = new System.Windows.Forms.Button();
+            this.string_button_wordConvert = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
-            this.string_button_wordConvert = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -346,6 +347,7 @@ namespace niushuai233Kit
             // 
             // string_groupbox_function
             // 
+            this.string_groupbox_function.Controls.Add(this.string_button_textNumber);
             this.string_groupbox_function.Controls.Add(this.string_button_wordConvert);
             this.string_groupbox_function.Controls.Add(this.button2);
             this.string_groupbox_function.Controls.Add(this.string_button_wordCount);
@@ -355,6 +357,26 @@ namespace niushuai233Kit
             this.string_groupbox_function.TabIndex = 0;
             this.string_groupbox_function.TabStop = false;
             this.string_groupbox_function.Text = "功能区";
+            // 
+            // string_button_textNumber
+            // 
+            this.string_button_textNumber.Location = new System.Drawing.Point(6, 66);
+            this.string_button_textNumber.Name = "string_button_textNumber";
+            this.string_button_textNumber.Size = new System.Drawing.Size(125, 30);
+            this.string_button_textNumber.TabIndex = 3;
+            this.string_button_textNumber.Text = "增加序号";
+            this.string_button_textNumber.UseVisualStyleBackColor = true;
+            this.string_button_textNumber.Click += new System.EventHandler(this.string_button_textNumber_Click);
+            // 
+            // string_button_wordConvert
+            // 
+            this.string_button_wordConvert.Location = new System.Drawing.Point(138, 30);
+            this.string_button_wordConvert.Name = "string_button_wordConvert";
+            this.string_button_wordConvert.Size = new System.Drawing.Size(125, 30);
+            this.string_button_wordConvert.TabIndex = 2;
+            this.string_button_wordConvert.Text = "大小写转换";
+            this.string_button_wordConvert.UseVisualStyleBackColor = true;
+            this.string_button_wordConvert.Click += new System.EventHandler(this.string_button_wordConvert_Click);
             // 
             // button2
             // 
@@ -399,16 +421,6 @@ namespace niushuai233Kit
             this.datetime_tabPage.TabIndex = 5;
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
-            // 
-            // string_button_wordConvert
-            // 
-            this.string_button_wordConvert.Location = new System.Drawing.Point(138, 30);
-            this.string_button_wordConvert.Name = "string_button_wordConvert";
-            this.string_button_wordConvert.Size = new System.Drawing.Size(125, 30);
-            this.string_button_wordConvert.TabIndex = 2;
-            this.string_button_wordConvert.Text = "大小写转换";
-            this.string_button_wordConvert.UseVisualStyleBackColor = true;
-            this.string_button_wordConvert.Click += new System.EventHandler(this.string_button_wordConvert_Click);
             // 
             // KitApplication
             // 
@@ -475,6 +487,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button encrypt_button_base64;
         private System.Windows.Forms.Button encrypted_button_escape;
         private System.Windows.Forms.Button string_button_wordConvert;
+        private System.Windows.Forms.Button string_button_textNumber;
     }
 }
 
