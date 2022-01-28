@@ -46,13 +46,13 @@ namespace niushuai233Kit
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.code_trans_tabPage = new System.Windows.Forms.TabPage();
-            this.encrypt_groupBox_result = new System.Windows.Forms.GroupBox();
+            this.codec_trans_tabPage = new System.Windows.Forms.TabPage();
+            this.codec_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.encrypted_button_escape = new System.Windows.Forms.Button();
-            this.encrypt_button_base64 = new System.Windows.Forms.Button();
+            this.codec_button_escape = new System.Windows.Forms.Button();
+            this.codec_button_base64 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.encrypt_button_urlCodec = new System.Windows.Forms.Button();
+            this.codec_button_urlCodec = new System.Windows.Forms.Button();
             this.string_tabPage = new System.Windows.Forms.TabPage();
             this.string_groupBox_result = new System.Windows.Forms.GroupBox();
             this.string_groupbox_function = new System.Windows.Forms.GroupBox();
@@ -69,7 +69,7 @@ namespace niushuai233Kit
             this.groupBox6.SuspendLayout();
             this.encrypt_tabPage.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.code_trans_tabPage.SuspendLayout();
+            this.codec_trans_tabPage.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.string_tabPage.SuspendLayout();
             this.string_groupbox_function.SuspendLayout();
@@ -248,34 +248,34 @@ namespace niushuai233Kit
             this.button5.Text = "字数统计";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // code_trans_tabPage
+            // codec_trans_tabPage
             // 
-            this.code_trans_tabPage.Controls.Add(this.encrypt_groupBox_result);
-            this.code_trans_tabPage.Controls.Add(this.groupBox2);
-            this.code_trans_tabPage.Location = new System.Drawing.Point(4, 26);
-            this.code_trans_tabPage.Margin = new System.Windows.Forms.Padding(4);
-            this.code_trans_tabPage.Name = "code_trans_tabPage";
-            this.code_trans_tabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.code_trans_tabPage.Size = new System.Drawing.Size(1084, 580);
-            this.code_trans_tabPage.TabIndex = 1;
-            this.code_trans_tabPage.Text = "编码转换";
-            this.code_trans_tabPage.UseVisualStyleBackColor = true;
+            this.codec_trans_tabPage.Controls.Add(this.codec_groupBox_result);
+            this.codec_trans_tabPage.Controls.Add(this.groupBox2);
+            this.codec_trans_tabPage.Location = new System.Drawing.Point(4, 26);
+            this.codec_trans_tabPage.Margin = new System.Windows.Forms.Padding(4);
+            this.codec_trans_tabPage.Name = "codec_trans_tabPage";
+            this.codec_trans_tabPage.Padding = new System.Windows.Forms.Padding(4);
+            this.codec_trans_tabPage.Size = new System.Drawing.Size(1084, 580);
+            this.codec_trans_tabPage.TabIndex = 1;
+            this.codec_trans_tabPage.Text = "编码转换";
+            this.codec_trans_tabPage.UseVisualStyleBackColor = true;
             // 
-            // encrypt_groupBox_result
+            // codec_groupBox_result
             // 
-            this.encrypt_groupBox_result.Location = new System.Drawing.Point(286, 8);
-            this.encrypt_groupBox_result.Name = "encrypt_groupBox_result";
-            this.encrypt_groupBox_result.Size = new System.Drawing.Size(791, 565);
-            this.encrypt_groupBox_result.TabIndex = 3;
-            this.encrypt_groupBox_result.TabStop = false;
-            this.encrypt_groupBox_result.Text = "显示区";
+            this.codec_groupBox_result.Location = new System.Drawing.Point(286, 8);
+            this.codec_groupBox_result.Name = "codec_groupBox_result";
+            this.codec_groupBox_result.Size = new System.Drawing.Size(791, 565);
+            this.codec_groupBox_result.TabIndex = 3;
+            this.codec_groupBox_result.TabStop = false;
+            this.codec_groupBox_result.Text = "显示区";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.encrypted_button_escape);
-            this.groupBox2.Controls.Add(this.encrypt_button_base64);
+            this.groupBox2.Controls.Add(this.codec_button_escape);
+            this.groupBox2.Controls.Add(this.codec_button_base64);
             this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.encrypt_button_urlCodec);
+            this.groupBox2.Controls.Add(this.codec_button_urlCodec);
             this.groupBox2.Location = new System.Drawing.Point(8, 8);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(270, 565);
@@ -283,26 +283,26 @@ namespace niushuai233Kit
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "功能区";
             // 
-            // encrypted_button_escape
+            // codec_button_escape
             // 
-            this.encrypted_button_escape.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.encrypted_button_escape.Location = new System.Drawing.Point(6, 66);
-            this.encrypted_button_escape.Name = "encrypted_button_escape";
-            this.encrypted_button_escape.Size = new System.Drawing.Size(125, 30);
-            this.encrypted_button_escape.TabIndex = 3;
-            this.encrypted_button_escape.Text = "Escape/Unicode";
-            this.encrypted_button_escape.UseVisualStyleBackColor = true;
-            this.encrypted_button_escape.Click += new System.EventHandler(this.encrypted_button_escape_Click);
+            this.codec_button_escape.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.codec_button_escape.Location = new System.Drawing.Point(6, 66);
+            this.codec_button_escape.Name = "codec_button_escape";
+            this.codec_button_escape.Size = new System.Drawing.Size(125, 30);
+            this.codec_button_escape.TabIndex = 3;
+            this.codec_button_escape.Text = "Escape/Unicode";
+            this.codec_button_escape.UseVisualStyleBackColor = true;
+            this.codec_button_escape.Click += new System.EventHandler(this.encrypted_button_escape_Click);
             // 
-            // encrypt_button_base64
+            // codec_button_base64
             // 
-            this.encrypt_button_base64.Location = new System.Drawing.Point(138, 30);
-            this.encrypt_button_base64.Name = "encrypt_button_base64";
-            this.encrypt_button_base64.Size = new System.Drawing.Size(125, 30);
-            this.encrypt_button_base64.TabIndex = 2;
-            this.encrypt_button_base64.Text = "Base64";
-            this.encrypt_button_base64.UseVisualStyleBackColor = true;
-            this.encrypt_button_base64.Click += new System.EventHandler(this.encrypt_button_base64_Click);
+            this.codec_button_base64.Location = new System.Drawing.Point(138, 30);
+            this.codec_button_base64.Name = "codec_button_base64";
+            this.codec_button_base64.Size = new System.Drawing.Size(125, 30);
+            this.codec_button_base64.TabIndex = 2;
+            this.codec_button_base64.Text = "Base64";
+            this.codec_button_base64.UseVisualStyleBackColor = true;
+            this.codec_button_base64.Click += new System.EventHandler(this.encrypt_button_base64_Click);
             // 
             // button1
             // 
@@ -313,15 +313,15 @@ namespace niushuai233Kit
             this.button1.Text = "待续...";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // encrypt_button_urlCodec
+            // codec_button_urlCodec
             // 
-            this.encrypt_button_urlCodec.Location = new System.Drawing.Point(6, 30);
-            this.encrypt_button_urlCodec.Name = "encrypt_button_urlCodec";
-            this.encrypt_button_urlCodec.Size = new System.Drawing.Size(125, 30);
-            this.encrypt_button_urlCodec.TabIndex = 0;
-            this.encrypt_button_urlCodec.Text = "Url";
-            this.encrypt_button_urlCodec.UseVisualStyleBackColor = true;
-            this.encrypt_button_urlCodec.Click += new System.EventHandler(this.encrypt_button_urlCodec_Click);
+            this.codec_button_urlCodec.Location = new System.Drawing.Point(6, 30);
+            this.codec_button_urlCodec.Name = "codec_button_urlCodec";
+            this.codec_button_urlCodec.Size = new System.Drawing.Size(125, 30);
+            this.codec_button_urlCodec.TabIndex = 0;
+            this.codec_button_urlCodec.Text = "Url";
+            this.codec_button_urlCodec.UseVisualStyleBackColor = true;
+            this.codec_button_urlCodec.Click += new System.EventHandler(this.encrypt_button_urlCodec_Click);
             // 
             // string_tabPage
             // 
@@ -400,7 +400,7 @@ namespace niushuai233Kit
             // tabControl_main
             // 
             this.tabControl_main.Controls.Add(this.string_tabPage);
-            this.tabControl_main.Controls.Add(this.code_trans_tabPage);
+            this.tabControl_main.Controls.Add(this.codec_trans_tabPage);
             this.tabControl_main.Controls.Add(this.encrypt_tabPage);
             this.tabControl_main.Controls.Add(this.number_conversion_tabPage);
             this.tabControl_main.Controls.Add(this.datetime_tabPage);
@@ -444,7 +444,7 @@ namespace niushuai233Kit
             this.groupBox6.ResumeLayout(false);
             this.encrypt_tabPage.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.code_trans_tabPage.ResumeLayout(false);
+            this.codec_trans_tabPage.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.string_tabPage.ResumeLayout(false);
             this.string_groupbox_function.ResumeLayout(false);
@@ -460,17 +460,17 @@ namespace niushuai233Kit
         private System.Windows.Forms.TabPage other_tabPage;
         private System.Windows.Forms.TabPage number_conversion_tabPage;
         private System.Windows.Forms.TabPage encrypt_tabPage;
-        private System.Windows.Forms.TabPage code_trans_tabPage;
+        private System.Windows.Forms.TabPage codec_trans_tabPage;
         private System.Windows.Forms.TabPage string_tabPage;
         private System.Windows.Forms.TabControl tabControl_main;
         private System.Windows.Forms.GroupBox string_groupbox_function;
         private System.Windows.Forms.GroupBox string_groupBox_result;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button string_button_wordCount;
-        private System.Windows.Forms.GroupBox encrypt_groupBox_result;
+        private System.Windows.Forms.GroupBox codec_groupBox_result;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button encrypt_button_urlCodec;
+        private System.Windows.Forms.Button codec_button_urlCodec;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button4;
@@ -484,8 +484,8 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button other_button_keycode;
         private System.Windows.Forms.TabPage datetime_tabPage;
-        private System.Windows.Forms.Button encrypt_button_base64;
-        private System.Windows.Forms.Button encrypted_button_escape;
+        private System.Windows.Forms.Button codec_button_base64;
+        private System.Windows.Forms.Button codec_button_escape;
         private System.Windows.Forms.Button string_button_wordConvert;
         private System.Windows.Forms.Button string_button_textNumber;
     }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
 
-namespace niushuai233Kit.KitForm.Encrypt
+namespace niushuai233Kit.KitForm.Codec
 {
     public partial class Base64Form : Form
     {

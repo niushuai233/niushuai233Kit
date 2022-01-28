@@ -1,5 +1,5 @@
 ﻿
-namespace niushuai233Kit.KitForm.Encrypt
+namespace niushuai233Kit.KitForm.Codec
 {
     partial class UrlCodecForm
     {

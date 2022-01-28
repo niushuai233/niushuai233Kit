@@ -1,5 +1,5 @@
 ﻿
-using niushuai233Kit.KitForm.Encrypt;
+using niushuai233Kit.KitForm.Codec;
 using niushuai233Kit.KitForm.Other;
 using niushuai233Kit.KitForm.Strings;
 using System;
@@ -59,19 +59,19 @@ namespace niushuai233Kit
         private void encrypt_button_urlCodec_Click(object sender, EventArgs e)
         {
             UrlCodecForm form = new UrlCodecForm(this);
-            FormReset(this.encrypt_groupBox_result, form);
+            FormReset(this.codec_groupBox_result, form);
         }
 
         private void encrypt_button_base64_Click(object sender, EventArgs e)
         {
             Base64Form form = new Base64Form(this);
-            FormReset(this.encrypt_groupBox_result, form);
+            FormReset(this.codec_groupBox_result, form);
         }
 
         private void encrypted_button_escape_Click(object sender, EventArgs e)
         {
             EscapeForm form = new EscapeForm(this);
-            FormReset(this.encrypt_groupBox_result, form);
+            FormReset(this.codec_groupBox_result, form);
         }
 
         /// <summary>

@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace niushuai233Kit.KitForm.Encrypt
+namespace niushuai233Kit.KitForm.Codec
 {
     public partial class UrlCodecForm : Form
     {
