@@ -1,5 +1,6 @@
 ﻿
 using niushuai233Kit.KitForm.Codec;
+using niushuai233Kit.KitForm.Encrypt;
 using niushuai233Kit.KitForm.Other;
 using niushuai233Kit.KitForm.Strings;
 using System;
@@ -89,6 +90,12 @@ namespace niushuai233Kit
         {
             TextNumberForm form = new TextNumberForm(this);
             FormReset(this.string_groupBox_result, form);
+        }
+
+        private void encrypt_button_md5_Click(object sender, EventArgs e)
+        {
+            MD5Form form = new MD5Form(this);
+            FormReset(this.encrypt_groupBox_result, form);
         }
     }
 }

@@ -42,10 +42,10 @@ namespace niushuai233Kit
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.encrypt_tabPage = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.encrypt_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.encrypt_button_md5 = new System.Windows.Forms.Button();
             this.codec_trans_tabPage = new System.Windows.Forms.TabPage();
             this.codec_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -199,7 +199,7 @@ namespace niushuai233Kit
             // 
             // encrypt_tabPage
             // 
-            this.encrypt_tabPage.Controls.Add(this.groupBox3);
+            this.encrypt_tabPage.Controls.Add(this.encrypt_groupBox_result);
             this.encrypt_tabPage.Controls.Add(this.groupBox4);
             this.encrypt_tabPage.Location = new System.Drawing.Point(4, 26);
             this.encrypt_tabPage.Margin = new System.Windows.Forms.Padding(4);
@@ -210,22 +210,22 @@ namespace niushuai233Kit
             this.encrypt_tabPage.Text = "加密解密";
             this.encrypt_tabPage.UseVisualStyleBackColor = true;
             // 
-            // groupBox3
+            // encrypt_groupBox_result
             // 
-            this.groupBox3.Location = new System.Drawing.Point(286, 8);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(700, 500);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "显示区";
+            this.encrypt_groupBox_result.Location = new System.Drawing.Point(286, 8);
+            this.encrypt_groupBox_result.Name = "encrypt_groupBox_result";
+            this.encrypt_groupBox_result.Size = new System.Drawing.Size(791, 565);
+            this.encrypt_groupBox_result.TabIndex = 3;
+            this.encrypt_groupBox_result.TabStop = false;
+            this.encrypt_groupBox_result.Text = "显示区";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Controls.Add(this.button5);
+            this.groupBox4.Controls.Add(this.encrypt_button_md5);
             this.groupBox4.Location = new System.Drawing.Point(8, 8);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(270, 500);
+            this.groupBox4.Size = new System.Drawing.Size(270, 565);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "功能区";
@@ -239,14 +239,15 @@ namespace niushuai233Kit
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // encrypt_button_md5
             // 
-            this.button5.Location = new System.Drawing.Point(6, 38);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 30);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "字数统计";
-            this.button5.UseVisualStyleBackColor = true;
+            this.encrypt_button_md5.Location = new System.Drawing.Point(6, 38);
+            this.encrypt_button_md5.Name = "encrypt_button_md5";
+            this.encrypt_button_md5.Size = new System.Drawing.Size(125, 30);
+            this.encrypt_button_md5.TabIndex = 0;
+            this.encrypt_button_md5.Text = "MD5";
+            this.encrypt_button_md5.UseVisualStyleBackColor = true;
+            this.encrypt_button_md5.Click += new System.EventHandler(this.encrypt_button_md5_Click);
             // 
             // codec_trans_tabPage
             // 
@@ -471,10 +472,10 @@ namespace niushuai233Kit
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button codec_button_urlCodec;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox encrypt_groupBox_result;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button encrypt_button_md5;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button button6;

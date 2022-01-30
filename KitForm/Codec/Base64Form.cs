@@ -30,7 +30,7 @@ namespace niushuai233Kit.KitForm.Codec
             string text = this.base64_textBox_decoded.Text;
             if (StringUtil.IsNotEmpty(text))
             {
-                this.base64_textBox_encoded.Text = EncrypyUtil.Base64Encode(text);
+                this.base64_textBox_encoded.Text = CodecUtil.Base64Encode(text);
             }
         }
 
@@ -44,7 +44,7 @@ namespace niushuai233Kit.KitForm.Codec
             string text = this.base64_textBox_encoded.Text;
             if (StringUtil.IsNotEmpty(text))
             {
-                this.base64_textBox_decoded.Text = EncrypyUtil.Base64Decode(text);
+                this.base64_textBox_decoded.Text = CodecUtil.Base64Decode(text);
             }
         }
     }

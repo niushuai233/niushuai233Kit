@@ -4,7 +4,7 @@ using System.Web;
 
 namespace niushuai233Kit.Util
 {
-    public class EncrypyUtil
+    public class CodecUtil
     {
 
         /// <summary>

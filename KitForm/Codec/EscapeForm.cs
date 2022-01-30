@@ -27,7 +27,7 @@ namespace niushuai233Kit.KitForm.Codec
             string text = this.escape_textBox_decoded.Text;
             if (StringUtil.IsNotEmpty(text))
             {
-                this.escape_textBox_encoded.Text = EncrypyUtil.EscapeEncode(text);
+                this.escape_textBox_encoded.Text = CodecUtil.EscapeEncode(text);
             }
         }
 
@@ -41,7 +41,7 @@ namespace niushuai233Kit.KitForm.Codec
             string text = this.escape_textBox_encoded.Text;
             if (StringUtil.IsNotEmpty(text))
             {
-                this.escape_textBox_decoded.Text = EncrypyUtil.EscapeDecode(text);
+                this.escape_textBox_decoded.Text = CodecUtil.EscapeDecode(text);
             }
         }
     }

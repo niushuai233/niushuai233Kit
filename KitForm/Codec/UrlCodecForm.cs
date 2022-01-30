@@ -21,7 +21,7 @@ namespace niushuai233Kit.KitForm.Codec
             string text = this.encrypt_textBox_decoded.Text;
             if (StringUtil.IsNotEmpty(text))
             {
-                this.encrypt_textBox_encoded.Text = EncrypyUtil.UrlEncode(text);
+                this.encrypt_textBox_encoded.Text = CodecUtil.UrlEncode(text);
             }
         }
 
@@ -35,7 +35,7 @@ namespace niushuai233Kit.KitForm.Codec
             string text = this.encrypt_textBox_encoded.Text;
             if (StringUtil.IsNotEmpty(text))
             {
-                this.encrypt_textBox_decoded.Text = EncrypyUtil.UrlDecode(text);
+                this.encrypt_textBox_decoded.Text = CodecUtil.UrlDecode(text);
             }
         }
     }
