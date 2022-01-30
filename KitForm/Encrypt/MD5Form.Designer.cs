@@ -40,8 +40,13 @@ namespace niushuai233Kit.KitForm.Encrypt
             this.button_encrypt = new System.Windows.Forms.Button();
             this.button_clear = new System.Windows.Forms.Button();
             this.checkBox_autorun = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioButton_salt_after = new System.Windows.Forms.RadioButton();
+            this.radioButton_salt_before = new System.Windows.Forms.RadioButton();
+            this.textBox_salt = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox_source
@@ -65,7 +70,7 @@ namespace niushuai233Kit.KitForm.Encrypt
             // 
             this.groupBox1.Controls.Add(this.radioButton_style_upper);
             this.groupBox1.Controls.Add(this.radioButton_style_lower);
-            this.groupBox1.Location = new System.Drawing.Point(164, 219);
+            this.groupBox1.Location = new System.Drawing.Point(172, 219);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(133, 89);
             this.groupBox1.TabIndex = 2;
@@ -133,7 +138,7 @@ namespace niushuai233Kit.KitForm.Encrypt
             // 
             // button_encrypt
             // 
-            this.button_encrypt.Location = new System.Drawing.Point(323, 231);
+            this.button_encrypt.Location = new System.Drawing.Point(664, 219);
             this.button_encrypt.Name = "button_encrypt";
             this.button_encrypt.Size = new System.Drawing.Size(75, 23);
             this.button_encrypt.TabIndex = 4;
@@ -143,7 +148,7 @@ namespace niushuai233Kit.KitForm.Encrypt
             // 
             // button_clear
             // 
-            this.button_clear.Location = new System.Drawing.Point(323, 277);
+            this.button_clear.Location = new System.Drawing.Point(664, 253);
             this.button_clear.Name = "button_clear";
             this.button_clear.Size = new System.Drawing.Size(75, 23);
             this.button_clear.TabIndex = 5;
@@ -156,18 +161,62 @@ namespace niushuai233Kit.KitForm.Encrypt
             this.checkBox_autorun.AutoSize = true;
             this.checkBox_autorun.Checked = true;
             this.checkBox_autorun.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_autorun.Location = new System.Drawing.Point(664, 288);
+            this.checkBox_autorun.Location = new System.Drawing.Point(664, 287);
             this.checkBox_autorun.Name = "checkBox_autorun";
             this.checkBox_autorun.Size = new System.Drawing.Size(91, 20);
             this.checkBox_autorun.TabIndex = 6;
             this.checkBox_autorun.Text = "自动操作";
             this.checkBox_autorun.UseVisualStyleBackColor = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox_salt);
+            this.groupBox3.Controls.Add(this.radioButton_salt_after);
+            this.groupBox3.Controls.Add(this.radioButton_salt_before);
+            this.groupBox3.Location = new System.Drawing.Point(332, 219);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(179, 89);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "盐值";
+            // 
+            // radioButton_salt_after
+            // 
+            this.radioButton_salt_after.AutoSize = true;
+            this.radioButton_salt_after.Location = new System.Drawing.Point(89, 58);
+            this.radioButton_salt_after.Name = "radioButton_salt_after";
+            this.radioButton_salt_after.Size = new System.Drawing.Size(90, 20);
+            this.radioButton_salt_after.TabIndex = 1;
+            this.radioButton_salt_after.Text = "盐值在后";
+            this.radioButton_salt_after.UseVisualStyleBackColor = true;
+            this.radioButton_salt_after.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // radioButton_salt_before
+            // 
+            this.radioButton_salt_before.AutoSize = true;
+            this.radioButton_salt_before.Checked = true;
+            this.radioButton_salt_before.Location = new System.Drawing.Point(4, 58);
+            this.radioButton_salt_before.Name = "radioButton_salt_before";
+            this.radioButton_salt_before.Size = new System.Drawing.Size(90, 20);
+            this.radioButton_salt_before.TabIndex = 0;
+            this.radioButton_salt_before.TabStop = true;
+            this.radioButton_salt_before.Text = "盐值在前";
+            this.radioButton_salt_before.UseVisualStyleBackColor = true;
+            this.radioButton_salt_before.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
+            // 
+            // textBox_salt
+            // 
+            this.textBox_salt.Location = new System.Drawing.Point(6, 25);
+            this.textBox_salt.Name = "textBox_salt";
+            this.textBox_salt.Size = new System.Drawing.Size(167, 26);
+            this.textBox_salt.TabIndex = 2;
+            // 
             // MD5Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 526);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.checkBox_autorun);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.button_encrypt);
@@ -183,6 +232,8 @@ namespace niushuai233Kit.KitForm.Encrypt
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +252,9 @@ namespace niushuai233Kit.KitForm.Encrypt
         private System.Windows.Forms.RadioButton radioButton_bit_32;
         private System.Windows.Forms.RadioButton radioButton_bit_16;
         private System.Windows.Forms.CheckBox checkBox_autorun;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton radioButton_salt_after;
+        private System.Windows.Forms.RadioButton radioButton_salt_before;
+        private System.Windows.Forms.TextBox textBox_salt;
     }
 }

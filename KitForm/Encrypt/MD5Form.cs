@@ -26,8 +26,21 @@ namespace niushuai233Kit.KitForm.Encrypt
         private void run()
         {
             string source = this.textBox_source.Text;
+            string salt = this.textBox_salt.Text;
+            string value = source;
+            if (StringUtil.IsNotEmpty(salt))
+            {
+                if (this.radioButton_salt_before.Checked)
+                {
+                    value = salt + source;
+                }
+                if (this.radioButton_salt_after.Checked)
+                {
+                    value = source + salt;
+                }
+            }
 
-            this.textBox_result.Text = EncryptUtil.MD5(source, GetBit(), GetStyle());
+            this.textBox_result.Text = EncryptUtil.MD5(value, GetBit(), GetStyle());
         }
 
         private bool GetStyle()
