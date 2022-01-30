@@ -62,6 +62,7 @@ namespace niushuai233Kit
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
+            this.encrypt_button_sha = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -221,6 +222,7 @@ namespace niushuai233Kit
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.encrypt_button_sha);
             this.groupBox4.Controls.Add(this.button4);
             this.groupBox4.Controls.Add(this.encrypt_button_md5);
             this.groupBox4.Location = new System.Drawing.Point(8, 8);
@@ -232,16 +234,16 @@ namespace niushuai233Kit
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(137, 38);
+            this.button4.Location = new System.Drawing.Point(6, 66);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(125, 30);
             this.button4.TabIndex = 1;
-            this.button4.Text = "button4";
+            this.button4.Text = "待续...";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // encrypt_button_md5
             // 
-            this.encrypt_button_md5.Location = new System.Drawing.Point(6, 38);
+            this.encrypt_button_md5.Location = new System.Drawing.Point(6, 30);
             this.encrypt_button_md5.Name = "encrypt_button_md5";
             this.encrypt_button_md5.Size = new System.Drawing.Size(125, 30);
             this.encrypt_button_md5.TabIndex = 0;
@@ -423,6 +425,15 @@ namespace niushuai233Kit
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
             // 
+            // encrypt_button_sha
+            // 
+            this.encrypt_button_sha.Location = new System.Drawing.Point(138, 30);
+            this.encrypt_button_sha.Name = "encrypt_button_sha";
+            this.encrypt_button_sha.Size = new System.Drawing.Size(125, 30);
+            this.encrypt_button_sha.TabIndex = 2;
+            this.encrypt_button_sha.Text = "SHA";
+            this.encrypt_button_sha.UseVisualStyleBackColor = true;
+            // 
             // KitApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -489,6 +500,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button codec_button_escape;
         private System.Windows.Forms.Button string_button_wordConvert;
         private System.Windows.Forms.Button string_button_textNumber;
+        private System.Windows.Forms.Button encrypt_button_sha;
     }
 }
 
