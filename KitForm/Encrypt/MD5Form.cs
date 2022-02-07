@@ -40,7 +40,7 @@ namespace niushuai233Kit.KitForm.Encrypt
                 }
             }
 
-            this.textBox_result.Text = EncryptUtil.MD5(value, GetBit(), GetStyle());
+            this.textBox_result.Text = EncryptUtil.MD5(value, GetBit(), GetStyle()).Replace("-", "");
         }
 
         private bool GetStyle()

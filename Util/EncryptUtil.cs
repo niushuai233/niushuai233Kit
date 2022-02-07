@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HashLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -13,29 +14,97 @@ namespace niushuai233Kit.Util
         public static string MD5(string source, int bit, bool upperCase)
         {
 
-            string md5Str = string.Empty;
+            HashResult result = HashFactory.Crypto.CreateMD5().ComputeString(source, System.Text.Encoding.UTF8);
 
-            MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] byData = Encoding.Default.GetBytes(source);
-            byte[] result = md5.ComputeHash(byData);
+            return UpperCase(result.ToString(), upperCase);
+        }
 
-            if (bit == 16)
-            {
-                md5Str = BitConverter.ToString(result, 4, 8);
-            }
-            else if (bit == 32)
-            {
-                md5Str = BitConverter.ToString(result);
-            }
-            md5Str = md5Str.Replace("-", "");
+        /// <summary>
+        /// SHA1
+        /// </summary>
+        /// <param name="source">源串</param>
+        /// <param name="upperCase">是否大写</param>
+        /// <returns>经过SHA1处理过的字符串</returns>
+        public static string SHA1(string source, bool upperCase)
+        {
+            HashResult result = HashFactory.Crypto.CreateSHA1().ComputeString(source, System.Text.Encoding.UTF8);
 
+            return UpperCase(result.ToString(), upperCase);
+        }
+
+        /// <summary>
+        /// SHA224
+        /// </summary>
+        /// <param name="source">源串</param>
+        /// <param name="upperCase">是否大写</param>
+        /// <returns>经过SHA224处理过的字符串</returns>
+        public static string SHA224(string source, bool upperCase)
+        {
+            HashResult result = HashFactory.Crypto.CreateSHA224().ComputeString(source, System.Text.Encoding.UTF8);
+
+            return UpperCase(result.ToString(), upperCase);
+        }
+
+
+        /// <summary>
+        /// SHA256
+        /// </summary>
+        /// <param name="source">源串</param>
+        /// <param name="upperCase">是否大写</param>
+        /// <returns>经过SHA256处理过的字符串</returns>
+        public static string SHA256(string source, bool upperCase)
+        {
+            HashResult result = HashFactory.Crypto.CreateSHA256().ComputeString(source, System.Text.Encoding.UTF8);
+
+            return UpperCase(result.ToString(), upperCase);
+        }
+
+
+        /// <summary>
+        /// SHA384
+        /// </summary>
+        /// <param name="source">源串</param>
+        /// <param name="upperCase">是否大写</param>
+        /// <returns>经过SHA384处理过的字符串</returns>
+        public static string SHA384(string source, bool upperCase)
+        {
+
+            HashResult result = HashFactory.Crypto.CreateSHA384().ComputeString(source, System.Text.Encoding.UTF8);
+
+            return UpperCase(result.ToString(), upperCase);
+        }
+
+
+        /// <summary>
+        /// SHA512
+        /// </summary>
+        /// <param name="source">源串</param>
+        /// <param name="upperCase">是否大写</param>
+        /// <returns>经过SHA512处理过的字符串</returns>
+        public static string SHA512(string source, bool upperCase)
+        {
+
+            HashResult result = HashFactory.Crypto.CreateSHA512().ComputeString(source, System.Text.Encoding.UTF8);
+
+            return UpperCase(result.ToString(), upperCase);
+        }
+
+
+        /// <summary>
+        /// 是否转为大写返回
+        /// </summary>
+        /// <param name="source">源串</param>
+        /// <param name="upperCase">大写字母</param>
+        /// <returns></returns>
+        public static string UpperCase(string source, bool upperCase)
+        {
             if (upperCase)
             {
-                return md5Str.ToUpper();
+                return source.ToUpper();
             }
             else
             {
-                return md5Str.ToLower();
+                return source.ToLower();
             }
         }
 
