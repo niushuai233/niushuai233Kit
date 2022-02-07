@@ -81,8 +81,6 @@ namespace niushuai233Kit.KitForm.Encrypt
             // checkBox_autorun
             // 
             this.checkBox_autorun.AutoSize = true;
-            this.checkBox_autorun.Checked = true;
-            this.checkBox_autorun.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_autorun.Location = new System.Drawing.Point(664, 315);
             this.checkBox_autorun.Name = "checkBox_autorun";
             this.checkBox_autorun.Size = new System.Drawing.Size(91, 20);
@@ -223,9 +221,9 @@ namespace niushuai233Kit.KitForm.Encrypt
             // 
             // textBox_iv
             // 
-            this.textBox_iv.Location = new System.Drawing.Point(556, 38);
+            this.textBox_iv.Location = new System.Drawing.Point(557, 38);
             this.textBox_iv.Name = "textBox_iv";
-            this.textBox_iv.Size = new System.Drawing.Size(157, 26);
+            this.textBox_iv.Size = new System.Drawing.Size(172, 26);
             this.textBox_iv.TabIndex = 10;
             this.textBox_iv.Text = "1234567812345678";
             this.textBox_iv.TextChanged += new System.EventHandler(this.textChange_TextChanged);
