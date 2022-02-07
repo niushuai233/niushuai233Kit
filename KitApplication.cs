@@ -109,5 +109,12 @@ namespace niushuai233Kit
             AESForm form = new AESForm(this);
             FormReset(this.encrypt_groupBox_result, form);
         }
+
+
+        private void button_other_countdown_Click(object sender, EventArgs e)
+        {
+            CountDownForm form = new CountDownForm(this);
+            FormReset(this.other_groupBox_result, form);
+        }
     }
 }

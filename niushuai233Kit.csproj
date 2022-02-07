@@ -132,6 +132,12 @@
     <Compile Include="KitForm\Other\AsciiForm.Designer.cs">
       <DependentUpon>AsciiForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitForm\Other\CountDownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitForm\Other\CountDownForm.Designer.cs">
+      <DependentUpon>CountDownForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KitForm\Strings\TextNumberForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Other\AsciiForm.resx">
       <DependentUpon>AsciiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitForm\Other\CountDownForm.resx">
+      <DependentUpon>CountDownForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Strings\TextNumberForm.resx">
       <DependentUpon>TextNumberForm.cs</DependentUpon>

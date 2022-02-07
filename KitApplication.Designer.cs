@@ -34,7 +34,7 @@ namespace niushuai233Kit
             this.other_tabPage = new System.Windows.Forms.TabPage();
             this.other_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.button_other_countdown = new System.Windows.Forms.Button();
             this.other_button_keycode = new System.Windows.Forms.Button();
             this.number_conversion_tabPage = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -44,6 +44,7 @@ namespace niushuai233Kit
             this.encrypt_tabPage = new System.Windows.Forms.TabPage();
             this.encrypt_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.encrypt_button_sha = new System.Windows.Forms.Button();
             this.button_encrypt_aes = new System.Windows.Forms.Button();
             this.encrypt_button_md5 = new System.Windows.Forms.Button();
@@ -63,7 +64,7 @@ namespace niushuai233Kit
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -120,7 +121,8 @@ namespace niushuai233Kit
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.button8);
+            this.groupBox8.Controls.Add(this.button4);
+            this.groupBox8.Controls.Add(this.button_other_countdown);
             this.groupBox8.Controls.Add(this.other_button_keycode);
             this.groupBox8.Location = new System.Drawing.Point(8, 8);
             this.groupBox8.Name = "groupBox8";
@@ -129,18 +131,19 @@ namespace niushuai233Kit
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "功能区";
             // 
-            // button8
+            // button_other_countdown
             // 
-            this.button8.Location = new System.Drawing.Point(137, 38);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(125, 30);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "待续...";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button_other_countdown.Location = new System.Drawing.Point(137, 30);
+            this.button_other_countdown.Name = "button_other_countdown";
+            this.button_other_countdown.Size = new System.Drawing.Size(125, 30);
+            this.button_other_countdown.TabIndex = 1;
+            this.button_other_countdown.Text = "倒计时";
+            this.button_other_countdown.UseVisualStyleBackColor = true;
+            this.button_other_countdown.Click += new System.EventHandler(this.button_other_countdown_Click);
             // 
             // other_button_keycode
             // 
-            this.other_button_keycode.Location = new System.Drawing.Point(6, 38);
+            this.other_button_keycode.Location = new System.Drawing.Point(6, 30);
             this.other_button_keycode.Name = "other_button_keycode";
             this.other_button_keycode.Size = new System.Drawing.Size(125, 30);
             this.other_button_keycode.TabIndex = 0;
@@ -233,6 +236,15 @@ namespace niushuai233Kit
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "功能区";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(137, 66);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(125, 30);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "待续...";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // encrypt_button_sha
             // 
@@ -438,14 +450,14 @@ namespace niushuai233Kit
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button4
             // 
-            this.button3.Location = new System.Drawing.Point(137, 66);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 30);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "待续...";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(6, 66);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(125, 30);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "待续...";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // KitApplication
             // 
@@ -506,7 +518,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.GroupBox other_groupBox_result;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button_other_countdown;
         private System.Windows.Forms.Button other_button_keycode;
         private System.Windows.Forms.TabPage datetime_tabPage;
         private System.Windows.Forms.Button codec_button_base64;
@@ -515,6 +527,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button string_button_textNumber;
         private System.Windows.Forms.Button encrypt_button_sha;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 
