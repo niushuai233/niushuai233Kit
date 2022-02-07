@@ -98,6 +98,7 @@ namespace niushuai233Kit.KitForm.Encrypt
             this.button_decrypt.TabIndex = 12;
             this.button_decrypt.Text = "解密";
             this.button_decrypt.UseVisualStyleBackColor = true;
+            this.button_decrypt.Click += new System.EventHandler(this.button_decrypt_Click);
             // 
             // button_encrypt
             // 

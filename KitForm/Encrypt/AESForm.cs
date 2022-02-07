@@ -31,6 +31,11 @@ namespace niushuai233Kit.KitForm.Encrypt
             this.textBox_result.Text = "";
         }
 
+        /// <summary>
+        /// 加密
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_encrypt_Click(object sender, EventArgs e)
         {
             runEncrypt();
@@ -60,7 +65,7 @@ namespace niushuai233Kit.KitForm.Encrypt
             }
             catch (Exception e)
             {
-                MessageBox.Show("错误：" + e.Message);
+                MessageBox.Show("加密错误：" + e.Message);
             }
         }
         private string RandomIV(string iv)
@@ -95,7 +100,7 @@ namespace niushuai233Kit.KitForm.Encrypt
         {
             if ((StringUtil.IsNotEmpty(this.textBox_source.Text) || StringUtil.IsNotEmpty(this.textBox_result.Text)) && this.checkBox_autorun.Checked)
             {
-                runEncrypt();
+                runChoose();
             }
             calcElementLength();
         }
@@ -122,7 +127,7 @@ namespace niushuai233Kit.KitForm.Encrypt
 
             if (StringUtil.IsNotEmpty(this.textBox_source.Text) && this.checkBox_autorun.Checked)
             {
-                runEncrypt();
+                runChoose();
                 calcElementLength();
             }
         }
@@ -131,8 +136,24 @@ namespace niushuai233Kit.KitForm.Encrypt
         {
             if (StringUtil.IsNotEmpty(this.textBox_source.Text) && this.checkBox_autorun.Checked)
             {
-                runEncrypt();
+                runChoose();
                 calcElementLength();
+            }
+        }
+
+        private void runChoose()
+        {
+            if (mode == -1)
+            {
+                return;
+            }
+            else if (mode == 1)
+            {
+                runEncrypt();
+            }
+            else if (mode == 2)
+            {
+                runDecrypt();
             }
         }
 
@@ -149,9 +170,45 @@ namespace niushuai233Kit.KitForm.Encrypt
         {
             if (mode != 1 && StringUtil.IsNotEmpty(this.textBox_result.Text) && this.checkBox_autorun.Checked)
             {
-                runEncrypt();
+                runDecrypt();
             }
             calcElementLength();
+        }
+
+        /// <summary>
+        /// 解密
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button_decrypt_Click(object sender, EventArgs e)
+        {
+            runDecrypt();
+            calcElementLength();
+        }
+
+        private void runDecrypt()
+        {
+            // 置为当前操作为解密操作
+            mode = 2;
+            try
+            {
+                string text = this.textBox_result.Text;
+                if (StringUtil.IsEmpty(text))
+                {
+                    // 非空才解密
+                    return;
+                }
+                string key = this.textBox_key.Text;
+                string iv = this.textBox_iv.Text;
+
+                string result = EncryptUtil.AES_Decrypt(GetMode(), GetPadding(), text, key, iv);
+
+                this.textBox_source.Text = result;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("解密错误：" + e.Message);
+            }
         }
     }
 }
