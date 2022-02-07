@@ -62,6 +62,9 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HashLib, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\HashLib.2.0.1\lib\net40\HashLib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.JScript" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -110,6 +113,12 @@
     </Compile>
     <Compile Include="KitForm\Encrypt\MD5Form.Designer.cs">
       <DependentUpon>MD5Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KitForm\Encrypt\SHAForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitForm\Encrypt\SHAForm.Designer.cs">
+      <DependentUpon>SHAForm.cs</DependentUpon>
     </Compile>
     <Compile Include="KitForm\Other\AsciiForm.cs">
       <SubType>Form</SubType>
@@ -160,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Encrypt\MD5Form.resx">
       <DependentUpon>MD5Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitForm\Encrypt\SHAForm.resx">
+      <DependentUpon>SHAForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Other\AsciiForm.resx">
       <DependentUpon>AsciiForm.cs</DependentUpon>

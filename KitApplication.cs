@@ -97,5 +97,11 @@ namespace niushuai233Kit
             MD5Form form = new MD5Form(this);
             FormReset(this.encrypt_groupBox_result, form);
         }
+
+        private void encrypt_button_sha_Click(object sender, EventArgs e)
+        {
+            SHAForm form = new SHAForm(this);
+            FormReset(this.encrypt_groupBox_result, form);
+        }
     }
 }
