@@ -45,7 +45,7 @@ namespace niushuai233Kit
             this.encrypt_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.encrypt_button_sha = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_encrypt_aes = new System.Windows.Forms.Button();
             this.encrypt_button_md5 = new System.Windows.Forms.Button();
             this.codec_trans_tabPage = new System.Windows.Forms.TabPage();
             this.codec_groupBox_result = new System.Windows.Forms.GroupBox();
@@ -63,6 +63,7 @@ namespace niushuai233Kit
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -222,8 +223,9 @@ namespace niushuai233Kit
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Controls.Add(this.encrypt_button_sha);
-            this.groupBox4.Controls.Add(this.button4);
+            this.groupBox4.Controls.Add(this.button_encrypt_aes);
             this.groupBox4.Controls.Add(this.encrypt_button_md5);
             this.groupBox4.Location = new System.Drawing.Point(8, 8);
             this.groupBox4.Name = "groupBox4";
@@ -242,14 +244,15 @@ namespace niushuai233Kit
             this.encrypt_button_sha.UseVisualStyleBackColor = true;
             this.encrypt_button_sha.Click += new System.EventHandler(this.encrypt_button_sha_Click);
             // 
-            // button4
+            // button_encrypt_aes
             // 
-            this.button4.Location = new System.Drawing.Point(6, 66);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 30);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "待续...";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_encrypt_aes.Location = new System.Drawing.Point(6, 66);
+            this.button_encrypt_aes.Name = "button_encrypt_aes";
+            this.button_encrypt_aes.Size = new System.Drawing.Size(125, 30);
+            this.button_encrypt_aes.TabIndex = 1;
+            this.button_encrypt_aes.Text = "AES";
+            this.button_encrypt_aes.UseVisualStyleBackColor = true;
+            this.button_encrypt_aes.Click += new System.EventHandler(this.button_encrypt_aes_Click);
             // 
             // encrypt_button_md5
             // 
@@ -435,6 +438,15 @@ namespace niushuai233Kit
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(137, 66);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(125, 30);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "待续...";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // KitApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -486,7 +498,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button codec_button_urlCodec;
         private System.Windows.Forms.GroupBox encrypt_groupBox_result;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_encrypt_aes;
         private System.Windows.Forms.Button encrypt_button_md5;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -502,6 +514,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button string_button_wordConvert;
         private System.Windows.Forms.Button string_button_textNumber;
         private System.Windows.Forms.Button encrypt_button_sha;
+        private System.Windows.Forms.Button button3;
     }
 }
 

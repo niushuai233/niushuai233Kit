@@ -89,6 +89,45 @@ namespace niushuai233Kit.Util
             return UpperCase(result.ToString(), upperCase);
         }
 
+        public static string AES_Encrypt(CipherMode cipherMode, PaddingMode paddingMode, string source, string key, string iv)
+        {
+            Byte[] keyArray = System.Text.Encoding.UTF8.GetBytes(key);
+            Byte[] toEncryptArray = System.Text.Encoding.UTF8.GetBytes(source);
+            var rijndael = new System.Security.Cryptography.RijndaelManaged();
+            rijndael.Key = keyArray;
+            rijndael.Mode = cipherMode;
+            rijndael.Padding = paddingMode;
+            rijndael.IV = System.Text.Encoding.UTF8.GetBytes(iv);
+            System.Security.Cryptography.ICryptoTransform cTransform = rijndael.CreateEncryptor();
+            Byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+            return Convert.ToBase64String(resultArray, 0, resultArray.Length);
+        }
+
+        public static string AES_Decrypt(CipherMode cipherMode, PaddingMode paddingMode, string source, string key, string iv)
+        {
+            Byte[] keyArray = System.Text.Encoding.UTF8.GetBytes(key);
+            Byte[] toEncryptArray = Convert.FromBase64String(source);
+            var rijndael = new System.Security.Cryptography.RijndaelManaged();
+            rijndael.Key = keyArray;
+            rijndael.Mode = cipherMode;
+            rijndael.Padding = paddingMode;
+            rijndael.IV = System.Text.Encoding.UTF8.GetBytes(iv);
+            System.Security.Cryptography.ICryptoTransform cTransform = rijndael.CreateDecryptor();
+            Byte[] resultArray = cTransform.TransformFinalBlock(toEncryptArray, 0, toEncryptArray.Length);
+            return System.Text.Encoding.UTF8.GetString(resultArray);
+        }
+
+        public static string DES_Encrypt(string source, string key, bool upperCase)
+        {
+
+            return "";
+        }
+        public static string DES_Decrypt(string source, string key, bool upperCase)
+        {
+
+            return "";
+        }
+
 
         /// <summary>
         /// 是否转为大写返回

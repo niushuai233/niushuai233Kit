@@ -103,5 +103,11 @@ namespace niushuai233Kit
             SHAForm form = new SHAForm(this);
             FormReset(this.encrypt_groupBox_result, form);
         }
+
+        private void button_encrypt_aes_Click(object sender, EventArgs e)
+        {
+            AESForm form = new AESForm(this);
+            FormReset(this.encrypt_groupBox_result, form);
+        }
     }
 }

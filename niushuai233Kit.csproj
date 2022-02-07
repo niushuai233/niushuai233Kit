@@ -108,6 +108,12 @@
     <Compile Include="KitForm\Codec\UrlCodecForm.Designer.cs">
       <DependentUpon>UrlCodecForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitForm\Encrypt\AESForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitForm\Encrypt\AESForm.Designer.cs">
+      <DependentUpon>AESForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KitForm\Encrypt\MD5Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Codec\UrlCodecForm.resx">
       <DependentUpon>UrlCodecForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitForm\Encrypt\AESForm.resx">
+      <DependentUpon>AESForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Encrypt\MD5Form.resx">
       <DependentUpon>MD5Form.cs</DependentUpon>
