@@ -33,11 +33,11 @@ namespace niushuai233Kit.KitForm.Encrypt
 
         private void button_encrypt_Click(object sender, EventArgs e)
         {
-            run();
+            runEncrypt();
             calcElementLength();
         }
 
-        private void run()
+        private void runEncrypt()
         {
             // 置为当前操作为加密操作
             mode = 1;
@@ -95,7 +95,7 @@ namespace niushuai233Kit.KitForm.Encrypt
         {
             if ((StringUtil.IsNotEmpty(this.textBox_source.Text) || StringUtil.IsNotEmpty(this.textBox_result.Text)) && this.checkBox_autorun.Checked)
             {
-                run();
+                runEncrypt();
             }
             calcElementLength();
         }
@@ -122,7 +122,7 @@ namespace niushuai233Kit.KitForm.Encrypt
 
             if (StringUtil.IsNotEmpty(this.textBox_source.Text) && this.checkBox_autorun.Checked)
             {
-                run();
+                runEncrypt();
                 calcElementLength();
             }
         }
@@ -131,7 +131,7 @@ namespace niushuai233Kit.KitForm.Encrypt
         {
             if (StringUtil.IsNotEmpty(this.textBox_source.Text) && this.checkBox_autorun.Checked)
             {
-                run();
+                runEncrypt();
                 calcElementLength();
             }
         }
@@ -140,7 +140,7 @@ namespace niushuai233Kit.KitForm.Encrypt
         {
             if (mode != 2 && StringUtil.IsNotEmpty(this.textBox_source.Text) && this.checkBox_autorun.Checked)
             {
-                run();
+                runEncrypt();
             }
             calcElementLength();
         }
@@ -149,7 +149,7 @@ namespace niushuai233Kit.KitForm.Encrypt
         {
             if (mode != 1 && StringUtil.IsNotEmpty(this.textBox_result.Text) && this.checkBox_autorun.Checked)
             {
-                run();
+                runEncrypt();
             }
             calcElementLength();
         }
