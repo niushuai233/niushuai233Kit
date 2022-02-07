@@ -14,16 +14,19 @@ namespace niushuai233Kit.KitForm.Encrypt
 {
     public partial class AESForm : Form
     {
+        public static int mode = -1;
         public AESForm(KitApplication kitApplication)
         {
             InitializeComponent();
+            mode = -1;
             this.comboBox_mode.SelectedIndex = 0;
             this.comboBox_padding.SelectedIndex = 1;
         }
 
         private void button_clear_Click(object sender, EventArgs e)
         {
-            this.textBox_key.Text = "";
+            this.textBox_iv.Text = "1234567812345678";
+            this.textBox_key.Text = "abcdefghijklmnop";
             this.textBox_source.Text = "";
             this.textBox_result.Text = "";
         }
@@ -36,11 +39,20 @@ namespace niushuai233Kit.KitForm.Encrypt
 
         private void run()
         {
+            // 置为当前操作为加密操作
+            mode = 1;
             try
             {
-                string key = this.textBox_key.Text;
                 string text = this.textBox_source.Text;
+                if (StringUtil.IsEmpty(text))
+                {
+                    // 非空才加密
+                    return;
+                }
+                string key = this.textBox_key.Text;
                 string iv = this.textBox_iv.Text;
+
+                iv = RandomIV(iv);
 
                 string result = EncryptUtil.AES_Encrypt(GetMode(), GetPadding(), text, key, iv);
 
@@ -50,7 +62,10 @@ namespace niushuai233Kit.KitForm.Encrypt
             {
                 MessageBox.Show("错误：" + e.Message);
             }
-
+        }
+        private string RandomIV(string iv)
+        {
+            return StringUtil.IsNotEmpty(iv) ? iv : StringUtil.GetRandomString(16);
         }
 
 
@@ -119,6 +134,24 @@ namespace niushuai233Kit.KitForm.Encrypt
                 run();
                 calcElementLength();
             }
+        }
+
+        private void sourceTextChange_TextChanged(object sender, EventArgs e)
+        {
+            if (mode != 2 && StringUtil.IsNotEmpty(this.textBox_source.Text) && this.checkBox_autorun.Checked)
+            {
+                run();
+            }
+            calcElementLength();
+        }
+
+        private void resultTextChange_TextChanged(object sender, EventArgs e)
+        {
+            if (mode != 1 && StringUtil.IsNotEmpty(this.textBox_result.Text) && this.checkBox_autorun.Checked)
+            {
+                run();
+            }
+            calcElementLength();
         }
     }
 }

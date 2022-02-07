@@ -116,7 +116,7 @@ namespace niushuai233Kit.KitForm.Encrypt
             this.textBox_result.Name = "textBox_result";
             this.textBox_result.Size = new System.Drawing.Size(750, 160);
             this.textBox_result.TabIndex = 8;
-            this.textBox_result.TextChanged += new System.EventHandler(this.textChange_TextChanged);
+            this.textBox_result.TextChanged += new System.EventHandler(this.resultTextChange_TextChanged);
             // 
             // textBox_source
             // 
@@ -125,7 +125,7 @@ namespace niushuai233Kit.KitForm.Encrypt
             this.textBox_source.Name = "textBox_source";
             this.textBox_source.Size = new System.Drawing.Size(750, 160);
             this.textBox_source.TabIndex = 7;
-            this.textBox_source.TextChanged += new System.EventHandler(this.textChange_TextChanged);
+            this.textBox_source.TextChanged += new System.EventHandler(this.sourceTextChange_TextChanged);
             // 
             // button_clear
             // 
