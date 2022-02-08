@@ -41,6 +41,7 @@ namespace niushuai233Kit.KitForm.Other
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.button_mini = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_hour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_minute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_second)).BeginInit();
@@ -53,14 +54,14 @@ namespace niushuai233Kit.KitForm.Other
             // 
             // label_left_time
             // 
-            this.label_left_time.AutoSize = true;
             this.label_left_time.Font = new System.Drawing.Font("Times New Roman", 63.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_left_time.ForeColor = System.Drawing.Color.Red;
             this.label_left_time.Location = new System.Drawing.Point(138, 72);
             this.label_left_time.Name = "label_left_time";
             this.label_left_time.Size = new System.Drawing.Size(501, 97);
             this.label_left_time.TabIndex = 0;
-            this.label_left_time.Text = "00:01:30:000";
+            this.label_left_time.Text = "----------------";
+            this.label_left_time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button_start
             // 
@@ -174,11 +175,22 @@ namespace niushuai233Kit.KitForm.Other
             this.label3.TabIndex = 9;
             this.label3.Text = "s";
             // 
+            // button_mini
+            // 
+            this.button_mini.Location = new System.Drawing.Point(672, 12);
+            this.button_mini.Name = "button_mini";
+            this.button_mini.Size = new System.Drawing.Size(100, 25);
+            this.button_mini.TabIndex = 10;
+            this.button_mini.Text = "打开精简";
+            this.button_mini.UseVisualStyleBackColor = true;
+            this.button_mini.Click += new System.EventHandler(this.button_mini_Click);
+            // 
             // CountDownForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 516);
+            this.Controls.Add(this.button_mini);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -214,5 +226,6 @@ namespace niushuai233Kit.KitForm.Other
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button_mini;
     }
 }

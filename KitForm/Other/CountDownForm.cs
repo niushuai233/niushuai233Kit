@@ -13,9 +13,14 @@ namespace niushuai233Kit.KitForm.Other
 {
     public partial class CountDownForm : Form
     {
+
+        public delegate void TextUpdated(string text);
+        public event TextUpdated CustomTextUpdated;
+
         static bool started = false;
         static DateTime endDateTime;
-        string defaultDisplayText = "00:01:30:000", displayText, endDisplayText = "00:00:00:000";
+        string defaultDisplayText = "00:01:30:000", displayText, endDisplayText = "----------------";
+        static CountDownMiniForm mini;
         public CountDownForm(KitApplication kitApplication)
         {
             InitializeComponent();
@@ -77,6 +82,34 @@ namespace niushuai233Kit.KitForm.Other
             }
         }
 
+        private void button_mini_Click(object sender, EventArgs e)
+        {
+            if (mini == null)
+            {
+                //创建一个新窗体
+                mini = new CountDownMiniForm(this);
+
+                //设置窗体无边框
+                mini.FormBorderStyle = FormBorderStyle.None;
+                //让窗体透明
+                mini.BackColor = Color.White;
+                mini.TransparencyKey = mini.BackColor;
+                // 最上层显示
+                mini.ShowInTaskbar = false;
+                mini.TopLevel = true;
+                mini.TopMost = true;
+
+                mini.Show();
+
+                this.button_mini.Text = "关闭精简";
+            } else
+            {
+                mini.Close();
+                mini = null;
+                this.button_mini.Text = "打开精简";
+            }
+        }
+
         /// <summary>
         /// 负责更新展示的文本
         /// </summary>
@@ -84,15 +117,24 @@ namespace niushuai233Kit.KitForm.Other
         private void UpdateDisplayText(string displayText)
         {
             this.label_left_time.Text = displayText;
+            if (mini != null)
+            {
+                // 精简窗口显示时才更新
+                CustomTextUpdated(displayText);
+            }
         }
 
         private string format()
         {
             TimeSpan ts = DateUtil.Diff(endDateTime, DateTime.Now);
 
-            int hour = ts.Days * 24 + ts.Hours;
-            
-            string dateDiff = hour.ToString().PadLeft(2, '0') + ":" + ts.Minutes.ToString().PadLeft(2, '0') + ":" + ts.Seconds.ToString().PadLeft(2, '0') + ":" + ts.Milliseconds;
+            string hour = "";
+            if (ts.Hours != 0)
+            {
+                hour = (ts.Days * 24 + ts.Hours).ToString().PadLeft(2, '0') + ":";
+            }
+
+            string dateDiff = hour + ts.Minutes.ToString().PadLeft(2, '0') + ":" + ts.Seconds.ToString().PadLeft(2, '0') + ":" + ts.Milliseconds.ToString().PadLeft(3, '0');
 
             return dateDiff;
         }

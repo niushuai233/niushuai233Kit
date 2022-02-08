@@ -138,6 +138,12 @@
     <Compile Include="KitForm\Other\CountDownForm.Designer.cs">
       <DependentUpon>CountDownForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitForm\Other\CountDownMiniForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitForm\Other\CountDownMiniForm.Designer.cs">
+      <DependentUpon>CountDownMiniForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KitForm\Strings\TextNumberForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,7 @@
     <Compile Include="Util\JsonUtil.cs" />
     <Compile Include="Util\NumberUtil.cs" />
     <Compile Include="Util\StringUtil.cs" />
+    <Compile Include="Util\WinAPI.cs" />
     <Compile Include="Util\XmlUtil.cs" />
     <EmbeddedResource Include="KitApplication.resx">
       <DependentUpon>KitApplication.cs</DependentUpon>
@@ -194,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Other\CountDownForm.resx">
       <DependentUpon>CountDownForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitForm\Other\CountDownMiniForm.resx">
+      <DependentUpon>CountDownMiniForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Strings\TextNumberForm.resx">
       <DependentUpon>TextNumberForm.cs</DependentUpon>
