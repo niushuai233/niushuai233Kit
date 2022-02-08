@@ -159,6 +159,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\CodecUtil.cs" />
+    <Compile Include="Util\DateUtil.cs" />
     <Compile Include="Util\EncryptUtil.cs" />
     <Compile Include="Util\FiltUtil.cs" />
     <Compile Include="Util\HttpUtil.cs" />
