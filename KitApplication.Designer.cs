@@ -34,6 +34,7 @@ namespace niushuai233Kit
             this.other_tabPage = new System.Windows.Forms.TabPage();
             this.other_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.button_other_countdown = new System.Windows.Forms.Button();
             this.other_button_keycode = new System.Windows.Forms.Button();
             this.number_conversion_tabPage = new System.Windows.Forms.TabPage();
@@ -64,7 +65,6 @@ namespace niushuai233Kit
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -130,6 +130,15 @@ namespace niushuai233Kit
             this.groupBox8.TabIndex = 2;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "功能区";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(6, 66);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(125, 30);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "待续...";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button_other_countdown
             // 
@@ -449,15 +458,6 @@ namespace niushuai233Kit
             this.datetime_tabPage.TabIndex = 5;
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(6, 66);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 30);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "待续...";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // KitApplication
             // 
