@@ -21,10 +21,13 @@ namespace niushuai233Kit.KitForm.Other
         static DateTime endDateTime;
         string defaultDisplayText = "00:01:30:000", displayText, endDisplayText = "----------------";
         static CountDownMiniForm mini;
+
         public CountDownForm(KitApplication kitApplication)
         {
             InitializeComponent();
             started = false;
+
+            List<string> wavList = FileUtil.ListDirectory("C:\\Windows\\Media", "*.wav");
         }
 
         private void button_start_Click(object sender, EventArgs e)

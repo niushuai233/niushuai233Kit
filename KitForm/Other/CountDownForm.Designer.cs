@@ -42,6 +42,8 @@ namespace niushuai233Kit.KitForm.Other
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button_mini = new System.Windows.Forms.Button();
+            this.button_media_set = new System.Windows.Forms.Button();
+            this.comboBox_media = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_hour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_minute)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_second)).BeginInit();
@@ -66,7 +68,7 @@ namespace niushuai233Kit.KitForm.Other
             // button_start
             // 
             this.button_start.Font = new System.Drawing.Font("宋体", 16F);
-            this.button_start.Location = new System.Drawing.Point(221, 383);
+            this.button_start.Location = new System.Drawing.Point(221, 331);
             this.button_start.Name = "button_start";
             this.button_start.Size = new System.Drawing.Size(100, 35);
             this.button_start.TabIndex = 1;
@@ -77,7 +79,7 @@ namespace niushuai233Kit.KitForm.Other
             // button_stop
             // 
             this.button_stop.Font = new System.Drawing.Font("宋体", 16F);
-            this.button_stop.Location = new System.Drawing.Point(475, 383);
+            this.button_stop.Location = new System.Drawing.Point(475, 331);
             this.button_stop.Name = "button_stop";
             this.button_stop.Size = new System.Drawing.Size(100, 35);
             this.button_stop.TabIndex = 2;
@@ -88,7 +90,7 @@ namespace niushuai233Kit.KitForm.Other
             // button_reset
             // 
             this.button_reset.Font = new System.Drawing.Font("宋体", 16F);
-            this.button_reset.Location = new System.Drawing.Point(345, 383);
+            this.button_reset.Location = new System.Drawing.Point(345, 331);
             this.button_reset.Name = "button_reset";
             this.button_reset.Size = new System.Drawing.Size(100, 35);
             this.button_reset.TabIndex = 3;
@@ -99,7 +101,7 @@ namespace niushuai233Kit.KitForm.Other
             // numericUpDown_hour
             // 
             this.numericUpDown_hour.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown_hour.Location = new System.Drawing.Point(140, 250);
+            this.numericUpDown_hour.Location = new System.Drawing.Point(140, 198);
             this.numericUpDown_hour.Maximum = new decimal(new int[] {
             99,
             0,
@@ -112,7 +114,7 @@ namespace niushuai233Kit.KitForm.Other
             // numericUpDown_minute
             // 
             this.numericUpDown_minute.Font = new System.Drawing.Font("宋体", 24F);
-            this.numericUpDown_minute.Location = new System.Drawing.Point(327, 250);
+            this.numericUpDown_minute.Location = new System.Drawing.Point(327, 198);
             this.numericUpDown_minute.Maximum = new decimal(new int[] {
             59,
             0,
@@ -130,7 +132,7 @@ namespace niushuai233Kit.KitForm.Other
             // numericUpDown_second
             // 
             this.numericUpDown_second.Font = new System.Drawing.Font("宋体", 24F);
-            this.numericUpDown_second.Location = new System.Drawing.Point(515, 250);
+            this.numericUpDown_second.Location = new System.Drawing.Point(515, 198);
             this.numericUpDown_second.Maximum = new decimal(new int[] {
             999,
             0,
@@ -149,7 +151,7 @@ namespace niushuai233Kit.KitForm.Other
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 24F);
-            this.label1.Location = new System.Drawing.Point(260, 256);
+            this.label1.Location = new System.Drawing.Point(260, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 33);
             this.label1.TabIndex = 7;
@@ -159,7 +161,7 @@ namespace niushuai233Kit.KitForm.Other
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("宋体", 24F);
-            this.label2.Location = new System.Drawing.Point(447, 256);
+            this.label2.Location = new System.Drawing.Point(447, 204);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 33);
             this.label2.TabIndex = 8;
@@ -169,7 +171,7 @@ namespace niushuai233Kit.KitForm.Other
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("宋体", 24F);
-            this.label3.Location = new System.Drawing.Point(635, 256);
+            this.label3.Location = new System.Drawing.Point(635, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 33);
             this.label3.TabIndex = 9;
@@ -185,11 +187,32 @@ namespace niushuai233Kit.KitForm.Other
             this.button_mini.UseVisualStyleBackColor = true;
             this.button_mini.Click += new System.EventHandler(this.button_mini_Click);
             // 
+            // button_media_set
+            // 
+            this.button_media_set.Font = new System.Drawing.Font("宋体", 16F);
+            this.button_media_set.Location = new System.Drawing.Point(475, 420);
+            this.button_media_set.Name = "button_media_set";
+            this.button_media_set.Size = new System.Drawing.Size(100, 35);
+            this.button_media_set.TabIndex = 11;
+            this.button_media_set.Text = "设置";
+            this.button_media_set.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_media
+            // 
+            this.comboBox_media.Font = new System.Drawing.Font("宋体", 16F);
+            this.comboBox_media.FormattingEnabled = true;
+            this.comboBox_media.Location = new System.Drawing.Point(140, 423);
+            this.comboBox_media.Name = "comboBox_media";
+            this.comboBox_media.Size = new System.Drawing.Size(305, 29);
+            this.comboBox_media.TabIndex = 12;
+            // 
             // CountDownForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 516);
+            this.Controls.Add(this.comboBox_media);
+            this.Controls.Add(this.button_media_set);
             this.Controls.Add(this.button_mini);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -227,5 +250,7 @@ namespace niushuai233Kit.KitForm.Other
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button_mini;
+        private System.Windows.Forms.Button button_media_set;
+        private System.Windows.Forms.ComboBox comboBox_media;
     }
 }
