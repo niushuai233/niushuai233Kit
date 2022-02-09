@@ -199,7 +199,7 @@ namespace niushuai233Kit.KitForm.Other
                 player.Stop();
                 playStatus = false;
                 return;
-            } 
+            }
             else
             {
                 player.PlayLooping();
@@ -208,16 +208,20 @@ namespace niushuai233Kit.KitForm.Other
             }
         }
 
-
+        /// <summary>
+        /// 倒计时结束播放音效
+        /// </summary>
         private void PlayStart()
         {
             string path = this.comboBox_media.SelectedValue.ToString();
-            player.SoundLocation = @path;
 
-            player.PlayLooping();
-            this.button_media_preplay.Text = "停止";
-            playStatus = true;
-
+            if (StringUtil.IsNotEmpty(path))
+            {
+                player.SoundLocation = @path;
+                player.PlayLooping();
+                this.button_media_preplay.Text = "停止";
+                playStatus = true;
+            }
         }
     }
 }
