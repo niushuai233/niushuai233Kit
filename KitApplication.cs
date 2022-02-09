@@ -27,6 +27,26 @@ namespace niushuai233Kit
         /// </summary>
         //////////////////////////////////////////////////////////////////////////////
 
+        /// <summary>
+        /// 字数统计
+        /// </summary>
+        private static WordCountForm wordCountForm;
+
+
+        /// <summary>
+        /// 大小写转换
+        /// </summary>
+        private static WordConvertForm wordConvertForm;
+
+        /// <summary>
+        /// 增加序号
+        /// </summary>
+        private static TextNumberForm textNumberForm;
+
+        /// <summary>
+        /// UUID/GUID
+        /// </summary>
+        private static UUIDForm uuidForm;
 
         //////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -36,6 +56,20 @@ namespace niushuai233Kit
         /// </summary>
         //////////////////////////////////////////////////////////////////////////////
 
+        /// <summary>
+        /// Url
+        /// </summary>
+        private static UrlCodecForm urlCodecForm;
+
+        /// <summary>
+        /// Base64
+        /// </summary>
+        private static Base64Form base64Form;
+
+        /// <summary>
+        /// Escape
+        /// </summary>
+        private static EscapeForm escapeForm;
 
         //////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -46,6 +80,20 @@ namespace niushuai233Kit
         //////////////////////////////////////////////////////////////////////////////
 
 
+        /// <summary>
+        /// MD5
+        /// </summary>
+        private static MD5Form md5Form;
+
+        /// <summary>
+        /// MD5
+        /// </summary>
+        private static SHAForm shaForm;
+
+        /// <summary>
+        /// AES
+        /// </summary>
+        private static AESForm aesForm;
 
 
         //////////////////////////////////////////////////////////////////////////////
@@ -64,6 +112,17 @@ namespace niushuai233Kit
         /// 
         /// </summary>
         //////////////////////////////////////////////////////////////////////////////
+
+        /// <summary>
+        /// ASCII查询
+        /// </summary>
+        private static AsciiForm asciiForm;
+
+        /// <summary>
+        /// 倒计时
+        /// </summary>
+        private static CountDownForm countDownForm;
+
 
         //////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -103,32 +162,48 @@ namespace niushuai233Kit
         /// <param name="e">参数</param>
         private void string_button_wordCount_Click(object sender, EventArgs e)
         {
-            WordCountForm form = new WordCountForm(this);
-            FormReset(this.string_groupBox_result, form);
+            if (wordCountForm == null)
+            {
+                wordCountForm = new WordCountForm(this);
+
+            }
+            FormReset(this.string_groupBox_result, wordCountForm);
         }
 
         private void other_button_keycode_Click(object sender, EventArgs e)
         {
-            AsciiForm form = new AsciiForm(this);
-            FormReset(this.other_groupBox_result, form);
+            if (asciiForm == null)
+            {
+                asciiForm = new AsciiForm(this);
+            }
+            FormReset(this.other_groupBox_result, asciiForm);
         }
 
         private void encrypt_button_urlCodec_Click(object sender, EventArgs e)
         {
-            UrlCodecForm form = new UrlCodecForm(this);
-            FormReset(this.codec_groupBox_result, form);
+            if (urlCodecForm == null)
+            {
+                urlCodecForm = new UrlCodecForm(this);
+            }
+            FormReset(this.codec_groupBox_result, urlCodecForm);
         }
 
         private void encrypt_button_base64_Click(object sender, EventArgs e)
         {
-            Base64Form form = new Base64Form(this);
-            FormReset(this.codec_groupBox_result, form);
+            if (base64Form == null)
+            {
+                base64Form = new Base64Form(this);
+            }
+            FormReset(this.codec_groupBox_result, base64Form);
         }
 
         private void encrypted_button_escape_Click(object sender, EventArgs e)
         {
-            EscapeForm form = new EscapeForm(this);
-            FormReset(this.codec_groupBox_result, form);
+            if (escapeForm == null)
+            {
+                escapeForm = new EscapeForm(this);
+            }
+            FormReset(this.codec_groupBox_result, escapeForm);
         }
 
         /// <summary>
@@ -138,45 +213,66 @@ namespace niushuai233Kit
         /// <param name="e"></param>
         private void string_button_wordConvert_Click(object sender, EventArgs e)
         {
-            WordConvertForm form = new WordConvertForm(this);
-            FormReset(this.string_groupBox_result, form);
+            if (wordConvertForm == null)
+            {
+                wordConvertForm = new WordConvertForm(this);
+            }
+            FormReset(this.string_groupBox_result, wordConvertForm);
         }
 
         private void string_button_textNumber_Click(object sender, EventArgs e)
         {
-            TextNumberForm form = new TextNumberForm(this);
-            FormReset(this.string_groupBox_result, form);
+            if (textNumberForm == null)
+            {
+                textNumberForm = new TextNumberForm(this);
+            }
+            FormReset(this.string_groupBox_result, textNumberForm);
         }
 
         private void encrypt_button_md5_Click(object sender, EventArgs e)
         {
-            MD5Form form = new MD5Form(this);
-            FormReset(this.encrypt_groupBox_result, form);
+            if (md5Form == null)
+            {
+                md5Form = new MD5Form(this);
+            }
+            FormReset(this.encrypt_groupBox_result, md5Form);
         }
 
         private void encrypt_button_sha_Click(object sender, EventArgs e)
         {
-            SHAForm form = new SHAForm(this);
-            FormReset(this.encrypt_groupBox_result, form);
+            if (shaForm == null)
+            {
+                shaForm = new SHAForm(this);
+            }
+            FormReset(this.encrypt_groupBox_result, shaForm);
         }
 
         private void button_encrypt_aes_Click(object sender, EventArgs e)
         {
-            AESForm form = new AESForm(this);
-            FormReset(this.encrypt_groupBox_result, form);
+            if (aesForm == null)
+            {
+                aesForm = new AESForm(this);
+            }
+            FormReset(this.encrypt_groupBox_result, aesForm);
         }
 
 
         private void button_other_countdown_Click(object sender, EventArgs e)
         {
-            CountDownForm form = new CountDownForm(this);
-            FormReset(this.other_groupBox_result, form);
+            if (countDownForm == null)
+            {
+                countDownForm = new CountDownForm(this);
+            }
+            FormReset(this.other_groupBox_result, countDownForm);
         }
 
         private void button_string_uuid_Click(object sender, EventArgs e)
         {
-            UUIDForm form = new UUIDForm(this);
-            FormReset(this.string_groupBox_result, form);
+            if (uuidForm == null)
+            {
+                uuidForm = new UUIDForm(this);
+            }
+            FormReset(this.string_groupBox_result, uuidForm);
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
