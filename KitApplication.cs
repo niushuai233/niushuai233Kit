@@ -122,5 +122,15 @@ namespace niushuai233Kit
             UUIDForm form = new UUIDForm(this);
             FormReset(this.string_groupBox_result, form);
         }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void KitApplication_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

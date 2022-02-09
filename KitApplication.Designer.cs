@@ -29,19 +29,16 @@ namespace niushuai233Kit
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KitApplication));
+            this.menuStrip_main = new System.Windows.Forms.MenuStrip();
+            this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.other_tabPage = new System.Windows.Forms.TabPage();
             this.other_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button_other_countdown = new System.Windows.Forms.Button();
             this.other_button_keycode = new System.Windows.Forms.Button();
-            this.number_conversion_tabPage = new System.Windows.Forms.TabPage();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.encrypt_tabPage = new System.Windows.Forms.TabPage();
             this.encrypt_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -59,18 +56,17 @@ namespace niushuai233Kit
             this.string_tabPage = new System.Windows.Forms.TabPage();
             this.string_groupBox_result = new System.Windows.Forms.GroupBox();
             this.string_groupbox_function = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.string_button_textNumber = new System.Windows.Forms.Button();
             this.string_button_wordConvert = new System.Windows.Forms.Button();
             this.button_string_uuid = new System.Windows.Forms.Button();
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.menuStrip_main.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
-            this.number_conversion_tabPage.SuspendLayout();
-            this.groupBox6.SuspendLayout();
             this.encrypt_tabPage.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.codec_trans_tabPage.SuspendLayout();
@@ -80,23 +76,24 @@ namespace niushuai233Kit
             this.tabControl_main.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip_main
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.关于ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1121, 31);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ExitToolStripMenuItem});
+            this.menuStrip_main.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip_main.Name = "menuStrip_main";
+            this.menuStrip_main.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
+            this.menuStrip_main.Size = new System.Drawing.Size(1121, 31);
+            this.menuStrip_main.TabIndex = 1;
+            this.menuStrip_main.Text = "主菜单";
             // 
-            // 关于ToolStripMenuItem
+            // ExitToolStripMenuItem
             // 
-            this.关于ToolStripMenuItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(54, 25);
-            this.关于ToolStripMenuItem.Text = "关于";
+            this.ExitToolStripMenuItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
+            this.ExitToolStripMenuItem.Size = new System.Drawing.Size(54, 25);
+            this.ExitToolStripMenuItem.Text = "退出";
+            this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // other_tabPage
             // 
@@ -160,57 +157,6 @@ namespace niushuai233Kit
             this.other_button_keycode.Text = "Ascii码查询";
             this.other_button_keycode.UseVisualStyleBackColor = true;
             this.other_button_keycode.Click += new System.EventHandler(this.other_button_keycode_Click);
-            // 
-            // number_conversion_tabPage
-            // 
-            this.number_conversion_tabPage.Controls.Add(this.groupBox5);
-            this.number_conversion_tabPage.Controls.Add(this.groupBox6);
-            this.number_conversion_tabPage.Location = new System.Drawing.Point(4, 26);
-            this.number_conversion_tabPage.Margin = new System.Windows.Forms.Padding(4);
-            this.number_conversion_tabPage.Name = "number_conversion_tabPage";
-            this.number_conversion_tabPage.Padding = new System.Windows.Forms.Padding(4);
-            this.number_conversion_tabPage.Size = new System.Drawing.Size(1084, 580);
-            this.number_conversion_tabPage.TabIndex = 3;
-            this.number_conversion_tabPage.Text = "进制转换";
-            this.number_conversion_tabPage.UseVisualStyleBackColor = true;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Location = new System.Drawing.Point(286, 8);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(700, 500);
-            this.groupBox5.TabIndex = 3;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "显示区";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.button6);
-            this.groupBox6.Controls.Add(this.button7);
-            this.groupBox6.Location = new System.Drawing.Point(8, 8);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(270, 500);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "功能区";
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(137, 38);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(125, 30);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(6, 38);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(125, 30);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "字数统计";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // encrypt_tabPage
             // 
@@ -397,6 +343,15 @@ namespace niushuai233Kit
             this.string_groupbox_function.TabStop = false;
             this.string_groupbox_function.Text = "功能区";
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(6, 102);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(125, 30);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "待续...";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // string_button_textNumber
             // 
             this.string_button_textNumber.Location = new System.Drawing.Point(6, 66);
@@ -442,7 +397,6 @@ namespace niushuai233Kit
             this.tabControl_main.Controls.Add(this.string_tabPage);
             this.tabControl_main.Controls.Add(this.codec_trans_tabPage);
             this.tabControl_main.Controls.Add(this.encrypt_tabPage);
-            this.tabControl_main.Controls.Add(this.number_conversion_tabPage);
             this.tabControl_main.Controls.Add(this.datetime_tabPage);
             this.tabControl_main.Controls.Add(this.other_tabPage);
             this.tabControl_main.Location = new System.Drawing.Point(16, 37);
@@ -462,14 +416,12 @@ namespace niushuai233Kit
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // notifyIcon
             // 
-            this.button5.Location = new System.Drawing.Point(6, 102);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(125, 30);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "待续...";
-            this.button5.UseVisualStyleBackColor = true;
+            this.notifyIcon.BalloonTipTitle = "niushuai233Kit";
+            this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
+            this.notifyIcon.Text = "niushuai233Kit";
+            this.notifyIcon.Visible = true;
             // 
             // KitApplication
             // 
@@ -477,20 +429,19 @@ namespace niushuai233Kit
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1121, 660);
             this.Controls.Add(this.tabControl_main);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip_main);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStrip_main;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "KitApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kit@niushuai233";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KitApplication_FormClosing);
+            this.menuStrip_main.ResumeLayout(false);
+            this.menuStrip_main.PerformLayout();
             this.other_tabPage.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
-            this.number_conversion_tabPage.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
             this.encrypt_tabPage.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.codec_trans_tabPage.ResumeLayout(false);
@@ -504,10 +455,9 @@ namespace niushuai233Kit
         }
 
         #endregion
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip_main;
+        private System.Windows.Forms.ToolStripMenuItem ExitToolStripMenuItem;
         private System.Windows.Forms.TabPage other_tabPage;
-        private System.Windows.Forms.TabPage number_conversion_tabPage;
         private System.Windows.Forms.TabPage encrypt_tabPage;
         private System.Windows.Forms.TabPage codec_trans_tabPage;
         private System.Windows.Forms.TabPage string_tabPage;
@@ -524,10 +474,6 @@ namespace niushuai233Kit
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button_encrypt_aes;
         private System.Windows.Forms.Button encrypt_button_md5;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.GroupBox other_groupBox_result;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Button button_other_countdown;
@@ -541,6 +487,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
     }
 }
 
