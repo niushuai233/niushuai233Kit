@@ -130,7 +130,22 @@ namespace niushuai233Kit
 
         private void KitApplication_FormClosing(object sender, FormClosingEventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
+            this.notifyIcon.Visible = true;
+            this.ShowInTaskbar = false;
             this.Hide();
+            e.Cancel = true;
+        }
+
+        private void notifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+                this.notifyIcon.Visible = false;
+                this.ShowInTaskbar = true;
+            }
         }
     }
 }
