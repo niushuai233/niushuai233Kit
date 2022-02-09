@@ -31,7 +31,7 @@ namespace niushuai233Kit.KitForm.Menus
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.label1 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_openurl = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,16 +48,17 @@ namespace niushuai233Kit.KitForm.Menus
             this.label1.TabIndex = 0;
             this.label1.Text = "工具箱 ver1.0 @niushuai233";
             // 
-            // linkLabel1
+            // linkLabel_openurl
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.Location = new System.Drawing.Point(105, 115);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(370, 21);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://github.com/niushuai233/niushuai233Kit";
+            this.linkLabel_openurl.AutoSize = true;
+            this.linkLabel_openurl.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel_openurl.Location = new System.Drawing.Point(105, 115);
+            this.linkLabel_openurl.Name = "linkLabel_openurl";
+            this.linkLabel_openurl.Size = new System.Drawing.Size(370, 21);
+            this.linkLabel_openurl.TabIndex = 1;
+            this.linkLabel_openurl.TabStop = true;
+            this.linkLabel_openurl.Text = "https://github.com/niushuai233/niushuai233Kit";
+            this.linkLabel_openurl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_openurl_LinkClicked);
             // 
             // label2
             // 
@@ -106,11 +107,11 @@ namespace niushuai233Kit.KitForm.Menus
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkLabel_openurl);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutForm";
@@ -125,7 +126,7 @@ namespace niushuai233Kit.KitForm.Menus
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel_openurl;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;

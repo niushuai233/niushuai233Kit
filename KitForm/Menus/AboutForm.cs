@@ -23,5 +23,10 @@ namespace niushuai233Kit.KitForm.Menus
         {
             this.Close();
         }
+
+        private void linkLabel_openurl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(this.linkLabel_openurl.Text);
+        }
     }
 }
