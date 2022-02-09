@@ -61,10 +61,11 @@ namespace niushuai233Kit
             this.string_groupbox_function = new System.Windows.Forms.GroupBox();
             this.string_button_textNumber = new System.Windows.Forms.Button();
             this.string_button_wordConvert = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_string_uuid = new System.Windows.Forms.Button();
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -384,9 +385,10 @@ namespace niushuai233Kit
             // 
             // string_groupbox_function
             // 
+            this.string_groupbox_function.Controls.Add(this.button5);
             this.string_groupbox_function.Controls.Add(this.string_button_textNumber);
             this.string_groupbox_function.Controls.Add(this.string_button_wordConvert);
-            this.string_groupbox_function.Controls.Add(this.button2);
+            this.string_groupbox_function.Controls.Add(this.button_string_uuid);
             this.string_groupbox_function.Controls.Add(this.string_button_wordCount);
             this.string_groupbox_function.Location = new System.Drawing.Point(8, 8);
             this.string_groupbox_function.Name = "string_groupbox_function";
@@ -415,14 +417,15 @@ namespace niushuai233Kit
             this.string_button_wordConvert.UseVisualStyleBackColor = true;
             this.string_button_wordConvert.Click += new System.EventHandler(this.string_button_wordConvert_Click);
             // 
-            // button2
+            // button_string_uuid
             // 
-            this.button2.Location = new System.Drawing.Point(138, 66);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 30);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "待续...";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_string_uuid.Location = new System.Drawing.Point(138, 66);
+            this.button_string_uuid.Name = "button_string_uuid";
+            this.button_string_uuid.Size = new System.Drawing.Size(125, 30);
+            this.button_string_uuid.TabIndex = 1;
+            this.button_string_uuid.Text = "UUID/GUID";
+            this.button_string_uuid.UseVisualStyleBackColor = true;
+            this.button_string_uuid.Click += new System.EventHandler(this.button_string_uuid_Click);
             // 
             // string_button_wordCount
             // 
@@ -458,6 +461,15 @@ namespace niushuai233Kit
             this.datetime_tabPage.TabIndex = 5;
             this.datetime_tabPage.Text = "时间转换";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(6, 102);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(125, 30);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "待续...";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // KitApplication
             // 
@@ -502,7 +514,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.TabControl tabControl_main;
         private System.Windows.Forms.GroupBox string_groupbox_function;
         private System.Windows.Forms.GroupBox string_groupBox_result;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_string_uuid;
         private System.Windows.Forms.Button string_button_wordCount;
         private System.Windows.Forms.GroupBox codec_groupBox_result;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -528,6 +540,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button encrypt_button_sha;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 

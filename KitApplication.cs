@@ -116,5 +116,11 @@ namespace niushuai233Kit
             CountDownForm form = new CountDownForm(this);
             FormReset(this.other_groupBox_result, form);
         }
+
+        private void button_string_uuid_Click(object sender, EventArgs e)
+        {
+            UUIDForm form = new UUIDForm(this);
+            FormReset(this.string_groupBox_result, form);
+        }
     }
 }

@@ -150,6 +150,12 @@
     <Compile Include="KitForm\Strings\TextNumberForm.Designer.cs">
       <DependentUpon>TextNumberForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitForm\Strings\UUIDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitForm\Strings\UUIDForm.Designer.cs">
+      <DependentUpon>UUIDForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KitForm\Strings\WordConvertForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Strings\TextNumberForm.resx">
       <DependentUpon>TextNumberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KitForm\Strings\UUIDForm.resx">
+      <DependentUpon>UUIDForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Strings\WordConvertForm.resx">
       <DependentUpon>WordConvertForm.cs</DependentUpon>
