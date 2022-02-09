@@ -9,33 +9,32 @@ namespace niushuai233Kit.Util
 {
     public class FileUtil
     {
-
-        public static List<string> ListDirectory(string path, string pattern = "")
+        public static FileInfo[] ListDirectory(string path, string pattern = "")
         {
-            List<string> list = new List<string>();
 
             if (path == null)
             {
-                return list;
+                return null;
             }
             string dirPath = @path;
             DirectoryInfo root = new DirectoryInfo(dirPath);
             FileInfo[] files = root.GetFiles();
-            
+
             if (CollectionUtil.IsEmpty(files))
             {
-                return list;
+                return null;
             }
 
+            List<FileInfo> list = new List<FileInfo>();
             foreach (FileInfo item in files)
             {
-                if (item.FullName.EndsWith(""))
+                if (item.Name.EndsWith(pattern))
                 {
-                    list.Add(item.FullName);
+                    list.Add(item);
                 }
             }
 
-            return list;
+            return list.ToArray<FileInfo>();
         }
     }
 }

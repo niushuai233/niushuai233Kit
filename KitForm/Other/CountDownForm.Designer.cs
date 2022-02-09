@@ -42,7 +42,7 @@ namespace niushuai233Kit.KitForm.Other
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button_mini = new System.Windows.Forms.Button();
-            this.button_media_set = new System.Windows.Forms.Button();
+            this.button_media_preplay = new System.Windows.Forms.Button();
             this.comboBox_media = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_hour)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_minute)).BeginInit();
@@ -187,18 +187,20 @@ namespace niushuai233Kit.KitForm.Other
             this.button_mini.UseVisualStyleBackColor = true;
             this.button_mini.Click += new System.EventHandler(this.button_mini_Click);
             // 
-            // button_media_set
+            // button_media_preplay
             // 
-            this.button_media_set.Font = new System.Drawing.Font("宋体", 16F);
-            this.button_media_set.Location = new System.Drawing.Point(475, 420);
-            this.button_media_set.Name = "button_media_set";
-            this.button_media_set.Size = new System.Drawing.Size(100, 35);
-            this.button_media_set.TabIndex = 11;
-            this.button_media_set.Text = "设置";
-            this.button_media_set.UseVisualStyleBackColor = true;
+            this.button_media_preplay.Font = new System.Drawing.Font("宋体", 16F);
+            this.button_media_preplay.Location = new System.Drawing.Point(475, 420);
+            this.button_media_preplay.Name = "button_media_preplay";
+            this.button_media_preplay.Size = new System.Drawing.Size(100, 35);
+            this.button_media_preplay.TabIndex = 11;
+            this.button_media_preplay.Text = "试听";
+            this.button_media_preplay.UseVisualStyleBackColor = true;
+            this.button_media_preplay.Click += new System.EventHandler(this.button_media_preplay_Click);
             // 
             // comboBox_media
             // 
+            this.comboBox_media.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_media.Font = new System.Drawing.Font("宋体", 16F);
             this.comboBox_media.FormattingEnabled = true;
             this.comboBox_media.Location = new System.Drawing.Point(140, 423);
@@ -212,7 +214,7 @@ namespace niushuai233Kit.KitForm.Other
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 516);
             this.Controls.Add(this.comboBox_media);
-            this.Controls.Add(this.button_media_set);
+            this.Controls.Add(this.button_media_preplay);
             this.Controls.Add(this.button_mini);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -250,7 +252,7 @@ namespace niushuai233Kit.KitForm.Other
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button_mini;
-        private System.Windows.Forms.Button button_media_set;
+        private System.Windows.Forms.Button button_media_preplay;
         private System.Windows.Forms.ComboBox comboBox_media;
     }
 }

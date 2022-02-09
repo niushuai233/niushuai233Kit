@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,20 +16,57 @@ namespace niushuai233Kit.KitForm.Other
     public partial class CountDownForm : Form
     {
 
+        static SoundPlayer player = new SoundPlayer();
+        static bool playStatus = false;
+
         public delegate void TextUpdated(string text);
         public event TextUpdated CustomTextUpdated;
 
         static bool started = false;
         static DateTime endDateTime;
-        string defaultDisplayText = "00:01:30:000", displayText, endDisplayText = "----------------";
+        string defaultDisplayText = "----------------", displayText, endDisplayText = "00:00:00:000";
         static CountDownMiniForm mini;
 
         public CountDownForm(KitApplication kitApplication)
         {
             InitializeComponent();
             started = false;
+            this.button_stop.Enabled = false;
+            InitWavCombox();
+        }
 
-            List<string> wavList = FileUtil.ListDirectory("C:\\Windows\\Media", "*.wav");
+        private void InitWavCombox()
+        {
+            FileInfo[] wavArray = FileUtil.ListDirectory("C:\\Windows\\Media", ".wav");
+
+            if (null == wavArray)
+            {
+                wavArray = new FileInfo[] { };
+            }
+
+            int count = wavArray.Count();
+
+            string[][] wavs = new string[2][];
+
+            DataTable wavDataTable = new DataTable();
+            wavDataTable.Columns.Add(new DataColumn("value"));
+            wavDataTable.Columns.Add(new DataColumn("display"));
+
+            for (int i = 0; i < count; i++)
+            {
+                FileInfo item = wavArray[i];
+
+                DataRow row = wavDataTable.NewRow();
+                row["value"] = item.FullName;
+                row["display"] = item.Name;
+
+                wavDataTable.Rows.Add(row);
+            }
+
+            this.comboBox_media.DataSource = wavDataTable;
+            this.comboBox_media.ValueMember = "value";
+            this.comboBox_media.DisplayMember = "display";
+            // this.comboBox_media.SelectedIndex = 0;
         }
 
         private void button_start_Click(object sender, EventArgs e)
@@ -63,6 +102,10 @@ namespace niushuai233Kit.KitForm.Other
                 started = false;
                 this.button_start.Enabled = true;
                 this.button_stop.Enabled = false;
+                // 置于前台显示
+                WinAPI.SetForegroundWindow(this.Handle);
+                // 播放提示音
+                PlayStart();
             }
             else
             {
@@ -71,7 +114,6 @@ namespace niushuai233Kit.KitForm.Other
 
             UpdateDisplayText(displayText);
         }
-
 
         private void button_reset_Click(object sender, EventArgs e)
         {
@@ -105,13 +147,16 @@ namespace niushuai233Kit.KitForm.Other
                 mini.Show();
 
                 this.button_mini.Text = "关闭精简";
-            } else
+            }
+            else
             {
                 mini.Close();
                 mini = null;
                 this.button_mini.Text = "打开精简";
             }
         }
+
+
 
         /// <summary>
         /// 负责更新展示的文本
@@ -140,6 +185,39 @@ namespace niushuai233Kit.KitForm.Other
             string dateDiff = hour + ts.Minutes.ToString().PadLeft(2, '0') + ":" + ts.Seconds.ToString().PadLeft(2, '0') + ":" + ts.Milliseconds.ToString().PadLeft(3, '0');
 
             return dateDiff;
+        }
+
+
+        private void button_media_preplay_Click(object sender, EventArgs e)
+        {
+            string path = this.comboBox_media.SelectedValue.ToString();
+            player.SoundLocation = @path;
+
+            if (playStatus)
+            {
+                this.button_media_preplay.Text = "试听";
+                player.Stop();
+                playStatus = false;
+                return;
+            } 
+            else
+            {
+                player.PlayLooping();
+                this.button_media_preplay.Text = "停止";
+                playStatus = true;
+            }
+        }
+
+
+        private void PlayStart()
+        {
+            string path = this.comboBox_media.SelectedValue.ToString();
+            player.SoundLocation = @path;
+
+            player.PlayLooping();
+            this.button_media_preplay.Text = "停止";
+            playStatus = true;
+
         }
     }
 }
