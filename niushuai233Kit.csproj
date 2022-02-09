@@ -129,6 +129,12 @@
     <Compile Include="KitForm\Encrypt\SHAForm.Designer.cs">
       <DependentUpon>SHAForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="KitForm\Menus\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KitForm\Menus\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="KitForm\Other\AsciiForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     <EmbeddedResource Include="KitForm\Encrypt\SHAForm.resx">
       <DependentUpon>SHAForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KitForm\Menus\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KitForm\Other\AsciiForm.resx">
       <DependentUpon>AsciiForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +244,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -262,10 +272,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\Image\" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Assets\Image\niushuai233Kit.png" />
     <Content Include="niushuai233kit.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

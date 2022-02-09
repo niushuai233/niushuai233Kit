@@ -1,6 +1,7 @@
 ﻿
 using niushuai233Kit.KitForm.Codec;
 using niushuai233Kit.KitForm.Encrypt;
+using niushuai233Kit.KitForm.Menus;
 using niushuai233Kit.KitForm.Other;
 using niushuai233Kit.KitForm.Strings;
 using System;
@@ -300,6 +301,12 @@ namespace niushuai233Kit
                 this.notifyIcon.Visible = false;
                 this.ShowInTaskbar = true;
             }
+        }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.ShowDialog(this);
         }
     }
 }

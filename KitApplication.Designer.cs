@@ -33,6 +33,7 @@ namespace niushuai233Kit
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KitApplication));
             this.menuStrip_main = new System.Windows.Forms.MenuStrip();
             this.ExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.other_tabPage = new System.Windows.Forms.TabPage();
             this.other_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -79,7 +80,8 @@ namespace niushuai233Kit
             // menuStrip_main
             // 
             this.menuStrip_main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ExitToolStripMenuItem});
+            this.ExitToolStripMenuItem,
+            this.AboutToolStripMenuItem});
             this.menuStrip_main.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_main.Name = "menuStrip_main";
             this.menuStrip_main.Padding = new System.Windows.Forms.Padding(8, 3, 0, 3);
@@ -94,6 +96,14 @@ namespace niushuai233Kit
             this.ExitToolStripMenuItem.Size = new System.Drawing.Size(54, 25);
             this.ExitToolStripMenuItem.Text = "退出";
             this.ExitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            // 
+            // AboutToolStripMenuItem
+            // 
+            this.AboutToolStripMenuItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
+            this.AboutToolStripMenuItem.Size = new System.Drawing.Size(54, 25);
+            this.AboutToolStripMenuItem.Text = "关于";
+            this.AboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // other_tabPage
             // 
@@ -489,6 +499,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.ToolStripMenuItem AboutToolStripMenuItem;
     }
 }
 
