@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,7 +36,7 @@ namespace niushuai233Kit.Util
 
             return dateTime.Hour + ":" + dateTime.Minute + ":" + dateTime.Second;
         }
-        
+
         /// <summary>
         /// 根据提供的pattern来格式化时间
         /// </summary>
@@ -71,6 +72,16 @@ namespace niushuai233Kit.Util
             return Now("HH:mm:ss");
         }
 
+        internal static long ToUnixTimeSeconds(DateTime dt)
+        {
+            return new DateTimeOffset(dt).ToUnixTimeSeconds();
+        }
+
+        internal static long ToUnixTimeMilliseconds(DateTime dt)
+        {
+            return new DateTimeOffset(dt).ToUnixTimeMilliseconds();
+        }
+
         /// <summary>
         /// 格式化为 HH:mm:ss:fff
         /// </summary>
@@ -99,6 +110,7 @@ namespace niushuai233Kit.Util
         {
             return Format(dt, "yyyy-MM-dd HH:mm:ss");
         }
+
         /// <summary>
         /// 格式化时间 可提供格式
         /// </summary>
@@ -128,6 +140,93 @@ namespace niushuai233Kit.Util
         }
 
         /// <summary>
+        /// 格式化时间 可提供格式
+        /// </summary>
+        /// <param name="dt">时间</param>
+        /// <returns>yyyy-MM-dd HH:mm:ss:fff</returns>
+        public static string FormatDateTimeWithMillisecond(DateTime dt)
+        {
+            return Format(dt, "yyyy-MM-dd HH:mm:ss:fff");
+        }
+
+
+        /// <summary>
+        /// 秒转DateTime
+        /// </summary>
+        /// <param name="seconds">秒值</param>
+        /// <returns>DateTime对象</returns>
+        public static DateTime Second2DateTime(long seconds)
+        {
+            return Millisecond2DateTime(seconds * 1000);
+        }
+
+        /// <summary>
+        /// 毫秒转DateTime
+        /// </summary>
+        /// <param name="millis">毫秒值</param>
+        /// <returns>DateTime对象</returns>
+        public static DateTime Millisecond2DateTime(long millis)
+        {
+            // 当地时区
+            DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
+            DateTime dt = startTime.AddMilliseconds(millis);
+
+            return dt;
+        }
+
+        /// <summary>
+        /// 封装为时间对象
+        /// </summary>
+        /// <param name="source">文本时间</param>
+        /// <param name="pattern">格式</param>
+        /// <returns>pattern</returns>
+        public static DateTime Parse(string source, string pattern = "yyyy-MM-dd HH:mm:ss")
+        {
+            return DateTime.ParseExact(source, pattern, CultureInfo.InvariantCulture);
+        }
+
+        /// <summary>
+        /// 封装为时间对象
+        /// </summary>
+        /// <param name="source">文本时间</param>
+        /// <returns>pattern</returns>
+        public static DateTime ParseDate(string source)
+        {
+            return Parse(source, "yyyy-MM-dd");
+        }
+
+        /// <summary>
+        /// 封装为时间对象
+        /// </summary>
+        /// <param name="source">文本时间</param>
+        /// <returns>pattern</returns>
+        public static DateTime ParseTime(string source)
+        {
+            return Parse(source, "HH:mm:ss");
+        }
+
+        /// <summary>
+        /// 封装为时间对象
+        /// </summary>
+        /// <param name="source">文本时间</param>
+        /// <returns>pattern</returns>
+        public static DateTime ParseDateTime(string source)
+        {
+            return Parse(source);
+        }
+
+        /// <summary>
+        /// 封装为时间对象
+        /// </summary>
+        /// <param name="source">文本时间</param>
+        /// <returns>pattern</returns>
+        public static DateTime ParseDateTimeWithMilliseconds(string source)
+        {
+            return Parse(source, "yyyy-MM-dd HH:mm:ss:fff");
+        }
+
+
+        /// <summary>
         /// 比较两个日期 <br/>
         /// <br/>
         ///  -1表示 dt1 &lt; dt2 <br/>
@@ -139,7 +238,7 @@ namespace niushuai233Kit.Util
         /// <returns></returns>
         public static int Compare(DateTime dt1, DateTime dt2)
         {
-            if (null == dt1 || null == dt2 )
+            if (null == dt1 || null == dt2)
             {
                 throw new NotSupportedException("比较的时间不能为空");
             }

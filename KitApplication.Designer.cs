@@ -64,6 +64,12 @@ namespace niushuai233Kit
             this.string_button_wordCount = new System.Windows.Forms.Button();
             this.tabControl_main = new System.Windows.Forms.TabControl();
             this.datetime_tabPage = new System.Windows.Forms.TabPage();
+            this.groupBox_time_result = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button_time_millssecond = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip_main.SuspendLayout();
             this.other_tabPage.SuspendLayout();
@@ -75,6 +81,8 @@ namespace niushuai233Kit
             this.string_tabPage.SuspendLayout();
             this.string_groupbox_function.SuspendLayout();
             this.tabControl_main.SuspendLayout();
+            this.datetime_tabPage.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip_main
@@ -418,13 +426,74 @@ namespace niushuai233Kit
             // 
             // datetime_tabPage
             // 
+            this.datetime_tabPage.Controls.Add(this.groupBox_time_result);
+            this.datetime_tabPage.Controls.Add(this.groupBox3);
             this.datetime_tabPage.Location = new System.Drawing.Point(4, 26);
             this.datetime_tabPage.Name = "datetime_tabPage";
             this.datetime_tabPage.Padding = new System.Windows.Forms.Padding(3);
             this.datetime_tabPage.Size = new System.Drawing.Size(1084, 580);
             this.datetime_tabPage.TabIndex = 5;
-            this.datetime_tabPage.Text = "时间转换";
+            this.datetime_tabPage.Text = "时间相关";
             this.datetime_tabPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox_time_result
+            // 
+            this.groupBox_time_result.Location = new System.Drawing.Point(286, 8);
+            this.groupBox_time_result.Name = "groupBox_time_result";
+            this.groupBox_time_result.Size = new System.Drawing.Size(791, 565);
+            this.groupBox_time_result.TabIndex = 5;
+            this.groupBox_time_result.TabStop = false;
+            this.groupBox_time_result.Text = "显示区";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.button6);
+            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Controls.Add(this.button_time_millssecond);
+            this.groupBox3.Location = new System.Drawing.Point(8, 8);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(270, 565);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "功能区";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(137, 66);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 30);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "待续...";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(138, 30);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(125, 30);
+            this.button6.TabIndex = 2;
+            this.button6.Text = "日期计算";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(6, 66);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(125, 30);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "时间差值计算";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button_time_millssecond
+            // 
+            this.button_time_millssecond.Location = new System.Drawing.Point(6, 30);
+            this.button_time_millssecond.Name = "button_time_millssecond";
+            this.button_time_millssecond.Size = new System.Drawing.Size(125, 30);
+            this.button_time_millssecond.TabIndex = 0;
+            this.button_time_millssecond.Text = "时间毫秒互转";
+            this.button_time_millssecond.UseVisualStyleBackColor = true;
+            this.button_time_millssecond.Click += new System.EventHandler(this.button_time_millssecond_Click);
             // 
             // notifyIcon
             // 
@@ -460,6 +529,8 @@ namespace niushuai233Kit
             this.string_tabPage.ResumeLayout(false);
             this.string_groupbox_function.ResumeLayout(false);
             this.tabControl_main.ResumeLayout(false);
+            this.datetime_tabPage.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,6 +571,12 @@ namespace niushuai233Kit
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.ToolStripMenuItem AboutToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox_time_result;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_time_millssecond;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 

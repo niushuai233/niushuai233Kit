@@ -4,6 +4,7 @@ using niushuai233Kit.KitForm.Encrypt;
 using niushuai233Kit.KitForm.Menus;
 using niushuai233Kit.KitForm.Other;
 using niushuai233Kit.KitForm.Strings;
+using niushuai233Kit.KitForm.Time;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -100,10 +101,15 @@ namespace niushuai233Kit
         //////////////////////////////////////////////////////////////////////////////
         /// <summary>
         /// 
-        /// 时间转换 Forms
+        /// 时间相关 Forms
         /// 
         /// </summary>
         //////////////////////////////////////////////////////////////////////////////
+
+        /// <summary>
+        /// 毫秒转换
+        /// </summary>
+        private static MillisecondTransForm millisecondTransForm;
 
 
         //////////////////////////////////////////////////////////////////////////////
@@ -307,6 +313,15 @@ namespace niushuai233Kit
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog(this);
+        }
+
+        private void button_time_millssecond_Click(object sender, EventArgs e)
+        {
+            if (millisecondTransForm == null)
+            {
+                millisecondTransForm = new MillisecondTransForm(this);
+            }
+            FormReset(this.groupBox_time_result, millisecondTransForm);
         }
     }
 }
