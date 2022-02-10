@@ -291,14 +291,16 @@ namespace niushuai233Kit
 
         private void KitApplication_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-            this.notifyIcon.Visible = true;
-            this.ShowInTaskbar = false;
-            this.Hide();
+            HideMainForm();
             e.Cancel = true;
         }
 
         private void notifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            ShowMainForm();
+        }
+
+        private void ShowMainForm()
         {
             if (this.WindowState == FormWindowState.Minimized)
             {
@@ -308,6 +310,15 @@ namespace niushuai233Kit
                 this.ShowInTaskbar = true;
             }
         }
+
+        private void HideMainForm()
+        {
+            this.WindowState = FormWindowState.Minimized;
+            this.notifyIcon.Visible = true;
+            this.ShowInTaskbar = false;
+            this.Hide();
+        }
+
 
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -322,6 +333,18 @@ namespace niushuai233Kit
                 millisecondTransForm = new MillisecondTransForm(this);
             }
             FormReset(this.groupBox_time_result, millisecondTransForm);
+        }
+
+        private void NotifyIconShowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ShowMainForm();
+        }
+
+        private void NotifyIconExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // 释放托盘图标
+            this.notifyIcon.Dispose();
+            Environment.Exit(0);
         }
     }
 }

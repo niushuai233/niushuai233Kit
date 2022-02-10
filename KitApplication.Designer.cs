@@ -69,6 +69,9 @@ namespace niushuai233Kit
             this.button2 = new System.Windows.Forms.Button();
             this.button_time_millssecond = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.contextMenuStrip_notifyIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.NotifyIconShowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NotifyIconExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip_main.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -81,6 +84,7 @@ namespace niushuai233Kit
             this.tabControl_main.SuspendLayout();
             this.datetime_tabPage.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.contextMenuStrip_notifyIcon.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip_main
@@ -476,9 +480,32 @@ namespace niushuai233Kit
             // notifyIcon
             // 
             this.notifyIcon.BalloonTipTitle = "niushuai233Kit";
+            this.notifyIcon.ContextMenuStrip = this.contextMenuStrip_notifyIcon;
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
             this.notifyIcon.Text = "niushuai233Kit";
             this.notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon_DoubleClick);
+            // 
+            // contextMenuStrip_notifyIcon
+            // 
+            this.contextMenuStrip_notifyIcon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.NotifyIconShowToolStripMenuItem,
+            this.NotifyIconExitToolStripMenuItem});
+            this.contextMenuStrip_notifyIcon.Name = "contextMenuStrip_notifyIcon";
+            this.contextMenuStrip_notifyIcon.Size = new System.Drawing.Size(181, 70);
+            // 
+            // NotifyIconShowToolStripMenuItem
+            // 
+            this.NotifyIconShowToolStripMenuItem.Name = "NotifyIconShowToolStripMenuItem";
+            this.NotifyIconShowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.NotifyIconShowToolStripMenuItem.Text = "显示";
+            this.NotifyIconShowToolStripMenuItem.Click += new System.EventHandler(this.NotifyIconShowToolStripMenuItem_Click);
+            // 
+            // NotifyIconExitToolStripMenuItem
+            // 
+            this.NotifyIconExitToolStripMenuItem.Name = "NotifyIconExitToolStripMenuItem";
+            this.NotifyIconExitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.NotifyIconExitToolStripMenuItem.Text = "退出";
+            this.NotifyIconExitToolStripMenuItem.Click += new System.EventHandler(this.NotifyIconExitToolStripMenuItem_Click);
             // 
             // KitApplication
             // 
@@ -509,6 +536,7 @@ namespace niushuai233Kit
             this.tabControl_main.ResumeLayout(false);
             this.datetime_tabPage.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.contextMenuStrip_notifyIcon.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -553,6 +581,9 @@ namespace niushuai233Kit
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button_time_millssecond;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip_notifyIcon;
+        private System.Windows.Forms.ToolStripMenuItem NotifyIconShowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem NotifyIconExitToolStripMenuItem;
     }
 }
 
