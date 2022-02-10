@@ -67,8 +67,6 @@ namespace niushuai233Kit
             this.groupBox_time_result = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button_time_millssecond = new System.Windows.Forms.Button();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip_main.SuspendLayout();
@@ -448,8 +446,6 @@ namespace niushuai233Kit
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button7);
             this.groupBox3.Controls.Add(this.button_time_millssecond);
             this.groupBox3.Location = new System.Drawing.Point(8, 8);
             this.groupBox3.Name = "groupBox3";
@@ -460,30 +456,12 @@ namespace niushuai233Kit
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(137, 66);
+            this.button2.Location = new System.Drawing.Point(139, 30);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 30);
             this.button2.TabIndex = 3;
             this.button2.Text = "待续...";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(138, 30);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(125, 30);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "日期计算";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(6, 66);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(125, 30);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "时间差值计算";
-            this.button7.UseVisualStyleBackColor = true;
             // 
             // button_time_millssecond
             // 
@@ -575,8 +553,6 @@ namespace niushuai233Kit
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button_time_millssecond;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
     }
 }
 
