@@ -262,6 +262,7 @@
     <Compile Include="Entity\Enums\CharType.cs" />
     <Compile Include="Entity\Settings\TranslationSettings.cs" />
     <Compile Include="Entity\Translation\Languages.cs" />
+    <Compile Include="Util\ReflectUtil.cs" />
     <Compile Include="Entity\Translation\TranslationResponse.cs" />
     <Compile Include="KitApplication.cs">
       <SubType>Form</SubType>

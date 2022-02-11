@@ -58,5 +58,10 @@ namespace niushuai233Kit.Util
             }
 
         }
+
+        public static TranslationResponse BaiduTranslate(string source, string targetLanguage, string specifiedSourceLanguage = null)
+        {
+            return new TranslationResponse();
+        }
     }
 }

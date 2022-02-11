@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -48,7 +49,24 @@ namespace niushuai233Kit.KitForm.Other
         /// </summary>
         private void InitLanguageCombox()
         {
-            
+            Languages languages = new Languages();
+            FieldInfo[] fieldInfos = ReflectUtil.GetAllField<Languages>();
+
+            this.comboBox_language_source.Items.Clear();
+            this.comboBox_language_result.Items.Clear();
+
+            for (int i = 0; i < fieldInfos.Length; i++)
+            {
+                Code code = (Code)fieldInfos[i].GetValue(languages);
+                this.comboBox_language_source.Items.Add(code.Name);
+                if (i != fieldInfos.Length - 1)
+                {
+                    this.comboBox_language_result.Items.Add(code.Name);
+                }
+            }
+
+            this.comboBox_language_source.SelectedIndex = 2;
+            this.comboBox_language_result.SelectedIndex = 0;
         }
 
 
@@ -60,9 +78,15 @@ namespace niushuai233Kit.KitForm.Other
 
         private void pictureBox_language_exchange_Click(object sender, EventArgs e)
         {
+            if (this.comboBox_language_source.SelectedIndex == 6)
+            {
+                return;
+            }
+
             int tmp = this.comboBox_language_source.SelectedIndex;
             this.comboBox_language_source.SelectedIndex = this.comboBox_language_result.SelectedIndex;
             this.comboBox_language_result.SelectedIndex = tmp;
+
         }
 
         private void pictureBox_content_exchange_Click(object sender, EventArgs e)
@@ -109,14 +133,18 @@ namespace niushuai233Kit.KitForm.Other
 
             TranslationResponse response = null;
 
+            Languages.MatchGoogle("中文简体");
+
             if (this.comboBox1.SelectedIndex == 0)
             {
+                ;
                 // Google
-                response = TranslationUtil.GoogleTranslate(this.textBox_source.Text, LanguageCodes.ChineseSimplified);
+                response = TranslationUtil.GoogleTranslate(this.textBox_source.Text, Languages.MatchGoogle(this.comboBox_language_result.Text), Languages.MatchGoogle(this.comboBox_language_source.Text));
             }
             else
             {
                 // Baidu
+                response = TranslationUtil.BaiduTranslate(this.textBox_source.Text, Languages.MatchGoogle(this.comboBox_language_result.Text), Languages.MatchGoogle(this.comboBox_language_source.Text));
             }
 
             // 未成功

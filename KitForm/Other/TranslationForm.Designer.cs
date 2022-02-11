@@ -84,6 +84,7 @@ namespace niushuai233Kit.KitForm.Other
             // 
             // comboBox_language_source
             // 
+            this.comboBox_language_source.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_language_source.FormattingEnabled = true;
             this.comboBox_language_source.Location = new System.Drawing.Point(13, 263);
             this.comboBox_language_source.Name = "comboBox_language_source";
@@ -92,6 +93,7 @@ namespace niushuai233Kit.KitForm.Other
             // 
             // comboBox_language_result
             // 
+            this.comboBox_language_result.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_language_result.FormattingEnabled = true;
             this.comboBox_language_result.Location = new System.Drawing.Point(210, 263);
             this.comboBox_language_result.Name = "comboBox_language_result";

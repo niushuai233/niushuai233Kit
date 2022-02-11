@@ -1,7 +1,9 @@
 ﻿using Google.Cloud.Translation.V2;
+using niushuai233Kit.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,15 +30,57 @@ namespace niushuai233Kit.Entity.Translation
     public class Languages
     {
 
-        /// <summary>
-        /// 自动检测
-        /// </summary>
-        internal static Code Auto = new Code
+        private static string Match(string name = null, int matchType = 1)
         {
-            Name = "auto",
-            GoogleCode = null,
-            BaiduCode = "auto"
-        };
+            Languages languages = new Languages();
+            FieldInfo[] fieldInfos = ReflectUtil.GetAllField<Languages>();
+
+            string result = null;
+            for (int i = 0; i < fieldInfos.Length; i++)
+            {
+                Code code = (Code)fieldInfos[i].GetValue(languages);
+
+                if (code.Name.Equals(name))
+                {
+                    if (matchType == 1)
+                    {
+                        // 匹配到的GoogleCode
+                        result = code.GoogleCode;
+                    } 
+                    else if (matchType == 2)
+                    {
+                        // 匹配到的BaiduCode
+                        result = code.BaiduCode;
+                    }
+                }
+            }
+
+            if (StringUtil.IsEmpty(result))
+            {
+                if (matchType == 1)
+                {
+                    // Google 默认为 null
+                    return Auto.GoogleCode;
+                }
+                else if (matchType == 2)
+                {
+                    // Baidu 默认为 auto
+                    return Auto.BaiduCode;
+                }
+            }
+
+            return result;
+        }
+
+        internal static string MatchGoogle(string name)
+        {
+            return Match(name, 1);
+        }
+
+        internal static string MatchBaidu(string name)
+        {
+            return Match(name, 2);
+        }
 
         /// <summary>
         /// 简体
@@ -96,6 +140,16 @@ namespace niushuai233Kit.Entity.Translation
             Name = "法语",
             GoogleCode = LanguageCodes.French,
             BaiduCode = "fra"
+        };
+
+        /// <summary>
+        /// 自动检测
+        /// </summary>
+        internal static Code Auto = new Code
+        {
+            Name = "自动检测",
+            GoogleCode = null,
+            BaiduCode = "auto"
         };
     }
 }
