@@ -491,19 +491,19 @@ namespace niushuai233Kit
             this.NotifyIconShowToolStripMenuItem,
             this.NotifyIconExitToolStripMenuItem});
             this.contextMenuStrip_notifyIcon.Name = "contextMenuStrip_notifyIcon";
-            this.contextMenuStrip_notifyIcon.Size = new System.Drawing.Size(181, 70);
+            this.contextMenuStrip_notifyIcon.Size = new System.Drawing.Size(101, 48);
             // 
             // NotifyIconShowToolStripMenuItem
             // 
             this.NotifyIconShowToolStripMenuItem.Name = "NotifyIconShowToolStripMenuItem";
-            this.NotifyIconShowToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.NotifyIconShowToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.NotifyIconShowToolStripMenuItem.Text = "显示";
             this.NotifyIconShowToolStripMenuItem.Click += new System.EventHandler(this.NotifyIconShowToolStripMenuItem_Click);
             // 
             // NotifyIconExitToolStripMenuItem
             // 
             this.NotifyIconExitToolStripMenuItem.Name = "NotifyIconExitToolStripMenuItem";
-            this.NotifyIconExitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.NotifyIconExitToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.NotifyIconExitToolStripMenuItem.Text = "退出";
             this.NotifyIconExitToolStripMenuItem.Click += new System.EventHandler(this.NotifyIconExitToolStripMenuItem_Click);
             // 
