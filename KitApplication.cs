@@ -130,6 +130,12 @@ namespace niushuai233Kit
         /// </summary>
         private static CountDownForm countDownForm;
 
+        
+        /// <summary>
+        /// 翻译
+        /// </summary>
+        private static TranslationForm translationForm;
+
 
         //////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -345,6 +351,20 @@ namespace niushuai233Kit
             // 释放托盘图标
             this.notifyIcon.Dispose();
             Environment.Exit(0);
+        }
+
+        /// <summary>
+        /// 翻译
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button_other_translation_Click(object sender, EventArgs e)
+        {
+            if (translationForm == null)
+            {
+                translationForm = new TranslationForm(this);
+            }
+            FormReset(this.other_groupBox_result, translationForm);
         }
     }
 }

@@ -121,4 +121,16 @@
   <data name="niushuai233Kit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Image\niushuai233Kit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Exchange" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon\Exchange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exchange_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon\Exchange_Red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exchange_Vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon\Exchange_Vertical.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exchange_Vertical_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\icon\Exchange_Vertical_Red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
