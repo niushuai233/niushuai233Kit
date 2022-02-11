@@ -51,6 +51,9 @@ namespace niushuai233Kit.KitForm.Other
 
         private void pictureBox_content_exchange_Click(object sender, EventArgs e)
         {
+            string tmp = this.textBox_source.Text;
+            this.textBox_source.Text = this.textBox_result.Text;
+            this.textBox_result.Text = tmp;
         }
 
         private void pictureBox_exchange_MouseDown(object sender, MouseEventArgs e)
