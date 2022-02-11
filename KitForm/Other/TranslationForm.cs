@@ -22,13 +22,9 @@ namespace niushuai233Kit.KitForm.Other
             InitializeComponent();
 
             Init();
+            
         }
 
-        private void button_settings_Click(object sender, EventArgs e)
-        {
-            TranslationSettingsForm settingsForm = new TranslationSettingsForm();
-            settingsForm.ShowDialog(this);
-        }
 
         private void Init()
         {
@@ -42,11 +38,31 @@ namespace niushuai233Kit.KitForm.Other
 
             // 加载初始配置
             TranslationUtil.settings = CommonUtil.LoadConfig<TranslationSettings>(CommonUtil.TranslationSettingsLocation());
+
+            InitLanguageCombox();
+        }
+
+
+        /// <summary>
+        /// 初始化翻译源语言与目标语言
+        /// </summary>
+        private void InitLanguageCombox()
+        {
+            
+        }
+
+
+        private void button_settings_Click(object sender, EventArgs e)
+        {
+            TranslationSettingsForm settingsForm = new TranslationSettingsForm();
+            settingsForm.ShowDialog(this);
         }
 
         private void pictureBox_language_exchange_Click(object sender, EventArgs e)
         {
-
+            int tmp = this.comboBox_language_source.SelectedIndex;
+            this.comboBox_language_source.SelectedIndex = this.comboBox_language_result.SelectedIndex;
+            this.comboBox_language_result.SelectedIndex = tmp;
         }
 
         private void pictureBox_content_exchange_Click(object sender, EventArgs e)
