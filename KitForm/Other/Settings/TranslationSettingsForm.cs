@@ -57,6 +57,8 @@ namespace niushuai233Kit.KitForm.Other.Settings
             };
 
             XmlUtil.Obj2Xml<TranslationSettings>(CommonUtil.TranslationSettingsLocation(), translationSettings);
+
+            TranslationUtil.settings = translationSettings;
             this.Close();
         }
     }

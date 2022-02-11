@@ -1,5 +1,8 @@
 ﻿using Google.Cloud.Translation.V2;
+using niushuai233Kit.Entity.Settings;
+using niushuai233Kit.Entity.Translation;
 using niushuai233Kit.KitForm.Other.Settings;
+using niushuai233Kit.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,6 +39,9 @@ namespace niushuai233Kit.KitForm.Other
 
             // 设置默认引擎为Google
             this.comboBox1.SelectedIndex = 0;
+
+            // 加载初始配置
+            TranslationUtil.settings = CommonUtil.LoadConfig<TranslationSettings>(CommonUtil.TranslationSettingsLocation());
         }
 
         private void pictureBox_language_exchange_Click(object sender, EventArgs e)
@@ -81,10 +87,29 @@ namespace niushuai233Kit.KitForm.Other
 
         private void button_translate_Click(object sender, EventArgs e)
         {
-            string apiKey = "AIzaSyAoRh9wFe9BN8r8EJPI9HOWJK3sMv2J9nc";
-            TranslationClient client = TranslationClient.CreateFromApiKey(apiKey);
-            TranslationResult result = client.TranslateText("It is raining.", LanguageCodes.ChineseSimplified);
-            Console.WriteLine($"Result: {result.TranslatedText}; detected language {result.DetectedSourceLanguage}");
+
+            TranslationResponse response = null;
+
+            if (this.comboBox1.SelectedIndex == 0)
+            {
+                // Google
+                response = TranslationUtil.GoogleTranslate(this.textBox_source.Text, LanguageCodes.ChineseSimplified);
+            }
+            else
+            {
+                // Baidu
+            }
+
+            // 未成功
+            if (response == null || !response.Success)
+            {
+                MessageBox.Show("失败: " + response.ErrorMessage);
+                return;
+            }
+
+            // 成功
+            this.textBox_result.Text = response.TranslatedText;
+
         }
     }
 }

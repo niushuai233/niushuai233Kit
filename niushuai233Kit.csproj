@@ -261,6 +261,7 @@
   <ItemGroup>
     <Compile Include="Entity\Enums\CharType.cs" />
     <Compile Include="Entity\Settings\TranslationSettings.cs" />
+    <Compile Include="Entity\Translation\TranslationResponse.cs" />
     <Compile Include="KitApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,6 +384,7 @@
     <Compile Include="Util\JsonUtil.cs" />
     <Compile Include="Util\NumberUtil.cs" />
     <Compile Include="Util\StringUtil.cs" />
+    <Compile Include="Util\TranslationUtil.cs" />
     <Compile Include="Util\WinAPI.cs" />
     <Compile Include="Util\XmlUtil.cs" />
     <EmbeddedResource Include="KitApplication.resx">
