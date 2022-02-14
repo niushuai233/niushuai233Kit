@@ -116,6 +116,8 @@ namespace niushuai233Kit.KitForm.Other
             this.comboBox_language_source.SelectedIndex = this.comboBox_language_result.SelectedIndex;
             this.comboBox_language_result.SelectedIndex = tmp;
 
+            // 切换后自动翻译一次
+            Translate();
         }
 
         private void pictureBox_content_exchange_Click(object sender, EventArgs e)
