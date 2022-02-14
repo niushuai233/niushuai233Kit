@@ -63,6 +63,7 @@ namespace niushuai233Kit.KitForm.Other
             this.textBox_source.Size = new System.Drawing.Size(760, 200);
             this.textBox_source.TabIndex = 1;
             this.textBox_source.Text = "Hello World!";
+            this.textBox_source.TextChanged += new System.EventHandler(this.textBox_source_TextChanged);
             // 
             // textBox_result
             // 

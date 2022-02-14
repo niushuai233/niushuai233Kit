@@ -18,14 +18,44 @@ namespace niushuai233Kit.KitForm.Other
 {
     public partial class TranslationForm : Form
     {
+        /// <summary>
+        /// 自动翻译计时器
+        /// </summary>
+        private Timer timer = new Timer();
+        private int mills = 1000;
+        private string lastSource = "";
+
         public TranslationForm(KitApplication kitApplication)
         {
             InitializeComponent();
 
             Init();
-            
+
+            InitTimer();
         }
 
+        private void InitTimer()
+        {
+
+            this.timer.Interval = mills;
+            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            Console.WriteLine("Write Line");
+            string currSource = this.textBox_source.Text;
+            if (!currSource.Equals(lastSource))
+            {
+                // 如果记录的上次翻译时内容与当前不同时, 再翻译一次
+                Translate();
+                lastSource = currSource;
+            } else
+            {
+                // 相等时停止触发timer
+                this.timer.Stop();
+            }
+        }
 
         private void Init()
         {
@@ -129,7 +159,11 @@ namespace niushuai233Kit.KitForm.Other
 
         private void button_translate_Click(object sender, EventArgs e)
         {
+            Translate();
+        }
 
+        private void Translate()
+        {
             TranslationResponse response = null;
 
             if (this.comboBox_translation_engine.SelectedIndex == 0)
@@ -152,13 +186,25 @@ namespace niushuai233Kit.KitForm.Other
 
             // 成功
             this.textBox_result.Text = response.TranslatedText;
-
         }
 
+        /// <summary>
+        /// 记住上次选择的翻译语言
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void comboBox_translation_engine_SelectedIndexChanged(object sender, EventArgs e)
         {
             TranslationUtil.settings.UsingTranslationEngine = this.comboBox_translation_engine.SelectedIndex;
             XmlUtil.Obj2Xml(CommonUtil.TranslationSettingsLocation(), TranslationUtil.settings);
+        }
+        
+        private void textBox_source_TextChanged(object sender, EventArgs e)
+        {
+            if (this.checkBox_auto_translate.Checked && !this.timer.Enabled)
+            {
+                this.timer.Start();
+            }
         }
     }
 }
