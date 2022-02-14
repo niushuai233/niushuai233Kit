@@ -260,6 +260,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Enums\CharType.cs" />
+    <Compile Include="Entity\Regex\RegexPool.cs" />
     <Compile Include="Entity\Settings\TranslationSettings.cs" />
     <Compile Include="Entity\Translation\Languages.cs" />
     <Compile Include="KitForm\Other\RegexForm.cs">

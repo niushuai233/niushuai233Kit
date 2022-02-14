@@ -37,7 +37,7 @@ namespace niushuai233Kit
             this.other_tabPage = new System.Windows.Forms.TabPage();
             this.other_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button_other_regex = new System.Windows.Forms.Button();
             this.button_other_translation = new System.Windows.Forms.Button();
             this.button_other_countdown = new System.Windows.Forms.Button();
             this.other_button_keycode = new System.Windows.Forms.Button();
@@ -73,6 +73,7 @@ namespace niushuai233Kit
             this.contextMenuStrip_notifyIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.NotifyIconShowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NotifyIconExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip_main.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -140,7 +141,8 @@ namespace niushuai233Kit
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.button6);
+            this.groupBox8.Controls.Add(this.button4);
+            this.groupBox8.Controls.Add(this.button_other_regex);
             this.groupBox8.Controls.Add(this.button_other_translation);
             this.groupBox8.Controls.Add(this.button_other_countdown);
             this.groupBox8.Controls.Add(this.other_button_keycode);
@@ -151,14 +153,15 @@ namespace niushuai233Kit
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "功能区";
             // 
-            // button6
+            // button_other_regex
             // 
-            this.button6.Location = new System.Drawing.Point(137, 66);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(125, 30);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "待续...";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button_other_regex.Location = new System.Drawing.Point(137, 66);
+            this.button_other_regex.Name = "button_other_regex";
+            this.button_other_regex.Size = new System.Drawing.Size(125, 30);
+            this.button_other_regex.TabIndex = 3;
+            this.button_other_regex.Text = "正则表达式";
+            this.button_other_regex.UseVisualStyleBackColor = true;
+            this.button_other_regex.Click += new System.EventHandler(this.button_other_regex_Click);
             // 
             // button_other_translation
             // 
@@ -519,6 +522,15 @@ namespace niushuai233Kit
             this.NotifyIconExitToolStripMenuItem.Text = "退出";
             this.NotifyIconExitToolStripMenuItem.Click += new System.EventHandler(this.NotifyIconExitToolStripMenuItem_Click);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(6, 102);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(125, 30);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "待续...";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // KitApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -596,7 +608,8 @@ namespace niushuai233Kit
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip_notifyIcon;
         private System.Windows.Forms.ToolStripMenuItem NotifyIconShowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem NotifyIconExitToolStripMenuItem;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button_other_regex;
+        private System.Windows.Forms.Button button4;
     }
 }
 

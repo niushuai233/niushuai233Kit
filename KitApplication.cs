@@ -136,6 +136,13 @@ namespace niushuai233Kit
         /// </summary>
         private static TranslationForm translationForm;
 
+        
+        
+        /// <summary>
+        /// 正则表达式
+        /// </summary>
+        private static RegexForm regexForm;
+
 
         //////////////////////////////////////////////////////////////////////////////
         /// <summary>
@@ -365,6 +372,15 @@ namespace niushuai233Kit
                 translationForm = new TranslationForm(this);
             }
             FormReset(this.other_groupBox_result, translationForm);
+        }
+
+        private void button_other_regex_Click(object sender, EventArgs e)
+        {
+            if (regexForm == null)
+            {
+                regexForm = new RegexForm(this);
+            }
+            FormReset(this.other_groupBox_result, regexForm);
         }
     }
 }

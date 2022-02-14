@@ -32,20 +32,20 @@ namespace niushuai233Kit.KitForm.Other
             this.textBox_source = new System.Windows.Forms.TextBox();
             this.textBox_result = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_pattern = new System.Windows.Forms.TextBox();
-            this.button_match = new System.Windows.Forms.Button();
-            this.radioButton_pattern_chinese = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton_pattern_chinese = new System.Windows.Forms.RadioButton();
+            this.button_match = new System.Windows.Forms.Button();
+            this.textBox_pattern = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,21 +87,138 @@ namespace niushuai233Kit.KitForm.Other
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // label1
+            // radioButton10
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "正则表达式:";
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(701, 55);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(42, 20);
+            this.radioButton10.TabIndex = 3;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Tag = "QQ";
+            this.radioButton10.Text = "QQ";
+            this.radioButton10.UseVisualStyleBackColor = true;
             // 
-            // textBox_pattern
+            // radioButton9
             // 
-            this.textBox_pattern.Location = new System.Drawing.Point(100, 15);
-            this.textBox_pattern.Name = "textBox_pattern";
-            this.textBox_pattern.Size = new System.Drawing.Size(568, 26);
-            this.textBox_pattern.TabIndex = 1;
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(638, 55);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(58, 20);
+            this.radioButton9.TabIndex = 3;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Tag = "IPV6";
+            this.radioButton9.Text = "IPV6";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(575, 55);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(58, 20);
+            this.radioButton8.TabIndex = 3;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Tag = "IPV4";
+            this.radioButton8.Text = "IPV4";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(480, 55);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(90, 20);
+            this.radioButton7.TabIndex = 3;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Tag = "IDCard";
+            this.radioButton7.Text = "身份证号";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(417, 55);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(58, 20);
+            this.radioButton6.TabIndex = 3;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Tag = "PostCode";
+            this.radioButton6.Text = "邮编";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(338, 55);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(74, 20);
+            this.radioButton5.TabIndex = 3;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Tag = "Mobile";
+            this.radioButton5.Text = "手机号";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(275, 55);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(58, 20);
+            this.radioButton4.TabIndex = 3;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Tag = "Phone";
+            this.radioButton4.Text = "座机";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(204, 55);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(66, 20);
+            this.radioButton3.TabIndex = 3;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Tag = "Email";
+            this.radioButton3.Text = "Email";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(141, 55);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(58, 20);
+            this.radioButton2.TabIndex = 3;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Tag = "NumberOnly";
+            this.radioButton2.Text = "数字";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(78, 55);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(58, 20);
+            this.radioButton1.TabIndex = 3;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Tag = "EnglishOnly";
+            this.radioButton1.Text = "英文";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_pattern_chinese
+            // 
+            this.radioButton_pattern_chinese.AutoSize = true;
+            this.radioButton_pattern_chinese.Location = new System.Drawing.Point(15, 55);
+            this.radioButton_pattern_chinese.Name = "radioButton_pattern_chinese";
+            this.radioButton_pattern_chinese.Size = new System.Drawing.Size(58, 20);
+            this.radioButton_pattern_chinese.TabIndex = 3;
+            this.radioButton_pattern_chinese.TabStop = true;
+            this.radioButton_pattern_chinese.Tag = "ChineseOnly";
+            this.radioButton_pattern_chinese.Text = "中文";
+            this.radioButton_pattern_chinese.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_chinese.CheckedChanged += new System.EventHandler(this.radioButton_pattern_CheckedChanged);
             // 
             // button_match
             // 
@@ -112,127 +229,23 @@ namespace niushuai233Kit.KitForm.Other
             this.button_match.TabIndex = 2;
             this.button_match.Text = "匹配测试";
             this.button_match.UseVisualStyleBackColor = true;
+            this.button_match.Click += new System.EventHandler(this.button_match_Click);
             // 
-            // radioButton_pattern_chinese
+            // textBox_pattern
             // 
-            this.radioButton_pattern_chinese.AutoSize = true;
-            this.radioButton_pattern_chinese.Location = new System.Drawing.Point(15, 55);
-            this.radioButton_pattern_chinese.Name = "radioButton_pattern_chinese";
-            this.radioButton_pattern_chinese.Size = new System.Drawing.Size(58, 20);
-            this.radioButton_pattern_chinese.TabIndex = 3;
-            this.radioButton_pattern_chinese.TabStop = true;
-            this.radioButton_pattern_chinese.Text = "中文";
-            this.radioButton_pattern_chinese.UseVisualStyleBackColor = true;
+            this.textBox_pattern.Location = new System.Drawing.Point(100, 15);
+            this.textBox_pattern.Name = "textBox_pattern";
+            this.textBox_pattern.Size = new System.Drawing.Size(568, 26);
+            this.textBox_pattern.TabIndex = 1;
             // 
-            // radioButton1
+            // label1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(78, 55);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 20);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "英文";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(141, 55);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(58, 20);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "数字";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(204, 55);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(66, 20);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Email";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(275, 55);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(58, 20);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "座机";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(338, 55);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(74, 20);
-            this.radioButton5.TabIndex = 3;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "手机号";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(417, 55);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(58, 20);
-            this.radioButton6.TabIndex = 3;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "邮编";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(480, 55);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(90, 20);
-            this.radioButton7.TabIndex = 3;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "身份证号";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(575, 55);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(58, 20);
-            this.radioButton8.TabIndex = 3;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "IPV4";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(638, 55);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(58, 20);
-            this.radioButton9.TabIndex = 3;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "IPV6";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(701, 55);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(42, 20);
-            this.radioButton10.TabIndex = 3;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "QQ";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "正则表达式:";
             // 
             // RegexForm
             // 
@@ -243,7 +256,7 @@ namespace niushuai233Kit.KitForm.Other
             this.Controls.Add(this.textBox_result);
             this.Controls.Add(this.textBox_source);
             this.Font = new System.Drawing.Font("宋体", 12F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegexForm";
             this.Text = "RegexForm";
             this.groupBox1.ResumeLayout(false);
