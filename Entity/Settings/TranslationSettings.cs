@@ -11,6 +11,10 @@ namespace niushuai233Kit.Entity.Settings
     public class TranslationSettings
     {
         /// <summary>
+        /// 当前翻译引擎
+        /// </summary>
+        public int UsingTranslationEngine { get; set; }
+        /// <summary>
         /// 谷歌ApiKey
         /// </summary>
         public string GoogleApiKey { get; set; }

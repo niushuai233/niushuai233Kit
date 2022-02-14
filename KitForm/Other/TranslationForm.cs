@@ -34,11 +34,10 @@ namespace niushuai233Kit.KitForm.Other
             // 初始化内容exchange背景图片
             this.pictureBox_content_exchange.Image = Properties.Resources.Exchange_Vertical;
 
-            // 设置默认引擎为Google
-            this.comboBox1.SelectedIndex = 0;
-
             // 加载初始配置
             TranslationUtil.settings = CommonUtil.LoadConfig<TranslationSettings>(CommonUtil.TranslationSettingsLocation());
+            // 设置默认引擎为上次勾选
+            this.comboBox_translation_engine.SelectedIndex = TranslationUtil.settings.UsingTranslationEngine;
 
             InitLanguageCombox();
         }
@@ -135,7 +134,7 @@ namespace niushuai233Kit.KitForm.Other
 
             Languages.MatchGoogle("中文简体");
 
-            if (this.comboBox1.SelectedIndex == 0)
+            if (this.comboBox_translation_engine.SelectedIndex == 0)
             {
                 ;
                 // Google
@@ -157,6 +156,12 @@ namespace niushuai233Kit.KitForm.Other
             // 成功
             this.textBox_result.Text = response.TranslatedText;
 
+        }
+
+        private void comboBox_translation_engine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TranslationUtil.settings.UsingTranslationEngine = this.comboBox_translation_engine.SelectedIndex;
+            XmlUtil.Obj2Xml(CommonUtil.TranslationSettingsLocation(), TranslationUtil.settings);
         }
     }
 }

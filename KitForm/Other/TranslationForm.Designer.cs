@@ -39,7 +39,7 @@ namespace niushuai233Kit.KitForm.Other
             this.pictureBox_content_exchange = new System.Windows.Forms.PictureBox();
             this.pictureBox_language_exchange = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_translation_engine = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_content_exchange)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_language_exchange)).BeginInit();
             this.SuspendLayout();
@@ -62,6 +62,7 @@ namespace niushuai233Kit.KitForm.Other
             this.textBox_source.Name = "textBox_source";
             this.textBox_source.Size = new System.Drawing.Size(760, 200);
             this.textBox_source.TabIndex = 1;
+            this.textBox_source.Text = "Hello World!";
             // 
             // textBox_result
             // 
@@ -145,24 +146,25 @@ namespace niushuai233Kit.KitForm.Other
             this.label1.TabIndex = 11;
             this.label1.Text = "翻译引擎：";
             // 
-            // comboBox1
+            // comboBox_translation_engine
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_translation_engine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_translation_engine.FormattingEnabled = true;
+            this.comboBox_translation_engine.Items.AddRange(new object[] {
             "Google翻译",
             "百度翻译"});
-            this.comboBox1.Location = new System.Drawing.Point(96, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 12;
+            this.comboBox_translation_engine.Location = new System.Drawing.Point(96, 9);
+            this.comboBox_translation_engine.Name = "comboBox_translation_engine";
+            this.comboBox_translation_engine.Size = new System.Drawing.Size(121, 24);
+            this.comboBox_translation_engine.TabIndex = 12;
+            this.comboBox_translation_engine.SelectedIndexChanged += new System.EventHandler(this.comboBox_translation_engine_SelectedIndexChanged);
             // 
             // TranslationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 516);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_translation_engine);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox_content_exchange);
             this.Controls.Add(this.pictureBox_language_exchange);
@@ -196,6 +198,6 @@ namespace niushuai233Kit.KitForm.Other
         private System.Windows.Forms.PictureBox pictureBox_language_exchange;
         private System.Windows.Forms.PictureBox pictureBox_content_exchange;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_translation_engine;
     }
 }
