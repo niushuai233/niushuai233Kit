@@ -132,18 +132,15 @@ namespace niushuai233Kit.KitForm.Other
 
             TranslationResponse response = null;
 
-            Languages.MatchGoogle("中文简体");
-
             if (this.comboBox_translation_engine.SelectedIndex == 0)
             {
-                ;
                 // Google
                 response = TranslationUtil.GoogleTranslate(this.textBox_source.Text, Languages.MatchGoogle(this.comboBox_language_result.Text), Languages.MatchGoogle(this.comboBox_language_source.Text));
             }
             else
             {
                 // Baidu
-                response = TranslationUtil.BaiduTranslate(this.textBox_source.Text, Languages.MatchGoogle(this.comboBox_language_result.Text), Languages.MatchGoogle(this.comboBox_language_source.Text));
+                response = TranslationUtil.BaiduTranslate(this.textBox_source.Text, Languages.MatchBaidu(this.comboBox_language_result.Text), Languages.MatchBaidu(this.comboBox_language_source.Text));
             }
 
             // 未成功
