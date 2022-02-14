@@ -11,6 +11,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,9 +22,11 @@ namespace niushuai233Kit.KitForm.Other
         /// <summary>
         /// 自动翻译计时器
         /// </summary>
-        private Timer timer = new Timer();
+        private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         private int mills = 1000;
         private string lastSource = "";
+
+        private Thread translateThread;
 
         public TranslationForm(KitApplication kitApplication)
         {
@@ -48,7 +51,7 @@ namespace niushuai233Kit.KitForm.Other
             if (!currSource.Equals(lastSource))
             {
                 // 如果记录的上次翻译时内容与当前不同时, 再翻译一次
-                Translate();
+                Translate_Before();
                 lastSource = currSource;
             } else
             {
@@ -117,7 +120,7 @@ namespace niushuai233Kit.KitForm.Other
             this.comboBox_language_result.SelectedIndex = tmp;
 
             // 切换后自动翻译一次
-            Translate();
+            Translate_Before();
         }
 
         private void pictureBox_content_exchange_Click(object sender, EventArgs e)
@@ -161,11 +164,22 @@ namespace niushuai233Kit.KitForm.Other
 
         private void button_translate_Click(object sender, EventArgs e)
         {
-            Translate();
+            Translate_Before();
+        }
+
+        private void Translate_Before()
+        {
+            translateThread = new Thread(new ThreadStart(Translate));
+            translateThread.Start();
         }
 
         private void Translate()
         {
+
+            // 加个状态 表示在翻译中了
+            this.button_translate.Text = "翻译中";
+            this.button_translate.ForeColor = Color.Red;
+
             TranslationResponse response = null;
 
             if (this.comboBox_translation_engine.SelectedIndex == 0)
@@ -188,6 +202,12 @@ namespace niushuai233Kit.KitForm.Other
 
             // 成功
             this.textBox_result.Text = response.TranslatedText;
+
+            this.button_translate.Text = "翻译";
+            this.button_translate.ForeColor = Color.Black;
+
+            // 停止线程
+            translateThread.Abort();
         }
 
         /// <summary>

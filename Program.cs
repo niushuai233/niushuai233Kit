@@ -14,6 +14,9 @@ namespace niushuai233Kit
         [STAThread]
         static void Main()
         {
+            // 允许线程间进行控件访问
+            System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new KitApplication());
