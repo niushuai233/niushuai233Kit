@@ -146,7 +146,7 @@ namespace niushuai233Kit.KitForm.Other
             // 未成功
             if (response == null || !response.Success)
             {
-                MessageBox.Show("失败: " + response.ErrorMessage);
+                MessageBox.Show("失败: " + response == null ? "无响应体" : response.ErrorMessage);
                 return;
             }
 
