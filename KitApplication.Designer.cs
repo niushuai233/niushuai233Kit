@@ -37,6 +37,7 @@ namespace niushuai233Kit
             this.other_tabPage = new System.Windows.Forms.TabPage();
             this.other_groupBox_result = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.button_other_regex = new System.Windows.Forms.Button();
             this.button_other_translation = new System.Windows.Forms.Button();
             this.button_other_countdown = new System.Windows.Forms.Button();
@@ -73,7 +74,6 @@ namespace niushuai233Kit
             this.contextMenuStrip_notifyIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.NotifyIconShowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NotifyIconExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button4 = new System.Windows.Forms.Button();
             this.menuStrip_main.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -152,6 +152,15 @@ namespace niushuai233Kit
             this.groupBox8.TabIndex = 2;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "功能区";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(6, 102);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(125, 30);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "待续...";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button_other_regex
             // 
@@ -522,15 +531,6 @@ namespace niushuai233Kit
             this.NotifyIconExitToolStripMenuItem.Text = "退出";
             this.NotifyIconExitToolStripMenuItem.Click += new System.EventHandler(this.NotifyIconExitToolStripMenuItem_Click);
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(6, 102);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(125, 30);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "待续...";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
             // KitApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -545,7 +545,7 @@ namespace niushuai233Kit
             this.MaximizeBox = false;
             this.Name = "KitApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kit@niushuai233";
+            this.Text = "Kit@niushuai233 v1.0.1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KitApplication_FormClosing);
             this.menuStrip_main.ResumeLayout(false);
             this.menuStrip_main.PerformLayout();
