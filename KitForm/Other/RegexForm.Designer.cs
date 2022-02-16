@@ -32,20 +32,20 @@ namespace niushuai233Kit.KitForm.Other
             this.textBox_source = new System.Windows.Forms.TextBox();
             this.textBox_result = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton_pattern_qq = new System.Windows.Forms.RadioButton();
+            this.radioButton_pattern_ipv4 = new System.Windows.Forms.RadioButton();
+            this.radioButton_pattern_idcard = new System.Windows.Forms.RadioButton();
+            this.radioButton_pattern_postcode = new System.Windows.Forms.RadioButton();
+            this.radioButton_pattern_mobile = new System.Windows.Forms.RadioButton();
+            this.radioButton_pattern_phone = new System.Windows.Forms.RadioButton();
+            this.radioButton_pattern_email = new System.Windows.Forms.RadioButton();
+            this.radioButton_pattern_number = new System.Windows.Forms.RadioButton();
+            this.radioButton_pattern_english = new System.Windows.Forms.RadioButton();
             this.radioButton_pattern_chinese = new System.Windows.Forms.RadioButton();
             this.button_match = new System.Windows.Forms.Button();
             this.textBox_pattern = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label_tips = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,7 @@ namespace niushuai233Kit.KitForm.Other
             this.textBox_source.Name = "textBox_source";
             this.textBox_source.Size = new System.Drawing.Size(755, 200);
             this.textBox_source.TabIndex = 0;
+            this.textBox_source.TextChanged += new System.EventHandler(this.textBox_auto_TextChanged);
             // 
             // textBox_result
             // 
@@ -67,16 +68,16 @@ namespace niushuai233Kit.KitForm.Other
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton10);
-            this.groupBox1.Controls.Add(this.radioButton9);
-            this.groupBox1.Controls.Add(this.radioButton8);
-            this.groupBox1.Controls.Add(this.radioButton7);
-            this.groupBox1.Controls.Add(this.radioButton6);
-            this.groupBox1.Controls.Add(this.radioButton5);
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.label_tips);
+            this.groupBox1.Controls.Add(this.radioButton_pattern_qq);
+            this.groupBox1.Controls.Add(this.radioButton_pattern_ipv4);
+            this.groupBox1.Controls.Add(this.radioButton_pattern_idcard);
+            this.groupBox1.Controls.Add(this.radioButton_pattern_postcode);
+            this.groupBox1.Controls.Add(this.radioButton_pattern_mobile);
+            this.groupBox1.Controls.Add(this.radioButton_pattern_phone);
+            this.groupBox1.Controls.Add(this.radioButton_pattern_email);
+            this.groupBox1.Controls.Add(this.radioButton_pattern_number);
+            this.groupBox1.Controls.Add(this.radioButton_pattern_english);
             this.groupBox1.Controls.Add(this.radioButton_pattern_chinese);
             this.groupBox1.Controls.Add(this.button_match);
             this.groupBox1.Controls.Add(this.textBox_pattern);
@@ -87,130 +88,127 @@ namespace niushuai233Kit.KitForm.Other
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton10
+            // radioButton_pattern_qq
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(701, 55);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(42, 20);
-            this.radioButton10.TabIndex = 3;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Tag = "QQ";
-            this.radioButton10.Text = "QQ";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_qq.AutoSize = true;
+            this.radioButton_pattern_qq.Location = new System.Drawing.Point(641, 53);
+            this.radioButton_pattern_qq.Name = "radioButton_pattern_qq";
+            this.radioButton_pattern_qq.Size = new System.Drawing.Size(42, 20);
+            this.radioButton_pattern_qq.TabIndex = 3;
+            this.radioButton_pattern_qq.TabStop = true;
+            this.radioButton_pattern_qq.Tag = "QQ";
+            this.radioButton_pattern_qq.Text = "QQ";
+            this.radioButton_pattern_qq.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_qq.CheckedChanged += new System.EventHandler(this.radioButton_pattern_CheckedChanged);
             // 
-            // radioButton9
+            // radioButton_pattern_ipv4
             // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(638, 55);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(58, 20);
-            this.radioButton9.TabIndex = 3;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Tag = "IPV6";
-            this.radioButton9.Text = "IPV6";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_ipv4.AutoSize = true;
+            this.radioButton_pattern_ipv4.Location = new System.Drawing.Point(577, 53);
+            this.radioButton_pattern_ipv4.Name = "radioButton_pattern_ipv4";
+            this.radioButton_pattern_ipv4.Size = new System.Drawing.Size(58, 20);
+            this.radioButton_pattern_ipv4.TabIndex = 3;
+            this.radioButton_pattern_ipv4.TabStop = true;
+            this.radioButton_pattern_ipv4.Tag = "IPV4";
+            this.radioButton_pattern_ipv4.Text = "IPV4";
+            this.radioButton_pattern_ipv4.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_ipv4.CheckedChanged += new System.EventHandler(this.radioButton_pattern_CheckedChanged);
             // 
-            // radioButton8
+            // radioButton_pattern_idcard
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(575, 55);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(58, 20);
-            this.radioButton8.TabIndex = 3;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Tag = "IPV4";
-            this.radioButton8.Text = "IPV4";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_idcard.AutoSize = true;
+            this.radioButton_pattern_idcard.Location = new System.Drawing.Point(481, 53);
+            this.radioButton_pattern_idcard.Name = "radioButton_pattern_idcard";
+            this.radioButton_pattern_idcard.Size = new System.Drawing.Size(90, 20);
+            this.radioButton_pattern_idcard.TabIndex = 3;
+            this.radioButton_pattern_idcard.TabStop = true;
+            this.radioButton_pattern_idcard.Tag = "IDCard";
+            this.radioButton_pattern_idcard.Text = "身份证号";
+            this.radioButton_pattern_idcard.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_idcard.CheckedChanged += new System.EventHandler(this.radioButton_pattern_CheckedChanged);
             // 
-            // radioButton7
+            // radioButton_pattern_postcode
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(480, 55);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(90, 20);
-            this.radioButton7.TabIndex = 3;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Tag = "IDCard";
-            this.radioButton7.Text = "身份证号";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_postcode.AutoSize = true;
+            this.radioButton_pattern_postcode.Location = new System.Drawing.Point(417, 53);
+            this.radioButton_pattern_postcode.Name = "radioButton_pattern_postcode";
+            this.radioButton_pattern_postcode.Size = new System.Drawing.Size(58, 20);
+            this.radioButton_pattern_postcode.TabIndex = 3;
+            this.radioButton_pattern_postcode.TabStop = true;
+            this.radioButton_pattern_postcode.Tag = "PostCode";
+            this.radioButton_pattern_postcode.Text = "邮编";
+            this.radioButton_pattern_postcode.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_postcode.CheckedChanged += new System.EventHandler(this.radioButton_pattern_CheckedChanged);
             // 
-            // radioButton6
+            // radioButton_pattern_mobile
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(417, 55);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(58, 20);
-            this.radioButton6.TabIndex = 3;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Tag = "PostCode";
-            this.radioButton6.Text = "邮编";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_mobile.AutoSize = true;
+            this.radioButton_pattern_mobile.Location = new System.Drawing.Point(337, 53);
+            this.radioButton_pattern_mobile.Name = "radioButton_pattern_mobile";
+            this.radioButton_pattern_mobile.Size = new System.Drawing.Size(74, 20);
+            this.radioButton_pattern_mobile.TabIndex = 3;
+            this.radioButton_pattern_mobile.TabStop = true;
+            this.radioButton_pattern_mobile.Tag = "Mobile";
+            this.radioButton_pattern_mobile.Text = "手机号";
+            this.radioButton_pattern_mobile.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_mobile.CheckedChanged += new System.EventHandler(this.radioButton_pattern_CheckedChanged);
             // 
-            // radioButton5
+            // radioButton_pattern_phone
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(338, 55);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(74, 20);
-            this.radioButton5.TabIndex = 3;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Tag = "Mobile";
-            this.radioButton5.Text = "手机号";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_phone.AutoSize = true;
+            this.radioButton_pattern_phone.Location = new System.Drawing.Point(273, 53);
+            this.radioButton_pattern_phone.Name = "radioButton_pattern_phone";
+            this.radioButton_pattern_phone.Size = new System.Drawing.Size(58, 20);
+            this.radioButton_pattern_phone.TabIndex = 3;
+            this.radioButton_pattern_phone.TabStop = true;
+            this.radioButton_pattern_phone.Tag = "Phone";
+            this.radioButton_pattern_phone.Text = "座机";
+            this.radioButton_pattern_phone.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_phone.CheckedChanged += new System.EventHandler(this.radioButton_pattern_CheckedChanged);
             // 
-            // radioButton4
+            // radioButton_pattern_email
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(275, 55);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(58, 20);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Tag = "Phone";
-            this.radioButton4.Text = "座机";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_email.AutoSize = true;
+            this.radioButton_pattern_email.Location = new System.Drawing.Point(201, 53);
+            this.radioButton_pattern_email.Name = "radioButton_pattern_email";
+            this.radioButton_pattern_email.Size = new System.Drawing.Size(66, 20);
+            this.radioButton_pattern_email.TabIndex = 3;
+            this.radioButton_pattern_email.TabStop = true;
+            this.radioButton_pattern_email.Tag = "Email";
+            this.radioButton_pattern_email.Text = "Email";
+            this.radioButton_pattern_email.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_email.CheckedChanged += new System.EventHandler(this.radioButton_pattern_CheckedChanged);
             // 
-            // radioButton3
+            // radioButton_pattern_number
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(204, 55);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(66, 20);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Tag = "Email";
-            this.radioButton3.Text = "Email";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_number.AutoSize = true;
+            this.radioButton_pattern_number.Location = new System.Drawing.Point(137, 53);
+            this.radioButton_pattern_number.Name = "radioButton_pattern_number";
+            this.radioButton_pattern_number.Size = new System.Drawing.Size(58, 20);
+            this.radioButton_pattern_number.TabIndex = 3;
+            this.radioButton_pattern_number.TabStop = true;
+            this.radioButton_pattern_number.Tag = "NumberOnly";
+            this.radioButton_pattern_number.Text = "数字";
+            this.radioButton_pattern_number.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_number.CheckedChanged += new System.EventHandler(this.radioButton_pattern_CheckedChanged);
             // 
-            // radioButton2
+            // radioButton_pattern_english
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(141, 55);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(58, 20);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Tag = "NumberOnly";
-            this.radioButton2.Text = "数字";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(78, 55);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 20);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Tag = "EnglishOnly";
-            this.radioButton1.Text = "英文";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_english.AutoSize = true;
+            this.radioButton_pattern_english.Location = new System.Drawing.Point(73, 53);
+            this.radioButton_pattern_english.Name = "radioButton_pattern_english";
+            this.radioButton_pattern_english.Size = new System.Drawing.Size(58, 20);
+            this.radioButton_pattern_english.TabIndex = 3;
+            this.radioButton_pattern_english.TabStop = true;
+            this.radioButton_pattern_english.Tag = "EnglishOnly";
+            this.radioButton_pattern_english.Text = "英文";
+            this.radioButton_pattern_english.UseVisualStyleBackColor = true;
+            this.radioButton_pattern_english.CheckedChanged += new System.EventHandler(this.radioButton_pattern_CheckedChanged);
             // 
             // radioButton_pattern_chinese
             // 
             this.radioButton_pattern_chinese.AutoSize = true;
-            this.radioButton_pattern_chinese.Location = new System.Drawing.Point(15, 55);
+            this.radioButton_pattern_chinese.Location = new System.Drawing.Point(9, 53);
             this.radioButton_pattern_chinese.Name = "radioButton_pattern_chinese";
             this.radioButton_pattern_chinese.Size = new System.Drawing.Size(58, 20);
             this.radioButton_pattern_chinese.TabIndex = 3;
@@ -237,6 +235,7 @@ namespace niushuai233Kit.KitForm.Other
             this.textBox_pattern.Name = "textBox_pattern";
             this.textBox_pattern.Size = new System.Drawing.Size(568, 26);
             this.textBox_pattern.TabIndex = 1;
+            this.textBox_pattern.TextChanged += new System.EventHandler(this.textBox_auto_TextChanged);
             // 
             // label1
             // 
@@ -246,6 +245,15 @@ namespace niushuai233Kit.KitForm.Other
             this.label1.Size = new System.Drawing.Size(96, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "正则表达式:";
+            // 
+            // label_tips
+            // 
+            this.label_tips.AutoSize = true;
+            this.label_tips.Location = new System.Drawing.Point(689, 55);
+            this.label_tips.Name = "label_tips";
+            this.label_tips.Size = new System.Drawing.Size(16, 16);
+            this.label_tips.TabIndex = 4;
+            this.label_tips.Text = " ";
             // 
             // RegexForm
             // 
@@ -275,15 +283,15 @@ namespace niushuai233Kit.KitForm.Other
         private System.Windows.Forms.TextBox textBox_pattern;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton_pattern_chinese;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton_pattern_idcard;
+        private System.Windows.Forms.RadioButton radioButton_pattern_postcode;
+        private System.Windows.Forms.RadioButton radioButton_pattern_mobile;
+        private System.Windows.Forms.RadioButton radioButton_pattern_phone;
+        private System.Windows.Forms.RadioButton radioButton_pattern_email;
+        private System.Windows.Forms.RadioButton radioButton_pattern_number;
+        private System.Windows.Forms.RadioButton radioButton_pattern_english;
+        private System.Windows.Forms.RadioButton radioButton_pattern_qq;
+        private System.Windows.Forms.RadioButton radioButton_pattern_ipv4;
+        private System.Windows.Forms.Label label_tips;
     }
 }
