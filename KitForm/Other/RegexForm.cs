@@ -28,7 +28,7 @@ namespace niushuai233Kit.KitForm.Other
 
         private void Do()
         {
-            if (StringUtil.IsEmpty(this.textBox_source.Text))
+            if (StringUtil.IsEmpty(this.textBox_source.Text) || StringUtil.IsEmpty(this.textBox_pattern.Text))
             {
                 return;
             }
@@ -38,7 +38,11 @@ namespace niushuai233Kit.KitForm.Other
 
             string source = this.textBox_source.Text;
             string pattern = this.textBox_pattern.Text;
-            Console.WriteLine("source = {0}, pattern = {1}", source, pattern);
+            if (this.checkBox_allMatch.Checked)
+            {
+                pattern = @"^" + @pattern + @"$";
+            }
+            // Console.WriteLine("source = {0}, pattern = {1}", source, pattern);
             // 匹配
             MatchCollection matchCollection = Regex.Matches(source, @pattern);
 
