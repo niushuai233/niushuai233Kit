@@ -8,7 +8,7 @@
     <ProjectGuid>{DC5C3B88-1DAA-41D2-AEE2-EF3B9034D1B7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>niushuai233Kit</RootNamespace>
-    <AssemblyName>niushuai233Kit v1.0.1</AssemblyName>
+    <AssemblyName>niushuai233Kit%40v1.0.1</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -260,6 +260,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Enums\CharType.cs" />
+    <Compile Include="Entity\Github\Releases.cs" />
     <Compile Include="Entity\Regex\RegexPool.cs" />
     <Compile Include="Entity\Settings\TranslationSettings.cs" />
     <Compile Include="Entity\Translation\Languages.cs" />
@@ -268,6 +269,13 @@
     </Compile>
     <Compile Include="KitForm\Other\RegexForm.Designer.cs">
       <DependentUpon>RegexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Updater\Autoupdater.cs" />
+    <Compile Include="Updater\AutoupdaterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Updater\AutoupdaterForm.Designer.cs">
+      <DependentUpon>AutoupdaterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Util\ReflectUtil.cs" />
     <Compile Include="Entity\Translation\TranslationResponse.cs" />
@@ -463,6 +471,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Updater\AutoupdaterForm.resx">
+      <DependentUpon>AutoupdaterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

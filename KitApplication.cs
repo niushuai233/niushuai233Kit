@@ -155,6 +155,9 @@ namespace niushuai233Kit
         public KitApplication()
         {
             InitializeComponent();
+
+            // 启动检查更新线程
+            niushuai233Kit.Updater.Autoupdater.CheckUpdate();
         }
 
         /// <summary>

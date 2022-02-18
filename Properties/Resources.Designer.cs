@@ -61,6 +61,15 @@ namespace niushuai233Kit.Properties {
         }
         
         /// <summary>
+        ///   查找类似 v1.0.1 的本地化字符串。
+        /// </summary>
+        internal static string App_Version {
+            get {
+                return ResourceManager.GetString("App_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
         internal static System.Drawing.Bitmap Exchange {
@@ -107,6 +116,15 @@ namespace niushuai233Kit.Properties {
             get {
                 object obj = ResourceManager.GetObject("niushuai233Kit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 2022-02-08 12:31:18 的本地化字符串。
+        /// </summary>
+        internal static string Release_Date {
+            get {
+                return ResourceManager.GetString("Release_Date", resourceCulture);
             }
         }
     }
