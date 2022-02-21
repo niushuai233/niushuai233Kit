@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,14 @@ namespace niushuai233Kit.Util
 {
     public class CommonUtil
     {
+
+        public static KitApplication Instance = null;
+
+        public static void SetKitApplication(KitApplication kit)
+        {
+            Instance = kit;
+        }
+
         /// <summary>
         /// 配置文件位置
         /// </summary>
@@ -16,6 +25,17 @@ namespace niushuai233Kit.Util
         public static string GetConfigLocationPrefix()
         {
             return CommonConstant.USER_PROFILE_DIRECTORY + "/" + CommonConstant.USER_PROFILE_PROJECT_DIRECTORY + "/" + CommonConstant.PROJECT_NAME + "/";
+        }
+
+
+        public static string GetCurrentProcessFileName()
+        {
+            return Process.GetCurrentProcess().MainModule.FileName;
+        }
+
+        public static string CurrentDirectory()
+        {
+            return System.Environment.CurrentDirectory;
         }
 
         /// <summary>

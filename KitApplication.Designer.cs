@@ -545,7 +545,7 @@ namespace niushuai233Kit
             this.MaximizeBox = false;
             this.Name = "KitApplication";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Kit@niushuai233 v1.0.1";
+            this.Text = "niushuai233Kit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.KitApplication_FormClosing);
             this.menuStrip_main.ResumeLayout(false);
             this.menuStrip_main.PerformLayout();

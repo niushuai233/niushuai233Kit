@@ -19,7 +19,10 @@ namespace niushuai233Kit
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KitApplication());
+            KitApplication mainForm = new KitApplication();
+
+            niushuai233Kit.Util.CommonUtil.SetKitApplication(mainForm);
+            Application.Run(mainForm);
         }
     }
 }

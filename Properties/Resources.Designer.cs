@@ -61,11 +61,29 @@ namespace niushuai233Kit.Properties {
         }
         
         /// <summary>
+        ///   查找类似 Kit@niushuai233 的本地化字符串。
+        /// </summary>
+        internal static string App_Name {
+            get {
+                return ResourceManager.GetString("App_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 v1.0.1 的本地化字符串。
         /// </summary>
         internal static string App_Version {
             get {
                 return ResourceManager.GetString("App_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 True 的本地化字符串。
+        /// </summary>
+        internal static string AutoCheckUpdate {
+            get {
+                return ResourceManager.GetString("AutoCheckUpdate", resourceCulture);
             }
         }
         
@@ -120,7 +138,7 @@ namespace niushuai233Kit.Properties {
         }
         
         /// <summary>
-        ///   查找类似 2022-02-08 12:31:18 的本地化字符串。
+        ///   查找类似 2022-02-18 12:11:56 的本地化字符串。
         /// </summary>
         internal static string Release_Date {
             get {

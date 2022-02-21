@@ -137,6 +137,12 @@
     <value>v1.0.1</value>
   </data>
   <data name="Release_Date" xml:space="preserve">
-    <value>2022-02-08 12:31:18</value>
+    <value>2022-02-18 12:11:56</value>
+  </data>
+  <data name="App_Name" xml:space="preserve">
+    <value>Kit@niushuai233</value>
+  </data>
+  <data name="AutoCheckUpdate" xml:space="preserve">
+    <value>True</value>
   </data>
 </root>

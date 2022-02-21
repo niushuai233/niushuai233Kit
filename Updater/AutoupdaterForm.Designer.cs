@@ -32,6 +32,8 @@ namespace niushuai233Kit.Updater
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_update = new System.Windows.Forms.Button();
             this.button_close = new System.Windows.Forms.Button();
+            this.labelx = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // textBox1
@@ -41,12 +43,12 @@ namespace niushuai233Kit.Updater
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(779, 406);
+            this.textBox1.Size = new System.Drawing.Size(779, 405);
             this.textBox1.TabIndex = 0;
             // 
             // button_update
             // 
-            this.button_update.Location = new System.Drawing.Point(589, 430);
+            this.button_update.Location = new System.Drawing.Point(589, 437);
             this.button_update.Margin = new System.Windows.Forms.Padding(4);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(100, 31);
@@ -57,7 +59,7 @@ namespace niushuai233Kit.Updater
             // 
             // button_close
             // 
-            this.button_close.Location = new System.Drawing.Point(697, 430);
+            this.button_close.Location = new System.Drawing.Point(697, 437);
             this.button_close.Margin = new System.Windows.Forms.Padding(4);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(100, 31);
@@ -66,11 +68,29 @@ namespace niushuai233Kit.Updater
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
+            // labelx
+            // 
+            this.labelx.AutoSize = true;
+            this.labelx.Location = new System.Drawing.Point(19, 425);
+            this.labelx.Name = "labelx";
+            this.labelx.Size = new System.Drawing.Size(136, 16);
+            this.labelx.TabIndex = 3;
+            this.labelx.Text = "当前下载进度: 0%";
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(16, 445);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(566, 23);
+            this.progressBar.TabIndex = 4;
+            // 
             // AutoupdaterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 469);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.labelx);
             this.Controls.Add(this.button_close);
             this.Controls.Add(this.button_update);
             this.Controls.Add(this.textBox1);
@@ -92,5 +112,7 @@ namespace niushuai233Kit.Updater
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button_update;
         private System.Windows.Forms.Button button_close;
+        private System.Windows.Forms.Label labelx;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }

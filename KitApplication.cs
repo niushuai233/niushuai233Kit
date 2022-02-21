@@ -155,9 +155,13 @@ namespace niushuai233Kit
         public KitApplication()
         {
             InitializeComponent();
+            this.Text = Properties.Resources.App_Name + " " + Properties.Resources.App_Version;
 
-            // 启动检查更新线程
-            niushuai233Kit.Updater.Autoupdater.Instance().CheckUpdate(this);
+            if (Properties.Resources.AutoCheckUpdate.Equals(Boolean.TrueString))
+            { 
+                // 启动检查更新线程
+                niushuai233Kit.Updater.Autoupdater.Instance().CheckUpdate(this);
+            }
         }
 
         /// <summary>
@@ -384,6 +388,11 @@ namespace niushuai233Kit
                 regexForm = new RegexForm(this);
             }
             FormReset(this.other_groupBox_result, regexForm);
+        }
+
+        private void 更新检测ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            niushuai233Kit.Updater.Autoupdater.Instance().CheckUpdate(this);
         }
     }
 }

@@ -38,6 +38,50 @@ namespace niushuai233Kit.Util
 
             return JsonConvert.DeserializeObject<T>(retString);
         }
+
+
+        public static void DownloadFile(string URL, string filename, System.Windows.Forms.ProgressBar progressBar, System.Windows.Forms.Label labelx)
+        {
+            float percent = 0;
+            try
+            {
+                System.Net.HttpWebRequest Myrq = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(URL);
+                System.Net.HttpWebResponse myrp = (System.Net.HttpWebResponse)Myrq.GetResponse();
+                long totalBytes = myrp.ContentLength;
+                if (progressBar != null)
+                {
+                    progressBar.Maximum = (int)totalBytes;
+                }
+                System.IO.Stream st = myrp.GetResponseStream();
+                System.IO.Stream so = new System.IO.FileStream(filename, System.IO.FileMode.Create);
+                long totalDownloadedByte = 0;
+                byte[] by = new byte[1024];
+                int osize = st.Read(by, 0, (int)by.Length);
+                while (osize > 0)
+                {
+                    totalDownloadedByte = osize + totalDownloadedByte;
+                    System.Windows.Forms.Application.DoEvents();
+                    so.Write(by, 0, osize);
+                    if (progressBar != null)
+                    {
+                        progressBar.Value = (int)totalDownloadedByte;
+                    }
+                    osize = st.Read(by, 0, (int)by.Length);
+
+                    percent = (float)totalDownloadedByte / (float)totalBytes * 100;
+                    labelx.Text = "当前下载进度: " + percent.ToString("f2") + "%";
+                    //必须加注这句代码，否则label1将因为循环执行太快而来不及显示信息
+                    System.Windows.Forms.Application.DoEvents();
+                }
+                so.Close();
+                st.Close();
+            }
+            catch (System.Exception)
+            {
+                throw;
+            }
+        }
+
     }
 }
 

@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using niushuai233Kit.Entity.Github;
+using niushuai233Kit.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,7 +37,15 @@ namespace niushuai233Kit.Updater
 
         private void button_update_Click(object sender, EventArgs e)
         {
+            string dest = CommonUtil.GetConfigLocationPrefix() + "tmp/";
+            dest = dest.Replace("/", "\\");
+            if (!Directory.Exists(@dest))
+            {
+                Directory.CreateDirectory(@dest);
+            }
+            HttpUtil.DownloadFile(releases.assets[0].browser_download_url, dest + "tmp.exe", this.progressBar, this.labelx);
 
+            Autoupdater.DealDownload(dest);
         }
     }
 }
