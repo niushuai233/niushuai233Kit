@@ -17,11 +17,6 @@ namespace niushuai233Kit.Updater
         {
             InitializeComponent();
             this.textBox1.Text = JsonConvert.SerializeObject(newestReleases, Formatting.Indented);
-
-            while (true)
-            {
-
-            }
         }
     }
 }

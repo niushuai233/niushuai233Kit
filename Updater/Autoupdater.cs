@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows;
 
 namespace niushuai233Kit.Updater
 {
@@ -18,25 +20,38 @@ namespace niushuai233Kit.Updater
         /// </summary>
         private const string REPOS_INFO_URL = "https://api.github.com/repos/niushuai233/niushuai233Kit/releases";
 
-        public static void CheckUpdate()
+        private static Autoupdater autoupdater = new Autoupdater();
+
+        private KitApplication parent;
+
+        private Autoupdater() { }
+
+        public static Autoupdater Instance()
         {
-            //Thread checkThread = new Thread(new ThreadStart(DoWork));
-            //checkThread.IsBackground = true;
-            //checkThread.Start();
-            DoWork();
+            return autoupdater;
         }
 
-        private static void DoWork()
+        public void CheckUpdate(KitApplication kitApplication)
         {
+            parent = kitApplication;
+
+            Thread checkThread = new Thread(new ThreadStart(DoWork));
+            checkThread.SetApartmentState(ApartmentState.STA);
+            checkThread.IsBackground = true;
+            checkThread.Start();
+        }
+
+        private void DoWork()
+        {
+            Releases newestReleases = new Releases();
+            newestReleases.published_at = DateUtil.ParseDate("1970-01-01");
+
             JArray arr = HttpUtil.Get<JArray>(REPOS_INFO_URL);
 
             if (null == arr || arr.Count == 0)
             {
                 return;
             }
-
-            Releases newestReleases = new Releases();
-            newestReleases.published_at = DateUtil.ParseDate("1970-01-01");
 
             foreach (JObject item in arr)
             {
@@ -51,11 +66,10 @@ namespace niushuai233Kit.Updater
             {
                 // 存在更新
                 AutoupdaterForm autoupdaterForm = new AutoupdaterForm(newestReleases);
-                autoupdaterForm.Show();
-                while (true)
-                {
 
-                }
+                parent.Invoke((MethodInvoker)delegate () {
+                    autoupdaterForm.Show();
+                });
             }
         }
     }
