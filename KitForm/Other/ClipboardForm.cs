@@ -16,5 +16,10 @@ namespace niushuai233Kit.KitForm.Other
         {
             InitializeComponent();
         }
+
+        private void button_start_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

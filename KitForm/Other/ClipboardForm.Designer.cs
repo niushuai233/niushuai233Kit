@@ -37,6 +37,7 @@ namespace niushuai233Kit.KitForm.Other
             this.textBox_keyword = new System.Windows.Forms.TextBox();
             this.button_start = new System.Windows.Forms.Button();
             this.button_stop = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_max_history)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +52,7 @@ namespace niushuai233Kit.KitForm.Other
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(759, 130);
+            this.groupBox1.Size = new System.Drawing.Size(759, 104);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -73,8 +74,13 @@ namespace niushuai233Kit.KitForm.Other
             0,
             0});
             this.numericUpDown_max_history.Name = "numericUpDown_max_history";
-            this.numericUpDown_max_history.Size = new System.Drawing.Size(73, 26);
+            this.numericUpDown_max_history.Size = new System.Drawing.Size(96, 26);
             this.numericUpDown_max_history.TabIndex = 1;
+            this.numericUpDown_max_history.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             // 
             // listView_main
             // 
@@ -87,7 +93,7 @@ namespace niushuai233Kit.KitForm.Other
             // 
             // button_search
             // 
-            this.button_search.Location = new System.Drawing.Point(647, 89);
+            this.button_search.Location = new System.Drawing.Point(647, 62);
             this.button_search.Name = "button_search";
             this.button_search.Size = new System.Drawing.Size(100, 32);
             this.button_search.TabIndex = 2;
@@ -96,7 +102,7 @@ namespace niushuai233Kit.KitForm.Other
             // 
             // textBox_keyword
             // 
-            this.textBox_keyword.Location = new System.Drawing.Point(6, 93);
+            this.textBox_keyword.Location = new System.Drawing.Point(6, 66);
             this.textBox_keyword.Name = "textBox_keyword";
             this.textBox_keyword.Size = new System.Drawing.Size(625, 26);
             this.textBox_keyword.TabIndex = 5;
@@ -109,6 +115,7 @@ namespace niushuai233Kit.KitForm.Other
             this.button_start.TabIndex = 6;
             this.button_start.Text = "开始记录";
             this.button_start.UseVisualStyleBackColor = true;
+            this.button_start.Click += new System.EventHandler(this.button_start_Click);
             // 
             // button_stop
             // 
@@ -119,11 +126,23 @@ namespace niushuai233Kit.KitForm.Other
             this.button_stop.Text = "停止记录";
             this.button_stop.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("宋体", 10F);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(555, 128);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(217, 14);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Tips: 双击选中即可复制到剪贴板";
+            // 
             // ClipboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 516);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.listView_main);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("宋体", 12F);
@@ -134,6 +153,7 @@ namespace niushuai233Kit.KitForm.Other
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_max_history)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -147,5 +167,6 @@ namespace niushuai233Kit.KitForm.Other
         private System.Windows.Forms.ListView listView_main;
         private System.Windows.Forms.Button button_stop;
         private System.Windows.Forms.Button button_start;
+        private System.Windows.Forms.Label label2;
     }
 }
