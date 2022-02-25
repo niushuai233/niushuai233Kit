@@ -136,12 +136,15 @@ namespace niushuai233Kit
         /// </summary>
         private static TranslationForm translationForm;
 
-        
-        
         /// <summary>
         /// 正则表达式
         /// </summary>
         private static RegexForm regexForm;
+           
+        /// <summary>
+        /// 剪贴板记录
+        /// </summary>
+        private static ClipboardForm clipboardForm;
 
 
         //////////////////////////////////////////////////////////////////////////////
@@ -390,9 +393,13 @@ namespace niushuai233Kit
             FormReset(this.other_groupBox_result, regexForm);
         }
 
-        private void 更新检测ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button_other_clipboard_Click(object sender, EventArgs e)
         {
-            niushuai233Kit.Updater.Autoupdater.Instance().CheckUpdate(this);
+            if (clipboardForm == null)
+            {
+                clipboardForm = new ClipboardForm(this);
+            }
+            FormReset(this.other_groupBox_result, clipboardForm);
         }
     }
 }

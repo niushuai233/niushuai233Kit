@@ -74,6 +74,7 @@ namespace niushuai233Kit
             this.contextMenuStrip_notifyIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.NotifyIconShowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NotifyIconExitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button_other_clipboard = new System.Windows.Forms.Button();
             this.menuStrip_main.SuspendLayout();
             this.other_tabPage.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -141,6 +142,7 @@ namespace niushuai233Kit
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.button_other_clipboard);
             this.groupBox8.Controls.Add(this.button4);
             this.groupBox8.Controls.Add(this.button_other_regex);
             this.groupBox8.Controls.Add(this.button_other_translation);
@@ -155,7 +157,7 @@ namespace niushuai233Kit
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(6, 102);
+            this.button4.Location = new System.Drawing.Point(137, 102);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(125, 30);
             this.button4.TabIndex = 4;
@@ -531,6 +533,16 @@ namespace niushuai233Kit
             this.NotifyIconExitToolStripMenuItem.Text = "退出";
             this.NotifyIconExitToolStripMenuItem.Click += new System.EventHandler(this.NotifyIconExitToolStripMenuItem_Click);
             // 
+            // button_other_clipboard
+            // 
+            this.button_other_clipboard.Location = new System.Drawing.Point(6, 102);
+            this.button_other_clipboard.Name = "button_other_clipboard";
+            this.button_other_clipboard.Size = new System.Drawing.Size(125, 30);
+            this.button_other_clipboard.TabIndex = 5;
+            this.button_other_clipboard.Text = "剪贴板记录";
+            this.button_other_clipboard.UseVisualStyleBackColor = true;
+            this.button_other_clipboard.Click += new System.EventHandler(this.button_other_clipboard_Click);
+            // 
             // KitApplication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -611,6 +623,7 @@ namespace niushuai233Kit
         private System.Windows.Forms.ToolStripMenuItem NotifyIconExitToolStripMenuItem;
         private System.Windows.Forms.Button button_other_regex;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_other_clipboard;
     }
 }
 
